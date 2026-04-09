@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../dist/output.css" />
+    <title>Shazid Rahman | Portfolio</title>
+  </head>
+  <body>
+    <!-------------------- Dark mode toggle button ----------------->
+    <section>
+      <div class="flex justify-end px-4 pt-3">
+        <div
+          class="switch px-3 py-1 rounded-full space-x-2 max-w-20 bg-stone-100 hover:bg-stone-200 border border-stone-300 shadow-sm duration-300"
+        >
+          <i class="fa-regular fa-sun dark:text-stone-500 cursor-pointer"></i>
+          <i class="fa-solid fa-moon text-stone-300 cursor-pointer"></i>
+        </div>
+      </div>
+    </section>
+    <!--------------------    Navigation bar    ----------------->
+    <header id="main-header" class="relative z-50 scroll-mt-20">
+      <nav class="container mx-auto">
+        <div class="flex justify-between items-center px-4 py-4">
+          <a href="./index.html" id="logo" class="text-4xl font-bold md:text-5xl"
+            >Shazid</a
+          >
+          <div id="nav-links" class="hidden md:flex space-x-6">
+            <a href="#about" class="text-orange-400 md:text-xl lg:text-2xl"
+              >About</a
+            >
+            <a
+              href="#experience"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >Experience</a
+            >
+            <a
+              href="#projects"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >Projects</a
+            >
+            <a
+              href="./pages/blogs/blog-menu.html"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >Blog</a
+            >
+            <a
+              href="#contact"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >Contact Me</a
+            >
+          </div>
+          <button id="menu-btn" class="block relative w-12 h-12 md:hidden">
+            <span
+              class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary -translate-y-2 transition-all duration-300"
+            ></span>
+            <span
+              class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary transition-all duration-300"
+            ></span>
+            <span
+              class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary translate-y-2 transition-all duration-300"
+            ></span>
+          </button>
+        </div>
+        <div
+          id="mobile-menu"
+          class="absolute left-0 top-full w-full bg-white shadow-lg py-10 px-6 space-y-6 text-lg text-center scale-y-0 font-bold transform origin-top transition-all duration-200 z-50"
+        >
+          <a href="#about" class="block hover:text-orange-400">About</a>
+          <a href="#experience" class="block hover:text-orange-400"
+            >Experience</a
+          >
+          <a href="#projects" class="block hover:text-orange-400">Projects</a>
+          <a
+            href="./pages/blogs/blog-menu.html"
+            class="block hover:text-orange-400"
+            >Blog</a
+          >
+          <a href="#contact" class="block hover:text-orange-400">Contact Me</a>
+        </div>
+      </nav>
+    </header>
+    <!--------------------  Hero section  ----------------->
+
+    <section class="mt-16 pb-10 md:mt-24">
+      <div
+        class="flex flex-col justify-center items-center gap-16 max-w-5xl mx-auto md:flex-row"
+      >
+        <div class="relative shrink-0 px-3 md:px-6">
+          <img
+            src="../img/profile_pic.jpeg"
+            alt="Profile picture"
+            class="w-56 h-56 md:w-72 md:h-72 rounded-full object-cover ring-4 ring-orange-200 hover:ring-background-brightOrange shadow-xl transition-colors duration-300"
+          />
+          <div
+            class="absolute bottom-2 right-4 bg-gray-900 text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1"
+          >
+            <span>📦</span> 8 Yrs at Amazon
+          </div>
+        </div>
+        <div class="text-center space-y-4 px-7 md:text-left">
+          <p
+            class="text-2xl text-gray-500 font-medium tracking-wide md:text-3xl"
+          >
+            Hello! I'm
+          </p>
+          <h1 class="text-4xl font-bold md:text-6xl text-text-dark">
+            Shazid Rahman
+          </h1>
+          <h2
+            class="text-2xl md:text-3xl font-semibold text-background-brightOrange"
+          >
+            Business Growth Consultant
+          </h2>
+          <p
+            class="text-base md:text-lg text-gray-500 leading-relaxed max-w-md"
+          >
+            I help businesses grow through strategic websites, SEO, and
+            decisions backed by real data.
+          </p>
+          <div
+            class="flex justify-center items-center flex-wrap gap-4 md:justify-start pt-4"
+          >
+            <a
+              href="/assets/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="ring-1 ring-orange-300 hover:bg-stone-100 font-semibold px-6 py-2.5 rounded-full transition-colors duration-200"
+              >Download CV</a
+            >
+            <a
+              href="./contact.html"
+              class="bg-stone-700 hover:bg-stone-800 text-white font-semibold px-6 py-2.5 rounded-full transition-colors duration-200"
+              >Contact Me →</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--------------------   About me section   ----------------->
+    <section id="about" class="py-20 px-4">
+      <div class="max-w-6xl mx-auto">
+        <p
+          class="text-xl text-center uppercase tracking-[0.2em] text-orange-500 font-semibold mb-2"
+        >
+          Get To Know
+        </p>
+        <h2
+          class="text-center text-4xl font-semibold text-text-dark mb-8 tracking-tight md:text-5xl"
+        >
+          About Me
+        </h2>
+        <div
+          class="bg-[#ede8de] rounded-3xl p-4 grid grid-cols-1 md:grid-cols-2 gap-4"
+        >
+          <div
+            class="bg-[#d4eacd] rounded-2xl p-8 flex flex-col justify-between min-h-[420px] hover:-translate-y-1 transition-transform duration-300 ease-in-out"
+          >
+            <div class="flex justify-center items-center h-52 mb-6">
+              <div class="relative">
+                <div
+                  class="w-36 h-36 bg-gray-900 rounded-2xl flex flex-col items-center justify-center shadow-2xl rotate-3 transform"
+                >
+                  <span class="text-5xl mb-1">📦</span>
+                  <span
+                    class="text-yellow-400 font-black text-xs tracking-widest uppercase"
+                    >Amazon Expert</span
+                  >
+                </div>
+                <div
+                  class="absolute -top-3 -right-3 bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded-full"
+                >
+                  8 Yrs
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-3 leading-tight">
+                Amazon & Business Operations
+              </h3>
+              <p class="text-gray-700 text-sm leading-relaxed mb-6">
+                With 8 years at Amazon as a Business Operations Analyst, I bring
+                data-driven thinking to every engagement. I help Amazon sellers
+                manage accounts, optimize listings, and scale operations — the
+                same way Amazon does it from the inside.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 bg-gray-900 text-white text-sm font-semibold px-5 py-3 rounded-xl hover:bg-gray-700 transition-colors duration-200"
+                >Learn More</a
+              >
+            </div>
+          </div>
+          <div
+            class="bg-[#cce0f0] rounded-2xl p-8 flex flex-col justify-between min-h-[420px] hover:-translate-y-1 transition-transform duration-300 ease-in-out"
+          >
+            <div class="flex justify-center items-center h-52 mb-6">
+              <div class="relative w-36 h-36">
+                <div
+                  class="absolute bottom-4 left-0 w-32 h-24 bg-gray-900 rounded-xl shadow-xl flex flex-col items-center justify-center"
+                >
+                  <span class="text-3xl mb-1">🌐</span>
+                  <span
+                    class="text-white font-black text-xs tracking-widest uppercase"
+                    >Web & SEO</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-3 leading-tight">
+                Websites, SEO & Digital Growth
+              </h3>
+              <p class="text-gray-700 text-sm leading-relaxed mb-6">
+                I build fast, conversion-focused websites and craft SEO
+                strategies that drive real organic traffic. Every site I build
+                is treated as a business growth tool — not just a digital
+                brochure. Your online presence, built to perform.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 bg-gray-900 text-white text-sm font-semibold px-5 py-3 rounded-xl hover:bg-gray-700 transition-colors duration-200"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-------------------- Experience Section  ----------------->
+    <section
+      id="experience"
+      class="relative py-20 px-4 max-w-5xl mx-auto pb-[40vh]"
+    >
+      <div class="text-center mb-14">
+        <p
+          class="text-xl uppercase tracking-[0.2em] text-orange-500 font-semibold mb-2"
+        >
+          My Journey
+        </p>
+        <h2
+          class="text-4xl md:text-5xl font-semibold text-text-dark leading-tight"
+        >
+          Experience & Expertise
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
+        <div
+          class="stat-card bg-gray-900 text-white rounded-2xl p-5 text-center"
+        >
+          <p class="text-4xl font-bold text-orange-400">8</p>
+          <p class="text-xs font-semibold text-gray-400 mt-1 uppercase">
+            Years at Amazon
+          </p>
+        </div>
+        <div class="stat-card bg-yellow-100 rounded-2xl p-5 text-center">
+          <p class="text-4xl font-bold text-gray-900">+17%</p>
+          <p class="text-xs font-semibold text-gray-700 mt-1 uppercase">
+            YoY Sales Growth
+          </p>
+        </div>
+        <div class="stat-card bg-teal-600 rounded-2xl p-5 text-center">
+          <p class="text-4xl font-bold text-white">−23%</p>
+          <p class="text-xs font-semibold text-gray-200 mt-1 uppercase">
+            Return Rate Cut
+          </p>
+        </div>
+        <div
+          class="stat-card bg-orange-500 text-white rounded-2xl p-5 text-center"
+        >
+          <p class="text-4xl font-bold">4+Yrs</p>
+          <p class="text-xs font-semibold text-orange-100 mt-1 uppercase">
+            Web & SEO
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-5xl mx-auto space-y-[100vh]">
+        <div
+          class="card sticky top-20 h-[500px] w-full bg-orange-500 rounded-3xl shadow-2xl flex items-center justify-center transition-all duration-500"
+        >
+          <div class="timeline-card w-full md:w-[calc(50%-2rem)] p-6">
+            <span
+              class="inline-block bg-orange-100 text-orange-600 text-xs font-semibold px-3 py-1 rounded-full mb-3"
+              >Feb 2017</span
+            >
+            <h3 class="font-bold text-2xl text-white mb-2 md:text-4xl">
+              Joined Amazon
+            </h3>
+            <p class="text-white leading-relaxed">
+              Started as a
+              <strong class="text-gray-200">Business Operations Analyst</strong>
+              within Amazon's direct seller business team working on data
+              analysis, seller growth, and risk mitigation.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="card sticky top-24 h-[500px] w-full bg-yellow-400 rounded-3xl shadow-2xl flex items-center justify-center transition-all duration-500"
+        >
+          <div
+            class="timeline-card w-full md:w-[calc(50%-2rem)] p-6 md:text-right"
+          >
+            <span
+              class="inline-block bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full mb-3"
+              >2020 — Present</span
+            >
+            <h3 class="text-2xl font-bold text-text-dark mb-2 md:text-4xl">
+              Discovered Web & SEO
+            </h3>
+            <p class="text-text-dark font-semibold">
+              While at Amazon, I began building custom websites and mastering
+              SEO — developing a strong foundation in organic growth, search
+              visibility, and performance-driven digital experiences
+            </p>
+            <div class="flex flex-wrap gap-2 mt-3 md:justify-end">
+              <span class="text-xs bg-white px-2 py-1 rounded-full border"
+                >HTML / CSS</span
+              >
+              <span class="text-xs bg-white px-2 py-1 rounded-full border"
+                >JavaScript</span
+              >
+              <span class="text-xs bg-white px-2 py-1 rounded-full border"
+                >SEO</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="card sticky top-28 h-[500px] w-full bg-teal-500 rounded-3xl shadow-2xl flex items-center justify-center transition-all duration-500"
+        >
+          <div
+            class="timeline-card w-full md:w-[calc(50%-1rem)] text-white p-6"
+          >
+            <span
+              class="inline-block bg-yellow-400 text-gray-900 text-xs font-semibold px-3 py-1 rounded-full mb-3"
+              >Oct 2024 — Now</span
+            >
+            <h3 class="text-2xl font-bold text-white mb-2 md:text-4xl">
+              Business Growth Consultant
+            </h3>
+            <p class="text-white leading-relaxed">
+              Combining 8 years of Amazon operations expertise with web
+              development and SEO — helping small businesses and Amazon sellers
+              grow smarter through data-driven strategy and custom digital
+              solutions.
+            </p>
+          </div>
+        </div>
+
+        <div
+          id="trigger-card"
+          class="card sticky top-32 z-50 h-auto min-h-[500px] w-full bg-slate-900 rounded-3xl shadow-[0_20px_50px_rgba(79,70,229,0.3)] flex items-center justify-center transition-all duration-700 mt-[60vh] border-2 border-indigo-500/50 p-8 mb-[40vh] md:p-12"
+        >
+          <div class="max-w-4xl w-full">
+            <div class="text-center mb-10">
+              <span
+                class="text-indigo-400 font-mono text-xl tracking-widest uppercase"
+                >The Growth DNA</span
+              >
+              <h2 class="text-3xl md:text-4xl font-black text-white mt-2">
+                Amazon Precision × Digital Strategy
+              </h2>
+            </div>
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm md:text-base"
+            >
+              <div
+                class="bg-slate-800/50 p-5 rounded-2xl border border-slate-700"
+              >
+                <div class="text-yellow-400 font-bold mb-1">
+                  +17% YoY Revenue
+                </div>
+                <p class="text-slate-300">
+                  Leveraging SQL/Redshift strategy to drive organic traffic.
+                </p>
+              </div>
+              <div
+                class="bg-slate-800/50 p-5 rounded-2xl border border-slate-700"
+              >
+                <div class="text-yellow-400 font-bold mb-1">+7% Retention</div>
+                <p class="text-slate-300">
+                  Optimizing UX insights to lower bounce rates.
+                </p>
+              </div>
+              <div
+                class="bg-slate-800/50 p-5 rounded-2xl border border-slate-700"
+              >
+                <div class="text-yellow-400 font-bold mb-1">
+                  −23% Return Rate
+                </div>
+                <p class="text-slate-300">
+                  Using Root-Cause Analysis (RCA) to bridge SEO gaps.
+                </p>
+              </div>
+              <div
+                class="bg-slate-800/50 p-5 rounded-2xl border border-slate-700"
+              >
+                <div class="text-yellow-400 font-bold mb-1">
+                  Data Storytelling
+                </div>
+                <p class="text-slate-300">
+                  Turning complex analytics into growth opportunities.
+                </p>
+              </div>
+              <div
+                class="md:col-span-2 bg-indigo-900/20 p-5 rounded-2xl border border-indigo-500/30"
+              >
+                <div class="text-yellow-400 font-bold mb-1">
+                  Structured Execution
+                </div>
+                <p class="text-slate-100">
+                  Applying Amazon-standard execution to web systems.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="merged-block"
+        class="fixed inset-0 z-[100] flex items-center justify-center pointer-events-none opacity-0 transition-all duration-700 scale-90"
+      >
+        <div
+          class="w-[90%] max-w-5xl h-[500px] bg-background-yellow rounded-3xl flex flex-col items-center justify-center shadow-2xl border-8 border-text-dark"
+        >
+          <h1
+            class="text-4xl font-black text-text-dark text-center md:text-6xl"
+          >
+            READY TO GROW
+          </h1>
+          <p class="text-xl font-semibold text-gray-600 px-3 mt-4">
+            Let's build your Amazon-scale digital presence.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-------------------- Project Section ----------------->
+    <section id="projects" class="space-y-16 mt-16 md:mt-24">
+      <div class="text-center mb-14">
+        <p
+          class="text-xl uppercase tracking-[0.2em] text-orange-500 font-semibold mb-2"
+        >
+          Projects
+        </p>
+        <h2
+          class="text-4xl md:text-5xl font-semibold text-text-dark leading-tight"
+        >
+          Latest Projects
+        </h2>
+      </div>
+      <!-- Parent: use items-stretch so children (cards) get equal height -->
+      <div
+        class="flex flex-col md:flex-row justify-between items-stretch gap-5 px-6 xl:max-w-6xl xl:mx-auto"
+      >
+        <!-- Card 1 -->
+        <div
+          class="flex flex-col flex-1 h-full bg-stone-100 space-y-6 p-2 rounded-lg shadow-lg ring-1 ring-stone-300 hover:-translate-y-1 duration-300 hover:cursor-pointer"
+        >
+          <img
+            src="/img/petsitter.jpg"
+            alt="petsitter website image"
+            class="w-full h-48 md:h-56 object-cover rounded-lg"
+          />
+          <div class="flex-1 flex flex-col justify-between">
+            <div>
+              <h2 class="text-2xl font-semibold dark:text-textColorDark">
+                Pet Sitters Website
+              </h2>
+              <p class="text-sm font-medium text-gray-500 pt-1">
+                Trusted Pet Sitting Services You Can Trust
+              </p>
+              <p
+                class="text-base text-center font-semibold bg-green-600 w-24 text-white mt-2 rounded-md"
+              >
+                <span class="text-red-300">●</span> Live
+              </p>
+            </div>
+            <a
+              href="./pages/projects/pet-sitter-website.html"
+              class="text-xl text-green-500 hover:text-blue-600 duration:300 max-w-36 font-semibold mt-4"
+              >Case Study <i class="fa-solid fa-arrow-right-long"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="flex flex-col flex-1 h-full bg-stone-100 space-y-6 p-2 rounded-lg shadow-lg ring-1 ring-stone-300 hover:-translate-y-1 duration-300 hover:cursor-pointer"
+        >
+          <img
+            src="/img/ngo.jpg"
+            alt=""
+            class="w-full h-48 md:h-56 object-cover rounded-lg"
+          />
+          <div class="flex-1 flex flex-col justify-between">
+            <div>
+              <h2 class="text-2xl font-semibold dark:text-textColorDark">
+                Fairmed India Project
+              </h2>
+              <p class="text-sm font-medium text-gray-500 pt-1">
+                Health for the Poorest Through Sustainable Support
+              </p>
+              <p
+                class="text-base text-center font-semibold bg-green-600 w-24 text-white mt-2 rounded-md"
+              >
+                <span class="text-red-300">●</span> Live
+              </p>
+            </div>
+            <a
+              href="./pages/projects/fairmed-india-project.html"
+              class="text-xl text-green-500 hover:text-blue-600 duration:300 max-w-36 font-semibold mt-4"
+              >Case Study <i class="fa-solid fa-arrow-right-long"></i
+            ></a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="flex flex-col flex-1 h-full bg-stone-100 space-y-6 p-2 rounded-lg shadow-lg ring-1 ring-stone-300 hover:-translate-y-1 duration-300 hover:cursor-pointer"
+        >
+          <img
+            src="/img/eyeclinic.jpg"
+            alt=""
+            class="w-full h-48 md:h-56 object-cover rounded-lg"
+          />
+          <div class="flex-1 flex flex-col justify-between">
+            <div>
+              <h2 class="text-2xl font-semibold dark:text-textColorDark">
+                Lensmaster Eye Clinic
+              </h2>
+              <p class="text-sm font-medium text-gray-500 pt-1">
+                Eye Care & Clinic With Better Professionals
+              </p>
+              <p
+                class="text-base text-center font-semibold bg-green-600 w-24 text-white mt-2 rounded-md"
+              >
+                <span class="text-red-300">●</span> Live
+              </p>
+            </div>
+            <a
+              href="#"
+              class="text-xl text-green-500 hover:text-blue-600 duration:300 max-w-36 font-semibold mt-4"
+              >Case Study <i class="fa-solid fa-arrow-right-long"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!---------------- Contact section ------------------>
+    <section id="contact" class="space-y-12 mt-16 md:space-y-16 md:mt-24">
+      <div class="text-center mb-14">
+        <p
+          class="text-xl uppercase tracking-[0.2em] text-orange-500 font-semibold mb-2"
+        >
+          Get In Touch
+        </p>
+        <h2
+          class="text-4xl md:text-5xl font-semibold text-text-dark leading-tight"
+        >
+          Contact Me
+        </h2>
+      </div>
+      <div>
+        <p
+          class="text-3xl duration-300 font-light text-text-dark text-center px-1 md:text-5xl text-scroll-color"
+        >
+          Let's Build Something <span class="text-[#0047FF]">Beautiful & Functional</span>
+        </p>
+      </div>
+      <div class="text-center scroll-animation from-bottom">
+        <a
+          href="./contact.html"
+          class="text-2xl hover:text-4xl font-bold px-10 py-2 ring-1 ring-orange-300 hover:ring-4 hover:bg-orange-100 duration-300 rounded-full shadow-md md:text-3xl"
+          >Say Hi!</a
+        >
+      </div>
+    </section>
+    <!--------------- Footer Section ---------------->
+    <footer class="mb-7 mt-16 mb:mt-20">
+      <div
+        class="text-center grid grid-cols-2 md:space-x-10 gap-y-3 md:block text-2xl font-medium"
+      >
+        <a href="#about" class="hover:text-orange-400 duration-200">About</a>
+        <a href="#experience" class="hover:text-orange-400 duration-200"
+          >Experience</a
+        >
+        <a href="#projects" class="hover:text-orange-400 duration-200"
+          >Projects</a
+        >
+        <a
+          href="./pages/blogs/blog-menu.html"
+          class="hover:text-orange-400 duration-200"
+          >Blogs</a
+        >
+      </div>
+      <div class="text-center my-7 py-10 text-4xl md:text-5xl">
+        <a href="https://github.com/firstprogram7"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/shazid-rahman/"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+      </div>
+      <p
+        class="font-semibold text-textColorLight text-center mt-10 px-3 md:mt-14"
+      >
+        Copyright &copy 2026 Shazid. All rights reserved.
+      </p>
+    </footer>
+    <!------------- Scroll Indicator ---------->
+
+    <script src="/main.js"></script>
+  </body>
+</html>
