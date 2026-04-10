@@ -26,14 +26,21 @@
       </div>
     </section>
     <!--------------------    Navigation bar    ----------------->
-    <header id="main-header" class="relative z-50 scroll-mt-20">
+    <header id="main-header" class="sticky top-0 z-50 scroll-mt-20">
       <nav class="container mx-auto">
         <div class="flex justify-between items-center px-4 py-4">
-          <a href="/index.html" id="logo" class="text-4xl font-bold md:text-5xl"
+          <a href="/index.html" id="logo" class="text-4xl font-bold md:text-5xl transistion-all duration-300  ease-in-out"
             >Shazid</a
           >
-          <div id="nav-links" class="hidden md:flex space-x-6">
-            <a href="#about" class="hover:text-orange-400 md:text-xl lg:text-2xl"
+          <div id="nav-links" class="hidden lg:flex space-x-6">
+            <a
+              href="/index.html"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl transistion-all duration-150  ease-in-out"
+              >Home</a
+            >
+            <a
+              href="/src/about.html"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
               >About</a
             >
             <a
@@ -57,7 +64,7 @@
               >Contact Me</a
             >
           </div>
-          <button id="menu-btn" class="block relative w-12 h-12 md:hidden">
+          <button id="menu-btn" class="block relative w-12 h-12 lg:hidden">
             <span
               class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary -translate-y-2 transition-all duration-300"
             ></span>
@@ -71,15 +78,20 @@
         </div>
         <div
           id="mobile-menu"
-          class="absolute left-0 top-full w-full bg-white shadow-lg py-10 px-6 space-y-6 text-lg text-center scale-y-0 font-bold transform origin-top transition-all duration-200 z-50"
+          class="absolute left-0 top-full w-full bg-[#f8fafc] shadow-lg py-10 px-6 space-y-6 text-lg text-center scale-y-0 font-bold transform origin-top transition-all duration-200 z-50"
         >
-          <a href="#about" class="block hover:text-orange-400">About</a>
+          <a href="/index.html" class="block hover:text-orange-400">Home</a>
+          <a href="/src/about.html" class="block hover:text-orange-400">About</a>
           <a href="#experience" class="block hover:text-orange-400"
             >Experience</a
           >
           <a href="#projects" class="block hover:text-orange-400">Projects</a>
-          <a href="./blog-menu.html" class="block hover:text-orange-400">Blogs</a>
-          <a href="/src/contact.html" class="block hover:text-orange-400">Contact Me</a>
+          <a href="./blog-menu.html" class="block hover:text-orange-400"
+            >Blogs</a
+          >
+          <a href="/src/contact.html" class="block hover:text-orange-400"
+            >Contact Me</a
+          >
         </div>
       </nav>
     </header>
@@ -99,7 +111,7 @@
     <section>
       <div class="px-6">
         <!-- Main card -->
-        <a href="../blogs/maintain-your-website.html">
+        <a href="./maintain-your-website.html">
           <div
             class="flex flex-col relative overflow-hidden group items-center gap-6 bg-white dark:bg-stone-700 max-w-6xl mx-auto rounded-3xl shadow md:flex-row md:gap-12"
           >
@@ -180,7 +192,7 @@
             </div>
           </a>
           <!-- Card#2-->
-          <a href="../blogs/motivation-in-learning.html" class="flex-1">
+          <a href="./motivation-in-learning.html" class="flex-1">
             <div
               class="flex flex-col-reverse bg-white dark:bg-stone-700 gap-2 shadow rounded-3xl h-full min-h-[260px] md:flex-row md:gap-6"
             >
@@ -214,7 +226,7 @@
             </div>
           </a>
           <!-- Card#3 -->
-          <a href="../blogs/my-react-learning-journey.html" class="flex-1">
+          <a href="./my-react-learning-journey.html" class="flex-1">
             <div
               class="flex flex-col-reverse bg-white dark:bg-stone-700 gap-2 shadow rounded-3xl h-full min-h-[260px] md:flex-row md:gap-6"
             >
@@ -258,7 +270,7 @@
         <!-- Card container -->
         <div class="px-6 space-y-3">
           <!-- Card#1 -->
-          <a href="../blogs/mordern-websites.html">
+          <a href="./mordern-websites.html">
             <div class="flex gap-7">
               <!-- Card image -->
               <div class="max-w-52 mt-4">
@@ -291,7 +303,7 @@
             class="border-1 border-gray-300 dark:border-stone-500 md:border-2"
           />
           <!-- Card#2 -->
-          <a href="../blogs/my-backend-learning-journey.html">
+          <a href="./my-backend-learning-journey.html">
             <div class="flex gap-7">
               <!-- Card image -->
               <div class="max-w-52 mt-4">
@@ -319,7 +331,7 @@
           </a>
           <hr class="border-2 border-gray-300 dark:border-stone-500" />
           <!-- Card#3-->
-          <a href="../blogs//ai-powered-websites.html">
+          <a href="./ai-powered-websites.html">
             <div class="flex gap-7">
               <!-- Card image -->
               <div class="max-w-52 mt-4">
@@ -398,19 +410,27 @@
       <div
         class="text-center grid grid-cols-2 md:space-x-10 gap-y-3 md:block text-2xl font-medium"
       >
-        <a href="#about" class="hover:text-orange-400 duration-200">About</a>
+        <a href="/src/about.html" class="hover:text-orange-400 duration-200">About</a>
         <a href="#experience" class="hover:text-orange-400 duration-200"
           >Experience</a
         >
         <a href="#projects" class="hover:text-orange-400 duration-200"
           >Projects</a
         >
-        <a href="../blogs/blog-menu.html" class="hover:text-orange-400 duration-200">Blogs</a>
+        <a
+          href="../blogs/blog-menu.html"
+          class="hover:text-orange-400 duration-200"
+          >Blogs</a
+        >
       </div>
       <div class="text-center my-7 py-10 text-4xl md:text-5xl">
-        <a href="https://github.com/firstprogram7"><i class="fa-brands fa-github"></i></a>
+        <a href="https://github.com/firstprogram7"
+          ><i class="fa-brands fa-github"></i
+        ></a>
         <a href=""><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/shazid-rahman/"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/shazid-rahman/"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
       </div>
       <p
         class="font-semibold text-textColorLight text-center mt-10 px-3 md:mt-14"

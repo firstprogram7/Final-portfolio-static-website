@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/dist/output.css" />
+    <title>About Me</title>
+  </head>
+
+  <body
+    class="dark:bg-[#121212] text-text-dark dark:text-slate-300 transition-colors duration-300"
+  >
+    <!-------------------- Dark mode toggle button ----------------->
+    <section class="bg-[#fdf5e2] dark:bg-[#121212]">
+      <div class="flex justify-end px-6 pt-3 lg:px-4">
+        <div
+          class="switch px-3 py-1 rounded-full space-x-2 max-w-20 bg-stone-700 hover:bg-stone-800 border border-orange-300 dark:border-orange-400 shadow-sm duration-300"
+        >
+          <i
+            id="light-mode"
+            class="fa-regular fa-sun text-background-yellow dark:text-stone-500 cursor-pointer"
+          ></i>
+          <i
+            id="dark-mode"
+            class="fa-solid fa-moon text-stone-400 dark:text-stone-200 cursor-pointer"
+          ></i>
+        </div>
+      </div>
+    </section>
+
+    <!--------------------    Navigation bar    ----------------->
+    <header
+      id="main-header"
+      class="sticky top-0 z-50 scroll-mt-20 bg-[#fdf5e2] dark:bg-[#121213]"
+    >
+      <nav class="container mx-auto">
+        <div class="flex justify-between items-center px-4 py-4">
+          <a
+            href="/index.html"
+            id="logo"
+            class="text-4xl font-bold md:text-5xl transistion-all duration-300 ease-in-out"
+            >Shazid</a
+          >
+          <div id="nav-links" class="hidden lg:flex space-x-6">
+            <a
+              href="/index.html"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl transistion-all duration-150 ease-in-out"
+              >Home</a
+            >
+            <a
+              href="./about.html"
+              class="text-orange-400 md:text-xl lg:text-2xl"
+              >About</a
+            >
+            <a
+              href="#experience"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >Experience</a
+            >
+            <a
+              href="#projects"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >Projects</a
+            >
+            <a
+              href="./pages/blogs/blog-menu.html"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >Blogs</a
+            >
+            <a
+              href="#contact"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >Contact Me</a
+            >
+          </div>
+          <button id="menu-btn" class="block relative w-12 h-12 lg:hidden">
+            <span
+              class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary dark:bg-slate-300 -translate-y-2 transition-all duration-300"
+            ></span>
+            <span
+              class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary dark:bg-slate-300 transition-all duration-300"
+            ></span>
+            <span
+              class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary dark:bg-slate-300 translate-y-2 transition-all duration-300"
+            ></span>
+          </button>
+        </div>
+        <div
+          id="mobile-menu"
+          class="absolute left-0 top-full w-full bg-[#fdf5e2] dark:bg-[#121212] shadow-lg py-10 px-6 space-y-6 text-lg text-center scale-y-0 font-bold transform origin-top transition-all duration-200 z-50"
+        >
+          <a href="/index.html" class="block hover:text-orange-400">Home</a>
+          <a href="#about" class="block hover:text-orange-400">About</a>
+          <a href="#experience" class="block hover:text-orange-400"
+            >Experience</a
+          >
+          <a href="#projects" class="block hover:text-orange-400">Projects</a>
+          <a
+            href="./src/pages/blogs/blog-menu.html"
+            class="block hover:text-orange-400"
+            >Blogs</a
+          >
+          <a href="#contact" class="block hover:text-orange-400">Contact Me</a>
+        </div>
+      </nav>
+    </header>
+    <!------------------ Hero Section (#fdf5e2)----------------->
+    <section
+      class="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#fdf5e2] dark:bg-[#121212]"
+    >
+      <div class="grain-overlay"></div>
+
+      <!-- Decorative floating elements -->
+      <div class="absolute top-24 left-12 float-1 opacity-20">
+        <div
+          class="w-16 h-16 border-2 border-orange-400 rounded-2xl rotate-12"
+        ></div>
+      </div>
+      <div class="absolute top-40 right-20 float-2 opacity-15">
+        <div class="w-8 h-8 bg-orange-500 rounded-full"></div>
+      </div>
+      <div class="absolute bottom-40 left-24 float-3 opacity-10">
+        <div class="w-24 h-24 border border-orange-300 rounded-full"></div>
+      </div>
+      <div class="absolute bottom-32 right-16 float-4 opacity-20">
+        <div class="w-6 h-6 bg-orange-400 rotate-45"></div>
+      </div>
+      <div class="absolute top-1/3 right-8 float-1 opacity-10">
+        <div
+          class="w-32 h-32 border border-stone-600 rounded-3xl rotate-6"
+        ></div>
+      </div>
+
+      <!-- Radial glow -->
+      <div class="absolute inset-0 pointer-events-none">
+        <div
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-500 rounded-full blur-[120px] opacity-[0.07]"
+        ></div>
+      </div>
+
+      <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+        <div
+          class="text-orange-400 text-xl tracking-[0.3em] uppercase mb-6 reveal"
+        >
+          The story of Shazid Rahman
+        </div>
+
+        <h1
+          class="text-5xl md:text-7xl lg:text-8xl text-[#000035] leading-[1.05] mb-8 reveal"
+        >
+          It Started With<br />
+          <span class="text-orange-400 italic">a Broken Toy.</span>
+        </h1>
+
+        <p
+          class="text-stone-500 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed reveal"
+        >
+          Curiosity has always been my foundation today, I use it to build,
+          optimize, and grow digital experiences that deliver results.
+        </p>
+
+        <!-- Scroll indicator -->
+        <div class="mt-16 flex flex-col items-center gap-2 reveal">
+          <span class="text-stone-600 text-xs tracking-widest uppercase"
+            >Scroll to read</span
+          >
+          <div
+            class="w-px h-12 bg-gradient-to-b from-orange-500 to-transparent mx-auto scroll-dot"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <!-----------------   CHAPTER 1 — Childhood ---------------->
+    <section class="py-24 px-6 relative overflow-hidden">
+      <!-- Background decoration -->
+      <div
+        class="absolute -right-20 top-20 w-64 h-64 bg-orange-100 dark:hidden rounded-full blur-3xl opacity-60 pointer-events-none"
+      ></div>
+
+      <div class="max-w-5xl mx-auto">
+        <!-- Chapter label -->
+        <div class="flex items-center gap-4 mb-12 reveal">
+          <div class="text-orange-500 text-xl font-medium">Chapter 01</div>
+          <div class="flex-1 h-px bg-orange-200"></div>
+          <div class="text-stone-400 dark:text-stone-300 text-xl">
+            The Beginning
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <!-- Text -->
+          <div class="space-y-6 reveal-left">
+            <h2
+              class="font-display text-4xl md:text-5xl text-stone-900 dark:text-slate-300 leading-tight"
+            >
+              The Kid Who<br /><span class="underline-orange"
+                >Took Everything Apart.</span
+              >
+            </h2>
+            <p class="text-stone-600 dark:text-slate-400 leading-relaxed">
+              I was never the kid who just played with toys. I played with them
+              and then I took them apart.
+            </p>
+            <p class="text-stone-600 dark:text-slate-400 leading-relaxed">
+              Every toy my dad brought home would eventually end up in pieces on
+              the floor not out of carelessness, but out of pure curiosity. I
+              needed to know
+              <em class="text-stone-800 dark:text-orange-400 font-medium"
+                >what was inside</em
+              >. How did it move? What made it spin? What was the engineering
+              behind it?
+            </p>
+            <p class="text-stone-600 dark:text-slate-400 leading-relaxed">
+              That obsession with understanding how things work never really
+              left me -
+              <em class="text-stone-800 dark:text-orange-400 font-medium"
+                >it just evolved.</em
+              >
+            </p>
+          </div>
+
+          <!-- Visual: Toy workshop illustration -->
+          <div class="reveal-right">
+            <div class="relative">
+              <div
+                class="bg-stone-900 rounded-3xl p-8 aspect-square flex flex-col items-center justify-center gap-4 relative overflow-hidden noise hover-lift"
+              >
+                <!-- Background circles -->
+                <div
+                  class="absolute top-4 right-4 w-24 h-24 bg-orange-500 rounded-full opacity-10 blur-xl"
+                ></div>
+                <div
+                  class="absolute bottom-4 left-4 w-32 h-32 bg-orange-400 rounded-full opacity-5 blur-2xl"
+                ></div>
+
+                <div class="text-7xl float-1">🔧</div>
+                <div class="text-center z-10">
+                  <p
+                    class="text-orange-400 text-xs tracking-widest uppercase mb-2"
+                  >
+                    Curiosity Engine
+                  </p>
+                  <p
+                    class="text-stone-300 text-sm leading-relaxed max-w-48 text-center"
+                  >
+                    Bamboo rotors. Salvaged motors. DIY helicopters. Pure
+                    engineering instinct.
+                  </p>
+                </div>
+                <!-- decorative items -->
+                <div class="absolute top-6 left-8 text-3xl float-2 opacity-40">
+                  ⚙️
+                </div>
+                <div
+                  class="absolute bottom-8 right-6 text-2xl float-3 opacity-40"
+                >
+                  🔩
+                </div>
+                <div
+                  class="absolute top-1/2 right-6 text-xl float-4 opacity-30"
+                >
+                  💡
+                </div>
+              </div>
+
+              <!-- Floating tag -->
+              <div
+                class="absolute -bottom-4 -left-4 bg-orange-500 text-white text-xs font-semibold px-4 py-2 rounded-full shadow-lg"
+              >
+                Born to build ✦
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pull quote -->
+        <div class="mt-16 relative reveal">
+          <div class="big-quote">"</div>
+          <blockquote
+            class="text-2xl md:text-3xl font-display text-stone-800 dark:text-slate-400 italic leading-relaxed pl-6 border-l-4 border-orange-400 ml-4"
+          >
+            By the time I was old enough to build things myself, I was chipping
+            bamboo into rotor blades, salvaging motors from broken toys, and
+            assembling my own miniature helicopters.
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!---------------    MARQUEE DIVIDER --------------->
+    <div class="bg-orange-500 py-4 overflow-hidden">
+      <div class="marquee-track text-white text-sm font-medium tracking-widest">
+        <span class="px-8">CURIOUS BY NATURE</span
+        ><span class="px-4 opacity-40">✦</span>
+        <span class="px-8">BUILT TO ANALYSE</span
+        ><span class="px-4 opacity-40">✦</span>
+        <span class="px-8">8 YEARS AT AMAZON</span
+        ><span class="px-4 opacity-40">✦</span>
+        <span class="px-8">DRIVEN BY DATA</span
+        ><span class="px-4 opacity-40">✦</span>
+        <span class="px-8">WEBSITES THAT CONVERT</span
+        ><span class="px-4 opacity-40">✦</span>
+        <span class="px-8">SEO THAT RANKS</span
+        ><span class="px-4 opacity-40">✦</span>
+        <span class="px-8">CURIOUS BY NATURE</span
+        ><span class="px-4 opacity-40">✦</span>
+        <span class="px-8">BUILT TO ANALYSE</span
+        ><span class="px-4 opacity-40">✦</span>
+        <span class="px-8">8 YEARS AT AMAZON</span
+        ><span class="px-4 opacity-40">✦</span>
+        <span class="px-8">DRIVEN BY DATA</span
+        ><span class="px-4 opacity-40">✦</span>
+        <span class="px-8">WEBSITES THAT CONVERT</span
+        ><span class="px-4 opacity-40">✦</span>
+        <span class="px-8">SEO THAT RANKS</span
+        ><span class="px-4 opacity-40">✦</span>
+      </div>
+    </div>
+
+    <!-------------    CHAPTER 2 — Education ------------------->
+    <section class="py-24 px-6 bg-[#ede8de]">
+      <div class="max-w-5xl mx-auto">
+        <div class="flex items-center gap-4 mb-12 reveal">
+          <div class="font-mono text-orange-500 text-xl font-medium">
+            Chapter 02
+          </div>
+          <div class="flex-1 h-px bg-stone-300"></div>
+          <div class="font-mono text-stone-400 text-xl">The Student</div>
+        </div>
+
+        <div class="grid md:grid-cols-5 gap-10 items-center">
+          <!-- Visual -->
+          <div class="md:col-span-2 reveal-left">
+            <div
+              class="bg-white rounded-3xl p-8 shadow-sm hover-lift border border-stone-200"
+            >
+              <div class="flex justify-center mb-6">
+                <div class="relative">
+                  <div
+                    class="w-24 h-24 bg-orange-100 rounded-full flex items-center justify-center text-5xl"
+                  >
+                    🎓
+                  </div>
+                  <div
+                    class="absolute -bottom-2 -right-2 w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white text-xs font-bold"
+                  >
+                    B.E
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <p class="font-display text-xl text-stone-900 mb-1">
+                  Engineering Graduate
+                </p>
+                <p class="text-orange-500 text-sm font-medium">
+                  Visvesvaraya Technological University
+                </p>
+                <p class="text-stone-400 text-xs mt-1">VTU, Karnataka</p>
+              </div>
+              <div
+                class="mt-6 pt-6 border-t border-stone-100 grid grid-cols-2 gap-4 text-center"
+              >
+                <div>
+                  <p class="font-display text-2xl text-stone-900">Science</p>
+                  <p class="text-stone-400 text-xs">Schooling Stream</p>
+                </div>
+                <div>
+                  <p class="font-display text-2xl text-stone-900">Engg.</p>
+                  <p class="text-stone-400 text-xs">Graduation</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Text -->
+          <div class="md:col-span-3 space-y-5 reveal-right">
+            <h2 class="font-display text-4xl text-stone-900 leading-tight">
+              The Student Who<br /><span class="text-orange-500 italic"
+                >Always Asked "Why?"</span
+              >
+            </h2>
+            <p class="text-stone-600 leading-relaxed text-lg">
+              I was never the top of my class. I was average and completely fine
+              with that. Because I was always more interested in
+              <strong class="text-stone-800">understanding</strong> things than
+              memorising them.
+            </p>
+            <p class="text-stone-600 leading-relaxed">
+              I completed my schooling in Science and went on to graduate in
+              Engineering from
+              <strong class="text-stone-800"
+                >Visvesvaraya Technological University (VTU)</strong
+              >. Engineering felt like a natural fit it was the closest academic
+              world to the way my brain already worked.
+            </p>
+            <p class="text-stone-600 leading-relaxed">
+              But the real education was still ahead of me.
+            </p>
+            <div
+              class="inline-flex items-center gap-2 bg-stone-900 text-white text-sm font-medium px-4 py-2 rounded-full"
+            >
+              <span>📦</span> Next stop: Amazon
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-----------   CHAPTER 3 — Amazon (Dark Section) ------------------->
+    <section
+      class="py-24 px-6 bg-[#1c1917] text-white relative overflow-hidden"
+    >
+      <!-- Background glow -->
+      <div
+        class="absolute top-0 right-0 w-96 h-96 bg-orange-600 rounded-full blur-[120px] opacity-[0.08] pointer-events-none"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-80 h-80 bg-orange-500 rounded-full blur-[100px] opacity-[0.06] pointer-events-none"
+      ></div>
+
+      <div class="max-w-5xl mx-auto relative z-10">
+        <div class="flex items-center gap-4 mb-12 reveal">
+          <div class="font-mono text-orange-400 text-xl font-medium">
+            Chapter 03
+          </div>
+          <div class="flex-1 h-px bg-stone-700"></div>
+          <div class="font-mono text-stone-500 dark:text-stone-300 text-xl">
+            The Amazon Years
+          </div>
+        </div>
+
+        <!-- Heading -->
+        <div class="max-w-3xl mb-12 reveal">
+          <h2
+            class="font-display text-4xl md:text-6xl text-white leading-tight mb-6"
+          >
+            The Amazon Chapter<br />
+            <span class="text-orange-400 italic"
+              >Where Curiosity Met Scale.</span
+            >
+          </h2>
+          <p class="text-stone-400 text-lg leading-relaxed">
+            Right after graduation, an opportunity came knocking and it had
+            Amazon's name on it. I didn't think twice.
+          </p>
+        </div>
+
+        <!-- Timeline within Amazon -->
+        <div class="grid md:grid-cols-2 gap-6 mb-12">
+          <div
+            class="bg-stone-800 rounded-2xl p-6 border border-stone-700 hover-lift reveal-left"
+          >
+            <div class="font-mono text-orange-400 text-xs tracking-widest mb-3">
+              Feb 2017
+            </div>
+            <h3 class="font-display text-xl text-white mb-2">
+              Joined as Risk Analyst
+            </h3>
+            <p class="text-stone-400 text-sm leading-relaxed">
+              Started at Amazon's direct seller business team analysing data,
+              uncovering patterns, protecting marketplace integrity at scale.
+            </p>
+          </div>
+          <div
+            class="bg-stone-800 rounded-2xl p-6 border border-stone-700 hover-lift reveal-right"
+          >
+            <div class="font-mono text-orange-400 text-xs tracking-widest mb-3">
+              2017 → 2024
+            </div>
+            <h3 class="font-display text-xl text-white mb-2">
+              Grew into Business Ops
+            </h3>
+            <p class="text-stone-400 text-sm leading-relaxed">
+              Transitioned into a Business Operations Analyst role, connecting
+              deep-dive analysis with system-driven improvements.
+            </p>
+          </div>
+        </div>
+
+        <!-- Philosophy quote -->
+        <div
+          class="bg-orange-500 rounded-3xl p-8 mb-12 relative overflow-hidden reveal"
+        >
+          <div
+            class="absolute -top-6 -right-4 font-display text-9xl text-orange-400 opacity-20 pointer-events-none leading-none"
+          >
+            "
+          </div>
+          <p
+            class="font-display text-2xl md:text-3xl text-white italic leading-relaxed relative z-10"
+          >
+            Good analysis doesn't just explain what happened — it drives what
+            should happen next.
+          </p>
+          <p class="text-orange-200 text-sm mt-4 font-medium relative z-10">
+            — A belief shaped by 8 years inside Amazon
+          </p>
+        </div>
+
+        <!-- Impact Numbers -->
+        <div class="mb-6 reveal">
+          <p
+            class="font-mono text-stone-500 text-xl tracking-widest uppercase mb-6"
+          >
+            Impact Delivered at Amazon
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div
+              class="bg-stone-900 border border-stone-700 rounded-2xl p-6 hover-lift"
+            >
+              <p
+                class="font-display text-5xl font-bold text-orange-400 impact-num"
+              >
+                +17%
+              </p>
+              <p class="text-white font-semibold mt-2 mb-1">YoY Sales Growth</p>
+              <p class="text-stone-400 text-sm leading-relaxed">
+                Identified behavioral trends for high-value seller accounts and
+                developed strategic Plans of Action using SQL & Redshift.
+              </p>
+            </div>
+
+            <div
+              class="bg-stone-900 border border-stone-700 rounded-2xl p-6 hover-lift"
+            >
+              <p
+                class="font-display text-5xl font-bold text-green-400 impact-num"
+              >
+                +7%
+              </p>
+              <p class="text-white font-semibold mt-2 mb-1">Seller Retention</p>
+              <p class="text-stone-400 text-sm leading-relaxed">
+                Cross-functional collaboration with Policy Makers and Account
+                Managers to close SOP gaps and optimise seller experience.
+              </p>
+            </div>
+
+            <div
+              class="bg-stone-900 border border-stone-700 rounded-2xl p-6 hover-lift"
+            >
+              <p
+                class="font-display text-5xl font-bold text-blue-400 impact-num"
+              >
+                −23%
+              </p>
+              <p class="text-white font-semibold mt-2 mb-1">Product Returns</p>
+              <p class="text-stone-400 text-sm leading-relaxed">
+                Root-cause analysis of logistics and transit errors for major
+                brands via cross-functional coordination with FBA teams.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- More achievements -->
+        <div class="grid md:grid-cols-2 gap-4 reveal">
+          <div
+            class="flex items-start gap-4 bg-stone-800 rounded-xl p-4 border border-stone-700"
+          >
+            <div
+              class="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center text-lg shrink-0"
+            >
+              📊
+            </div>
+            <div>
+              <p class="text-white font-medium text-sm">
+                Weekly Business Reviews
+              </p>
+              <p class="text-stone-400 text-xs mt-1">
+                Owned data storytelling for WBRs — translating complex metrics
+                into executive-level insights for senior leadership.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex items-start gap-4 bg-stone-800 rounded-xl p-4 border border-stone-700"
+          >
+            <div
+              class="w-10 h-10 bg-orange-500 rounded-xl flex items-center justify-center text-lg shrink-0"
+            >
+              🎓
+            </div>
+            <div>
+              <p class="text-white font-medium text-sm">Lead Trainer</p>
+              <p class="text-stone-400 text-xs mt-1">
+                Onboarded and trained new hires and internal transfers,
+                achieving 100% policy compliance across teams.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!---------------     CHAPTER 4 — The Painter Story     --------------->
+    <section class="py-24 px-6 relative overflow-hidden">
+      <div
+        class="absolute -left-20 top-1/3 w-64 h-64 bg-green-100 dark:hidden rounded-full blur-3xl opacity-70 pointer-events-none"
+      ></div>
+
+      <div class="max-w-5xl mx-auto">
+        <div class="flex items-center gap-4 mb-12 reveal">
+          <div class="text-orange-500 text-xl font-medium">Chapter 04</div>
+          <div class="flex-1 h-px bg-orange-200"></div>
+          <div class="font-mono text-stone-500 dark:text-stone-300 text-xl">
+            The Website That Changed Everything
+          </div>
+        </div>
+
+        <!-- Heading -->
+        <div class="max-w-3xl mb-16 reveal">
+          <h2
+            class="font-display text-4xl md:text-5xl text-stone-900 dark:text-stone-400 leading-tight"
+          >
+            The Website That<br /><span class="text-orange-500 italic"
+              >Changed Everything.</span
+            >
+          </h2>
+        </div>
+
+        <!-- Story layout -->
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <!-- Main story -->
+          <div class="md:col-span-2 space-y-5 reveal-left">
+            <p
+              class="text-stone-600 dark:text-stone-400 text-lg leading-relaxed"
+            >
+              Even while building my career at Amazon, that childhood instinct
+              to
+              <em class="text-stone-800 dark:text-orange-400 font-medium"
+                >create</em
+              >
+              kept pulling at me. I started exploring web development on the
+              side teaching myself HTML, CSS, and JavaScript first, then
+              gradually moving into Node.js, MongoDB, React, and backend
+              development. Not because someone told me to, but because I
+              genuinely couldn't stop.
+            </p>
+            <p
+              class="text-stone-600 dark:text-stone-400 text-lg leading-relaxed"
+            >
+              My first real project wasn't for a client. It was for a friend.
+              She was an incredibly talented painter — one of those people whose
+              work stops you mid-scroll — but nobody knew she existed online.
+              She had no website, no digital presence, no way for the world to
+              find her.
+            </p>
+            <p
+              class="text-stone-600 dark:text-stone-400 text-lg leading-relaxed"
+            >
+              <strong class="text-stone-800 dark:text-orange-400"
+                >So I built her one.</strong
+              >
+              I listed every piece of her art, designed the experience around
+              her creative identity, and put her work in front of the world. She
+              started getting real, paying clients. She'd call me just to say
+              thank you.
+            </p>
+            <p class="text-stone-800 dark:text-orange-400 font-medium text-lg">
+              That moment told me everything I needed to know.
+            </p>
+          </div>
+
+          <!-- Painter card visual -->
+          <div class="reveal-right">
+            <div
+              class="bg-[#1c1917] rounded-3xl p-6 h-full flex flex-col justify-between hover-lift"
+            >
+              <div class="text-6xl text-center py-6">🎨</div>
+              <div>
+                <div class="flex items-center gap-2 mb-3">
+                  <div
+                    class="w-2 h-2 bg-green-400 rounded-full animate-pulse"
+                  ></div>
+                  <span class="text-green-400 font-mono text-xs"
+                    >First project</span
+                  >
+                </div>
+                <p class="text-white font-display text-xl mb-2">
+                  "The Painter's Website"
+                </p>
+                <p class="text-stone-400 text-sm leading-relaxed mb-4">
+                  No online presence → Real paying clients. A passion project
+                  that proved everything.
+                </p>
+                <div class="bg-stone-800 rounded-xl p-3 text-center">
+                  <p class="text-orange-400 text-xs font-mono tracking-wider">
+                    RESULT
+                  </p>
+                  <p class="text-white font-semibold text-sm mt-1">
+                    First paying clients acquired 🎉
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- No WordPress badge -->
+        <div class="bg-stone-900 rounded-2xl p-8 reveal">
+          <div
+            class="flex flex-col md:flex-row items-start md:items-center gap-6"
+          >
+            <div class="text-5xl">⚡</div>
+            <div class="flex-1">
+              <p class="text-white font-display text-2xl mb-2">
+                No WordPress. Ever.
+              </p>
+              <p class="text-stone-400 leading-relaxed">
+                I want to be honest — I have never used CMS tools like
+                WordPress. Every site I've built has been written from scratch,
+                with real code. A WordPress site always looks like a theme
+                wearing a costume. A custom-coded website is something else
+                entirely — it has a soul. It's engineered, intentional, and
+                <em class="text-stone-300">built to perform.</em>
+              </p>
+            </div>
+            <div class="shrink-0">
+              <div
+                class="bg-orange-500 text-white font-mono text-xs font-bold px-4 py-2 rounded-full whitespace-nowrap"
+              >
+                100% Custom Code
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills tags -->
+        <div class="mt-8 reveal">
+          <p class="text-stone-400 text-xl mb-4 font-mono tracking-wider">
+            TECH STACK
+          </p>
+          <div class="flex flex-wrap gap-3 pb-2">
+            <span class="text-blue-500">{</span
+            ><span class="text-yellow-500">[</span><span class="text-yellow-800"
+              >'HTML', 'CSS', 'JavaScript', 'Node.js', 'MongoDB', 'React',
+              'SEO', 'Digital Marketing'</span
+            ><span class="text-yellow-500">]</span>.<span
+              class="text-purple-600"
+              >map</span
+            ><span class="text-yellow-500">(</span> s
+            <span class="text-blue-500">=></span
+            >s<span class="text-yellow-500">)</span
+            ><span class="text-blue-500">}</span>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <span
+              class="skill-tag bg-white border border-stone-200 text-stone-700 text-sm font-bold px-4 py-2 rounded-full cursor-default"
+              >HTML</span
+            >
+            <span
+              class="skill-tag bg-white border border-stone-200 text-stone-700 text-sm font-bold px-4 py-2 rounded-full cursor-default"
+              >CSS</span
+            >
+            <span
+              class="skill-tag bg-white border border-stone-200 text-stone-700 text-sm font-bold px-4 py-2 rounded-full cursor-default"
+              >JavaScript</span
+            >
+            <span
+              class="skill-tag bg-white border border-stone-200 text-stone-700 text-sm font-bold px-4 py-2 rounded-full cursor-default"
+              >Node.js</span
+            >
+            <span
+              class="skill-tag bg-white border border-stone-200 text-stone-700 text-sm font-bold px-4 py-2 rounded-full cursor-default"
+              >MongoDB</span
+            >
+            <span
+              class="skill-tag bg-white border border-stone-200 text-stone-700 text-sm font-bold px-4 py-2 rounded-full cursor-default"
+              >React</span
+            >
+            <span
+              class="skill-tag bg-orange-100 border border-orange-200 text-orange-700 text-sm font-bold px-4 py-2 rounded-full cursor-default"
+              >SEO</span
+            >
+            <span
+              class="skill-tag bg-orange-100 border border-orange-200 text-orange-700 text-sm font-bold px-4 py-2 rounded-full cursor-default"
+              >Digital Marketing</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--------------     CHAPTER 5 — SEO Results (Green Section) ----------->
+    <section class="py-24 px-6 bg-[#d4eacd] relative overflow-hidden">
+      <div
+        class="absolute top-0 right-0 w-72 h-72 bg-green-200 rounded-full blur-3xl opacity-50 pointer-events-none"
+      ></div>
+
+      <div class="max-w-5xl mx-auto relative z-10">
+        <div class="flex items-center gap-4 mb-12 reveal">
+          <div class="font-mono text-green-700 text-xl font-medium">
+            Chapter 05
+          </div>
+          <div class="flex-1 h-px bg-green-300"></div>
+          <div class="font-mono text-green-600 text-xl">Real World Results</div>
+        </div>
+
+        <h2
+          class="font-display text-4xl md:text-5xl text-stone-900 leading-tight mb-4 reveal"
+        >
+          From Amazon SEO to<br /><span class="text-green-700 italic"
+            >Real-World Rankings.</span
+          >
+        </h2>
+        <p class="text-stone-600 text-lg mb-12 max-w-2xl reveal">
+          Working inside Amazon meant learning SEO as a practical growth tool —
+          not a buzzword. I applied that same knowledge to every website I
+          built. The results have been real.
+        </p>
+
+        <!-- Case study cards -->
+        <div class="grid md:grid-cols-2 gap-6 mb-10">
+          <!-- Eye Clinic -->
+          <div
+            class="bg-white rounded-3xl p-8 shadow-sm hover-lift reveal-left"
+          >
+            <div class="flex items-start justify-between mb-6">
+              <div>
+                <div class="text-4xl mb-3">👀</div>
+                <h3 class="font-display text-2xl text-stone-900">Eye Clinic</h3>
+                <p class="text-stone-500 text-sm">Clinical Website + SEO</p>
+              </div>
+              <div
+                class="bg-green-100 text-green-700 font-mono text-xs font-bold px-3 py-1 rounded-full"
+              >
+                LIVE & RANKING
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4 mb-6">
+              <div class="bg-green-50 rounded-2xl p-4 text-center">
+                <p class="font-display text-4xl text-green-600">+45%</p>
+                <p class="text-green-700 text-xs mt-1 font-medium">
+                  Patient Footfall
+                </p>
+              </div>
+              <div class="bg-green-50 rounded-2xl p-4 text-center">
+                <p class="font-display text-4xl text-green-600">#3</p>
+                <p class="text-green-700 text-xs mt-1 font-medium">
+                  Google Rank
+                </p>
+              </div>
+            </div>
+            <p class="text-stone-500 text-sm leading-relaxed">
+              Built from scratch and executed a focused SEO strategy. Within 2
+              months the clinic ranked 3rd on Google — and it's still climbing.
+            </p>
+            <div class="flex items-center gap-2 mt-4">
+              <div
+                class="w-2 h-2 bg-green-400 rounded-full animate-pulse"
+              ></div>
+              <span class="text-green-600 text-xs font-mono"
+                >Still performing strong</span
+              >
+            </div>
+          </div>
+
+          <!-- NGO -->
+          <div class="bg-stone-900 rounded-3xl p-8 hover-lift reveal-right">
+            <div class="flex items-start justify-between mb-6">
+              <div>
+                <div class="text-4xl mb-3">🌍</div>
+                <h3 class="font-display text-2xl text-white">NGO Outreach</h3>
+                <p class="text-stone-400 text-sm">Digital Awareness Campaign</p>
+              </div>
+              <div
+                class="bg-orange-500 text-white font-mono text-xs font-bold px-3 py-1 rounded-full"
+              >
+                COMPLETED
+              </div>
+            </div>
+            <p class="text-stone-300 leading-relaxed mb-6">
+              An NGO whose primary goal was digital outreach and awareness. I
+              helped them reach more people and amplify their message in a way
+              that felt true to who they were.
+            </p>
+            <div class="bg-stone-800 rounded-xl p-4">
+              <p class="text-orange-400 font-mono text-xs tracking-widest mb-1">
+                OBJECTIVE MET
+              </p>
+              <p class="text-white text-sm font-medium">
+                Broader digital reach + real community awareness 🌱
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Philosophy -->
+        <div
+          class="bg-stone-900 rounded-2xl p-6 flex items-center gap-4 reveal"
+        >
+          <div class="text-3xl shrink-0">🎯</div>
+          <p class="text-stone-300 leading-relaxed">
+            Every project I've taken on, I've approached the same way:
+            <strong class="text-white"
+              >understand the business first, then build the solution around
+              it.</strong
+            >
+            From initial sketch to complete code — it's a creative process, and
+            I give every one everything I have.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+     CHAPTER 6 — Now
+══════════════════════════════════════════ -->
+    <section class="py-24 px-6 bg-[#ede8de]">
+      <div class="max-w-5xl mx-auto">
+        <div class="flex items-center gap-4 mb-12 reveal">
+          <div class="font-mono text-orange-500 text-xl font-medium">
+            Chapter 06
+          </div>
+          <div class="flex-1 h-px bg-stone-300"></div>
+          <div class="font-mono text-stone-500 text-xl">Now</div>
+        </div>
+
+        <!-- Two services -->
+        <div class="grid md:grid-cols-2 gap-6 mb-16">
+          <div
+            class="bg-white rounded-3xl p-8 border border-stone-200 shadow-sm hover-lift reveal-left"
+          >
+            <div
+              class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center text-3xl mb-6"
+            >
+              📦
+            </div>
+            <h3 class="font-display text-2xl text-stone-900 mb-3">
+              Amazon Sellers
+            </h3>
+            <p class="text-stone-600 leading-relaxed mb-4">
+              I help sellers who need someone who has actually worked inside
+              Amazon. I understand how the platform thinks — and I use that
+              knowledge to help you scale sales, manage accounts, and rank
+              products.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="bg-orange-50 text-orange-700 text-xs px-3 py-1 rounded-full border border-orange-100"
+                >Account Management</span
+              >
+              <span
+                class="bg-orange-50 text-orange-700 text-xs px-3 py-1 rounded-full border border-orange-100"
+                >Product Rankings</span
+              >
+              <span
+                class="bg-orange-50 text-orange-700 text-xs px-3 py-1 rounded-full border border-orange-100"
+                >Data Analysis</span
+              >
+              <span
+                class="bg-orange-50 text-orange-700 text-xs px-3 py-1 rounded-full border border-orange-100"
+                >Business Scaling</span
+              >
+            </div>
+          </div>
+
+          <div class="bg-[#1c1917] rounded-3xl p-8 hover-lift reveal-right">
+            <div
+              class="w-14 h-14 bg-stone-800 rounded-2xl flex items-center justify-center text-3xl mb-6"
+            >
+              🌐
+            </div>
+            <h3 class="font-display text-2xl text-white mb-3">
+              Small Businesses
+            </h3>
+            <p class="text-stone-400 leading-relaxed mb-4">
+              Fast, custom websites and real SEO strategies for businesses that
+              want to grow — not just look good online. I think about your
+              growth, not just your design.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="bg-stone-800 text-stone-300 text-xs px-3 py-1 rounded-full border border-stone-700"
+                >Custom Websites</span
+              >
+              <span
+                class="bg-stone-800 text-stone-300 text-xs px-3 py-1 rounded-full border border-stone-700"
+                >SEO Strategy</span
+              >
+              <span
+                class="bg-stone-800 text-stone-300 text-xs px-3 py-1 rounded-full border border-stone-700"
+                >Conversion Focus</span
+              >
+              <span
+                class="bg-stone-800 text-stone-300 text-xs px-3 py-1 rounded-full border border-stone-700"
+                >Digital Growth</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Big closing statement -->
+        <div class="text-center reveal">
+          <p
+            class="font-mono text-orange-500 text-2xl tracking-widest uppercase mb-4"
+          >
+            The Goal
+          </p>
+          <p
+            class="font-display text-3xl md:text-4xl text-[#010138] leading-tight max-w-3xl mx-auto"
+          >
+            "To give small businesses and Amazon sellers access to the same
+            data-driven strategies that power the world's biggest companies."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+     TRANSITION — Why I Left Amazon
+══════════════════════════════════════════ -->
+    <section class="py-20 px-6 bg-orange-500 relative overflow-hidden">
+      <div class="absolute inset-0 pointer-events-none opacity-10">
+        <div
+          class="absolute top-0 right-0 w-80 h-80 bg-white rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-0 left-0 w-60 h-60 bg-white rounded-full blur-3xl"
+        ></div>
+      </div>
+      <div class="max-w-4xl mx-auto relative z-10 reveal">
+        <p
+          class="font-mono text-orange-200 text-lg font-semibold tracking-widest uppercase mb-6"
+        >
+          In My Own Words
+        </p>
+        <blockquote
+          class="font-display text-2xl md:text-4xl text-white leading-relaxed"
+        >
+          "After nearly 8 years at Amazon, I realised the skills I'd built
+          analysing data, growing seller businesses, and solving operational
+          problems were exactly what small businesses needed but couldn't
+          access. Along the way, I discovered a passion for building websites,
+          optimising them for search engines, and creating digital experiences
+          that actually convert. So, I left to combine both worlds, bringing
+          Amazon-level business thinking, SEO strategy, and custom web solutions
+          directly to businesses who deserve it."
+        </blockquote>
+        <div class="flex items-center gap-4 mt-8">
+          <div class="w-12 h-0.5 bg-orange-300"></div>
+          <div>
+            <p class="text-white text-xl font-semibold">Shazid Rahman</p>
+            <p class="text-orange-200 text-lg font-medium">
+              Business Growth Consultant
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+     CHAPTER 7 — Outside Work
+══════════════════════════════════════════ -->
+    <section
+      class="py-24 px-6 bg-[#1c1917] text-white relative overflow-hidden"
+    >
+      <div
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-orange-600 rounded-full blur-[150px] opacity-[0.05] pointer-events-none"
+      ></div>
+
+      <div class="max-w-5xl mx-auto relative z-10">
+        <div class="flex items-center gap-4 mb-12 reveal">
+          <div class="font-mono text-orange-400 text-xl font-medium">
+            Chapter 07
+          </div>
+          <div class="flex-1 h-px bg-stone-700"></div>
+          <div class="font-mono text-stone-400 text-xl">Outside of Work</div>
+        </div>
+
+        <h2
+          class="font-display text-4xl md:text-5xl text-white leading-tight mb-12 reveal"
+        >
+          When I'm Not<br /><span class="text-orange-400 italic"
+            >Building Things.</span
+          >
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-6 reveal">
+          <div
+            class="bg-stone-900 rounded-3xl p-6 border border-stone-800 hover-lift"
+          >
+            <div class="text-3xl text-orange-400 mb-4 float-1">ō͡≡о</div>
+            <h3 class="font-display text-xl text-white mb-2">
+              Motorcycle Rides
+            </h3>
+            <p class="text-stone-400 text-sm leading-relaxed">
+              Long road trips on two wheels. Winding roads, early mornings, just
+              a helmet and a route. The best way to completely reset.
+            </p>
+          </div>
+
+          <div
+            class="bg-stone-900 rounded-3xl p-6 border border-stone-800 hover-lift"
+          >
+            <div class="text-5xl mb-4 float-2">⛺</div>
+            <h3 class="font-display text-xl text-white mb-2">Camping</h3>
+            <p class="text-stone-400 text-sm leading-relaxed">
+              Under open skies, away from screens. Camping reminds me that the
+              best experiences are slow, deliberate, and worth the effort.
+            </p>
+          </div>
+
+          <div
+            class="bg-stone-900 rounded-3xl p-6 border border-stone-800 hover-lift"
+          >
+            <div class="text-5xl mb-4 float-3">🎸</div>
+            <h3 class="font-display text-xl text-white mb-2">Guitar</h3>
+            <p class="text-stone-400 text-sm leading-relaxed">
+              Quietly playing guitar is where the ideas come from. Like building
+              a great website — slow, intentional, and worth every note.
+            </p>
+          </div>
+        </div>
+
+        <!-- Closing line -->
+        <div class="mt-16 text-center reveal">
+          <p
+            class="text-stone-400 text-sm font-mono tracking-wider uppercase mb-3"
+          >
+            Just like building a great website
+          </p>
+          <p class="font-display text-2xl md:text-3xl text-white italic">
+            The best things in life are slow, deliberate, and worth the effort.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+     CTA — Final
+══════════════════════════════════════════ -->
+    <section class="py-24 px-6 bg-[#f5f0e8] dark:bg-[#121212]">
+      <div class="max-w-3xl mx-auto text-center reveal">
+        <p
+          class="font-mono text-orange-500 text-xl tracking-widest uppercase mb-4"
+        >
+          Ready to grow?
+        </p>
+        <h2
+          class="font-display text-4xl md:text-5xl text-stone-900 dark:text-stone-400 leading-tight mb-6"
+        >
+          Let's Build Something<br /><span class="text-orange-500 italic"
+            >Worth Talking About.</span
+          >
+        </h2>
+        <p
+          class="text-stone-500 dark:text-stone-400 text-lg mb-10 leading-relaxed"
+        >
+          Whether you're an Amazon seller looking to scale, or a business that
+          needs a website that actually performs — I'd love to hear from you.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="#contact"
+            class="bg-stone-900 hover:bg-stone-700 text-white font-semibold px-8 py-3.5 rounded-full transition-colors duration-200 inline-flex items-center gap-2 justify-center"
+          >
+            Get in Touch <span>→</span>
+          </a>
+          <a
+            href="#services"
+            class="ring-1 ring-stone-300 hover:bg-stone-100 dark:hover:bg-stone-400 dark:hover:text-white text-stone-800 dark:text-stone-400 font-semibold px-8 py-3.5 rounded-full transition-colors duration-200"
+          >
+            View Services
+          </a>
+        </div>
+      </div>
+    </section>
+    <!--------------- Footer Section ---------------->
+    <footer class="pb-5 bg-[#f5f0e8] dark:bg-[#121212]">
+      <div
+        class="text-center grid grid-cols-2 md:space-x-10 gap-y-3 md:block text-2xl font-medium"
+      >
+        <a href="/index.html" class="hover:text-orange-400 duration-200"
+          >Home</a
+        >
+        <a href="#experience" class="hover:text-orange-400 duration-200"
+          >Experience</a
+        >
+        <a href="#projects" class="hover:text-orange-400 duration-200"
+          >Projects</a
+        >
+        <a
+          href="./src/pages/blogs/blog-menu.html"
+          class="hover:text-orange-400 duration-200"
+          >Blogs</a
+        >
+      </div>
+      <div class="text-center my-7 py-10 text-4xl md:text-5xl">
+        <a href="https://github.com/firstprogram7"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/shazid-rahman/"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+      </div>
+      <p
+        class="font-semibold text-textColorLight text-center mt-10 px-3 md:mt-14"
+      >
+        Copyright &copy 2026 Shazid. All rights reserved.
+      </p>
+    </footer>
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+
+      document
+        .querySelectorAll(".reveal, .reveal-left, .reveal-right")
+        .forEach((el) => {
+          observer.observe(el);
+        });
+    </script>
+    <script src="/main.js"></script>
+  </body>
+</html>
