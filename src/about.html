@@ -45,8 +45,10 @@
       id="main-header"
       class="sticky top-0 z-50 scroll-mt-20 bg-[#fdf5e2] dark:bg-[#121213]"
     >
-      <nav class="container mx-auto">
-        <div class="flex justify-between items-center px-4 py-4">
+      <nav class="container mx-auto max-w-6xl">
+        <div
+          class="flex justify-between items-center py-4 px-8 md:px-[55px] lg:px-0"
+        >
           <a
             href="/index.html"
             id="logo"
@@ -59,15 +61,11 @@
               class="hover:text-orange-400 md:text-xl lg:text-2xl transistion-all duration-150 ease-in-out"
               >Home</a
             >
+
             <a
-              href="./about.html"
-              class="text-orange-400 md:text-xl lg:text-2xl"
-              >About</a
-            >
-            <a
-              href="#experience"
+              href="#services"
               class="hover:text-orange-400 md:text-xl lg:text-2xl"
-              >Experience</a
+              >Services</a
             >
             <a
               href="#projects"
@@ -75,12 +73,17 @@
               >Projects</a
             >
             <a
+              href="./about.html"
+              class="text-orange-400 md:text-xl lg:text-2xl"
+              >About</a
+            >
+            <a
               href="./pages/blogs/blog-menu.html"
               class="hover:text-orange-400 md:text-xl lg:text-2xl"
               >Blogs</a
             >
             <a
-              href="#contact"
+              href="/src/contact.html"
               class="hover:text-orange-400 md:text-xl lg:text-2xl"
               >Contact Me</a
             >
@@ -102,17 +105,18 @@
           class="absolute left-0 top-full w-full bg-[#fdf5e2] dark:bg-[#121212] shadow-lg py-10 px-6 space-y-6 text-lg text-center scale-y-0 font-bold transform origin-top transition-all duration-200 z-50"
         >
           <a href="/index.html" class="block hover:text-orange-400">Home</a>
-          <a href="#about" class="block hover:text-orange-400">About</a>
-          <a href="#experience" class="block hover:text-orange-400"
-            >Experience</a
+
+          <a href="#services" class="block hover:text-orange-400"
+            >Services</a
           >
           <a href="#projects" class="block hover:text-orange-400">Projects</a>
+          <a href="#about" class="block hover:text-orange-400">About</a>
           <a
             href="./src/pages/blogs/blog-menu.html"
             class="block hover:text-orange-400"
             >Blogs</a
           >
-          <a href="#contact" class="block hover:text-orange-400">Contact Me</a>
+          <a href="/src/contact.html" class="block hover:text-orange-400">Contact Me</a>
         </div>
       </nav>
     </header>
@@ -745,15 +749,16 @@
           </p>
           <div class="flex flex-wrap gap-3 pb-2">
             <span class="text-blue-500">{</span
-            ><span class="text-yellow-500">[</span><span class="text-yellow-800"
+            ><span class="text-yellow-500">[</span
+            ><span class="text-yellow-800"
               >'HTML', 'CSS', 'JavaScript', 'Node.js', 'MongoDB', 'React',
               'SEO', 'Digital Marketing'</span
             ><span class="text-yellow-500">]</span>.<span
               class="text-purple-600"
               >map</span
             ><span class="text-yellow-500">(</span> s
-            <span class="text-blue-500">=></span
-            >s<span class="text-yellow-500">)</span
+            <span class="text-blue-500">=></span>s<span class="text-yellow-500"
+              >)</span
             ><span class="text-blue-500">}</span>
           </div>
           <div class="flex flex-wrap gap-3">
@@ -1187,8 +1192,8 @@
         <a href="/index.html" class="hover:text-orange-400 duration-200"
           >Home</a
         >
-        <a href="#experience" class="hover:text-orange-400 duration-200"
-          >Experience</a
+        <a href="#services" class="hover:text-orange-400 duration-200"
+          >Services</a
         >
         <a href="#projects" class="hover:text-orange-400 duration-200"
           >Projects</a

@@ -135,4 +135,4 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Scroll Reveal about page
+// Subscribe button function blog menu page

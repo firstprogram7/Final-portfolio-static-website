@@ -27,35 +27,36 @@
     </section>
     <!--------------------    Navigation bar    ----------------->
     <header id="main-header" class="sticky top-0 z-50 scroll-mt-20">
-      <nav class="container mx-auto">
-        <div class="flex justify-between items-center px-4 py-4">
+      <nav class="container mx-auto max-w-6xl"> 
+        <div class="flex justify-between items-center py-4 px-8  md:px-[55px]  lg:px-0">
           <a href="/index.html" id="logo" class="text-4xl font-bold md:text-5xl transistion-all duration-300  ease-in-out"
             >Shazid</a
           >
           <div id="nav-links" class="hidden lg:flex space-x-6">
-                        <a
+            <a
               href="/index.html"
               class="hover:text-orange-400 md:text-xl lg:text-2xl transistion-all duration-150  ease-in-out"
               >Home</a
             >
+
             <a
-              href="/src/about.html"
+              href="#services"
               class="hover:text-orange-400 md:text-xl lg:text-2xl"
-              >About</a
-            >
-            <a
-              href="#experience"
-              class="hover:text-orange-400 md:text-xl lg:text-2xl"
-              >Experience</a
+              >Services</a
             >
             <a
               href="#projects"
               class="hover:text-orange-400 md:text-xl lg:text-2xl"
               >Projects</a
             >
+                        <a
+              href="/src/about.html"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >About</a
+            >
             <a
               href="./blog-menu.html"
-              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              class="text-orange-400 md:text-xl lg:text-2xl"
               >Blogs</a
             >
             <a
@@ -80,12 +81,13 @@
           id="mobile-menu"
           class="absolute left-0 top-full w-full bg-[#f8fafc] shadow-lg py-10 px-6 space-y-6 text-lg text-center scale-y-0 font-bold transform origin-top transition-all duration-200 z-50"
         >
-        <a href="/index.html" class="block hover:text-orange-400">Home</a>
-          <a href="/src/about.html" class="block hover:text-orange-400">About</a>
-          <a href="#experience" class="block hover:text-orange-400"
-            >Experience</a
+          <a href="/index.html" class="block hover:text-orange-400">Home</a>
+
+          <a href="#services" class="block hover:text-orange-400"
+            >Services</a
           >
           <a href="#projects" class="block hover:text-orange-400">Projects</a>
+                    <a href="/src/about.html" class="block hover:text-orange-400">About</a>
           <a href="./blog-menu.html" class="block hover:text-orange-400"
             >Blogs</a
           >

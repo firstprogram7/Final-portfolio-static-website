@@ -41,12 +41,16 @@
 
     <!--------------------    Navigation bar    ----------------->
     <header id="main-header" class="sticky top-0 z-50 scroll-mt-20">
-      <nav class="container mx-auto">
-        <div class="flex justify-between items-center px-4 py-4">
+      <nav class="container mx-auto max-w-6xl">
+        <!--Changed-->
+        <div
+          class="flex justify-between items-center py-4 px-8 md:px-[55px] lg:px-0"
+        >
+          <!--Changed-->
           <a
             href="./index.html"
             id="logo"
-            class="text-4xl dark:text-white font-bold md:text-5xl transistion-all duration-300 ease-in-out"
+            class="text-4xl dark:text-white font-bold md:text-5xl transistion-all duration-200 ease-in-out"
             >Shazid</a
           >
           <div id="nav-links" class="hidden lg:flex space-x-6">
@@ -56,19 +60,19 @@
               >Home</a
             >
             <a
-              href="#about"
+              href="#services"
               class="hover:text-orange-400 md:text-xl lg:text-2xl"
-              >About</a
-            >
-            <a
-              href="#experience"
-              class="hover:text-orange-400 md:text-xl lg:text-2xl"
-              >Experience</a
+              >Services</a
             >
             <a
               href="#projects"
               class="hover:text-orange-400 md:text-xl lg:text-2xl"
               >Projects</a
+            >
+            <a
+              href="#about"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >About</a
             >
             <a
               href="./src/pages/blogs/blog-menu.html"
@@ -98,11 +102,11 @@
           class="absolute left-0 top-full w-full bg-[#f8fafc] dark:bg-[#121212] shadow-lg py-10 px-6 space-y-6 text-lg text-center scale-y-0 font-bold transform origin-top transition-all duration-200 z-50"
         >
           <a href="./index.html" class="block hover:text-orange-400">Home</a>
-          <a href="#about" class="block hover:text-orange-400">About</a>
-          <a href="#experience" class="block hover:text-orange-400"
-            >Experience</a
+          <a href="#services" class="block hover:text-orange-400">Services</a>
+          <a href="#projects" class="block hover:text-orange-400"
+            >Projects</a
           >
-          <a href="#projects" class="block hover:text-orange-400">Projects</a>
+          <a href="#about" class="block hover:text-orange-400">About</a>
           <a
             href="./src/pages/blogs/blog-menu.html"
             class="block hover:text-orange-400"
@@ -159,8 +163,8 @@
               href="/assets/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              class="ring-1 ring-orange-300 hover:bg-stone-100 hover:text-[#121212] font-semibold px-6 py-2.5 rounded-full transition-colors duration-200"
-              >Download CV</a
+              class="ring-1 ring-orange-300 hover:bg-stone-100 hover:text-[#121212] dark:bg-[#121212] dark:hover:text-white font-semibold px-6 py-2.5 rounded-full transition-colors duration-200"
+              >View Services</a
             >
             <a
               href="./src/contact.html"
@@ -461,7 +465,7 @@
         id="merged-block"
         class="fixed inset-0 z-[100] flex items-center justify-center pointer-events-none opacity-0 transition-all duration-700 scale-90"
       >
-        <div
+        <!-- <div
           class="w-[90%] max-w-5xl h-[500px] bg-background-yellow rounded-3xl flex flex-col items-center justify-center shadow-2xl border-8 border-text-dark"
         >
           <h1
@@ -472,7 +476,24 @@
           <p class="text-xl font-semibold text-gray-600 px-3 mt-4">
             Let's build your Amazon-scale digital presence.
           </p>
-        </div>
+          <a href="" class="">Book a Free Consultation</a>
+        </div> -->
+        <div class="w-[90%] max-w-5xl h-[500px] bg-background-yellow rounded-3xl flex flex-col items-center justify-center shadow-2xl border-8 border-text-dark">
+  <h1 class="text-3xl font-black text-text-dark text-center tracking-widest md:text-6xl">
+    READY TO GROW
+  </h1>
+  
+  <p class="text-xl font-semibold text-gray-600 px-3 mt-4 text-center md:text-2xl">
+    Let's build your Amazon-scale digital presence.
+  </p>
+
+  <a 
+    href="#" 
+    class="mt-8 px-8 py-4 text-xs bg-text-dark text-white font-black rounded-xl uppercase tracking-wider transition-transform hover:scale-105 active:scale-95 shadow-lg md:px-8 md:py-4 md:text-xl"
+  >
+    Book a Free Consultation
+  </a>
+</div>
       </div>
     </section>
 
@@ -505,7 +526,7 @@
           />
           <div class="flex-1 flex flex-col justify-between">
             <div>
-              <h2 class="text-2xl font-semibold dark:text-textColorDark">
+              <h2 class="text-2xl font-semibold dark:text-text-dark">
                 Pet Sitters Website
               </h2>
               <p class="text-sm font-medium text-gray-500 pt-1">
@@ -536,7 +557,7 @@
           />
           <div class="flex-1 flex flex-col justify-between">
             <div>
-              <h2 class="text-2xl font-semibold dark:text-textColorDark">
+              <h2 class="text-2xl font-semibold dark:text-text-dark">
                 Fairmed India Project
               </h2>
               <p class="text-sm font-medium text-gray-500 pt-1">
@@ -567,7 +588,7 @@
           />
           <div class="flex-1 flex flex-col justify-between">
             <div>
-              <h2 class="text-2xl font-semibold dark:text-textColorDark">
+              <h2 class="text-2xl font-semibold dark:text-text-dark">
                 Lensmaster Eye Clinic
               </h2>
               <p class="text-sm font-medium text-gray-500 pt-1">
@@ -624,8 +645,8 @@
         class="text-center grid grid-cols-2 md:space-x-10 gap-y-3 md:block text-2xl font-medium"
       >
         <a href="#about" class="hover:text-orange-400 duration-200">About</a>
-        <a href="#experience" class="hover:text-orange-400 duration-200"
-          >Experience</a
+        <a href="#services" class="hover:text-orange-400 duration-200"
+          >Services</a
         >
         <a href="#projects" class="hover:text-orange-400 duration-200"
           >Projects</a

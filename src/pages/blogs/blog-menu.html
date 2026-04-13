@@ -27,8 +27,8 @@
     </section>
     <!--------------------    Navigation bar    ----------------->
     <header id="main-header" class="sticky top-0 z-50 scroll-mt-20">
-      <nav class="container mx-auto">
-        <div class="flex justify-between items-center px-4 py-4">
+         <nav class="container mx-auto max-w-6xl"> 
+        <div class="flex justify-between items-center py-4 px-8  md:px-[55px]  lg:px-0"> 
           <a href="/index.html" id="logo" class="text-4xl font-bold md:text-5xl transistion-all duration-300  ease-in-out"
             >Shazid</a
           >
@@ -38,20 +38,21 @@
               class="hover:text-orange-400 md:text-xl lg:text-2xl transistion-all duration-150  ease-in-out"
               >Home</a
             >
+
             <a
-              href="/src/about.html"
+              href="#services"
               class="hover:text-orange-400 md:text-xl lg:text-2xl"
-              >About</a
-            >
-            <a
-              href="#experience"
-              class="hover:text-orange-400 md:text-xl lg:text-2xl"
-              >Experience</a
+              >Services</a
             >
             <a
               href="#projects"
               class="hover:text-orange-400 md:text-xl lg:text-2xl"
               >Projects</a
+            >
+                        <a
+              href="/src/about.html"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >About</a
             >
             <a
               href="./blog-menu.html"
@@ -81,11 +82,12 @@
           class="absolute left-0 top-full w-full bg-[#f8fafc] shadow-lg py-10 px-6 space-y-6 text-lg text-center scale-y-0 font-bold transform origin-top transition-all duration-200 z-50"
         >
           <a href="/index.html" class="block hover:text-orange-400">Home</a>
-          <a href="/src/about.html" class="block hover:text-orange-400">About</a>
-          <a href="#experience" class="block hover:text-orange-400"
-            >Experience</a
+
+          <a href="#services" class="block hover:text-orange-400"
+            >Services</a
           >
           <a href="#projects" class="block hover:text-orange-400">Projects</a>
+                    <a href="/src/about.html" class="block hover:text-orange-400">About</a>
           <a href="./blog-menu.html" class="block hover:text-orange-400"
             >Blogs</a
           >
@@ -98,7 +100,7 @@
     <!-- Top heading -->
     <section class="container mx-auto px-10 my-20">
       <div class="space-y-4">
-        <h2 class="text-4xl font-bold md:text-5xl">Blogs & Articles</h2>
+        <h2 class="text-4xl text-orange-400 font-bold md:text-5xl">Blogs & Articles</h2>
         <p class="text-2xl font-semibold text-gray-500 md:text-3xl">
           UX, Code & Beyond
         </p>
@@ -366,7 +368,7 @@
         <div
           class="flex flex-col flex-1 bg-white dark:bg-stone-700 justify-center p-20 mx-2 space-y-7 rounded-3xl"
         >
-          <h2 class="text-xl font-bold md:text-2xl">Subscribe to my blog</h2>
+          <h2 class="text-xl text-orange-400 font-bold md:text-2xl">Subscribe to my blog</h2>
           <p
             class="text-xl text-textColorLight dark:text-stone-400 font-semibold"
           >
@@ -375,8 +377,6 @@
           </p>
           <div>
             <form
-              action="/blogs"
-              method="POST"
               id="subscribeForm"
               class="space-y-3"
             >
@@ -387,6 +387,7 @@
                 class="ring-1 ring-gray-400 px-2 py-1 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none text-gray-600 font-semibold placeholder:Enter your email rounded-md w-full lg:w-auto"
               />
               <button
+              id="subscribe-btn"
                 type="submit"
                 class="text-xl font-semibold text-center py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-md w-full block"
               >
@@ -411,8 +412,8 @@
         class="text-center grid grid-cols-2 md:space-x-10 gap-y-3 md:block text-2xl font-medium"
       >
         <a href="/src/about.html" class="hover:text-orange-400 duration-200">About</a>
-        <a href="#experience" class="hover:text-orange-400 duration-200"
-          >Experience</a
+        <a href="#services" class="hover:text-orange-400 duration-200"
+          >Services</a
         >
         <a href="#projects" class="hover:text-orange-400 duration-200"
           >Projects</a
@@ -435,7 +436,7 @@
       <p
         class="font-semibold text-textColorLight text-center mt-10 px-3 md:mt-14"
       >
-        Copyright &copy 2025 Shazid. All rights reserved.
+        Copyright &copy 2026 Shazid. All rights reserved.
       </p>
     </footer>
 
