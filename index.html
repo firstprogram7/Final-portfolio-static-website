@@ -85,6 +85,23 @@
               >Contact Me</a
             >
           </div>
+          <!---------------   Dark mode switch for desktop scroll ---------------->
+          <div id="dark_switch" class="hidden">
+            <div class="flex justify-end px-6 pt-1 lg:px-4">
+              <div
+                class="switch px-2 py-[2px] rounded-full space-x-2 max-w-20 bg-stone-700 hover:bg-stone-800 border border-orange-300 dark:border-orange-400 shadow-sm duration-300"
+              >
+                <i
+                  id="light-mode-nav"
+                  class="fa-regular fa-sun fa-sm text-background-yellow dark:text-stone-500 cursor-pointer"
+                ></i>
+                <i
+                  id="dark-mode-nav"
+                  class="fa-solid fa-moon fa-sm text-stone-300/40 dark:text-white cursor-pointer"
+                ></i>
+              </div>
+            </div>
+          </div>
 
           <button id="menu-btn" class="block relative w-12 h-12 lg:hidden">
             <span
@@ -98,13 +115,18 @@
             ></span>
           </button>
         </div>
+
         <div
           id="mobile-menu"
           class="absolute left-0 top-full w-full bg-[#f8fafc] dark:bg-[#121212] shadow-lg py-10 px-6 space-y-6 text-lg text-center scale-y-0 font-bold transform origin-top transition-all duration-200 z-50"
         >
           <a href="./index.html" class="block hover:text-orange-400">Home</a>
-          <a href="./src/services.html" class="block hover:text-orange-400">Services</a>
-          <a href="./src/pages/projects/projectDashboard.html" class="block hover:text-orange-400"
+          <a href="./src/services.html" class="block hover:text-orange-400"
+            >Services</a
+          >
+          <a
+            href="./src/pages/projects/projectDashboard.html"
+            class="block hover:text-orange-400"
             >Projects</a
           >
           <a href="#about" class="block hover:text-orange-400">About</a>
@@ -477,22 +499,28 @@
           </p>
           <a href="" class="">Book a Free Consultation</a>
         </div> -->
-        <div class="w-[90%] max-w-5xl h-[500px] bg-background-yellow rounded-3xl flex flex-col items-center justify-center shadow-2xl border-8 border-text-dark">
-  <h1 class="text-3xl font-black text-text-dark text-center tracking-widest md:text-6xl">
-    READY TO GROW
-  </h1>
-  
-  <p class="text-xl font-semibold text-gray-600 px-3 mt-4 text-center md:text-2xl">
-    Let's build your Amazon-scale digital presence.
-  </p>
+        <div
+          class="w-[90%] max-w-5xl h-[500px] bg-background-yellow rounded-3xl flex flex-col items-center justify-center shadow-2xl border-8 border-text-dark"
+        >
+          <h1
+            class="text-3xl font-black text-text-dark text-center tracking-widest md:text-6xl"
+          >
+            READY TO GROW
+          </h1>
 
-  <a 
-    href="#" 
-    class="mt-8 px-8 py-4 text-xs bg-text-dark text-white font-black rounded-xl uppercase tracking-wider transition-transform hover:scale-105 active:scale-95 shadow-lg md:px-8 md:py-4 md:text-xl"
-  >
-    Book a Free Consultation
-  </a>
-</div>
+          <p
+            class="text-xl font-semibold text-gray-600 px-3 mt-4 text-center md:text-2xl"
+          >
+            Let's build your Amazon-scale digital presence.
+          </p>
+
+          <a
+            href="#"
+            class="mt-8 px-8 py-4 text-xs bg-text-dark text-white font-black rounded-xl uppercase tracking-wider transition-transform hover:scale-105 active:scale-95 shadow-lg md:px-8 md:py-4 md:text-xl"
+          >
+            Book a Free Consultation
+          </a>
+        </div>
       </div>
     </section>
 
@@ -647,7 +675,9 @@
         <a href="./src/services.html" class="hover:text-orange-400 duration-200"
           >Services</a
         >
-        <a href="./src/pages/projects/projectDashboard.html" class="hover:text-orange-400 duration-200"
+        <a
+          href="./src/pages/projects/projectDashboard.html"
+          class="hover:text-orange-400 duration-200"
           >Projects</a
         >
         <a
@@ -671,7 +701,6 @@
         Copyright &copy 2026 Shazid. All rights reserved.
       </p>
     </footer>
-  
 
     <script src="/main.js"></script>
   </body>

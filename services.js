@@ -37,7 +37,7 @@ window.addEventListener("scroll", () => {
   const navHeader = document.getElementById("main-header");
   const logo = document.getElementById("logo");
   const navLinks = document.querySelectorAll("#nav-links a");
-
+const activateDarkSwitch = document.getElementById("dark_switch");
   if (window.scrollY > 50) {
     // 1. Change background color
     navHeader.classList.add(
@@ -55,11 +55,13 @@ window.addEventListener("scroll", () => {
       link.classList.remove("md:text-xl", "lg:text-2xl");
       link.classList.add("text-sm");
     });
+    // 4. Show the dark mode toggle button
+    activateDarkSwitch.classList.remove("hidden");
   } else {
     // Reset everything when back at the top
     navHeader.classList.remove("bg-white", "shadow-md", "dark:bg-[#121212]");
     logo.classList.replace("text-2xl", "md:text-5xl");
-
+    activateDarkSwitch.classList.add("hidden");
     navLinks.forEach((link) => {
       link.classList.add("md:text-xl", "lg:text-2xl");
       link.classList.remove("text-sm");
@@ -76,6 +78,18 @@ lightBtn.addEventListener("click", () => {
   localStorage.setItem("theme", "light");
 });
 darkBtn.addEventListener("click", () => {
+  html.classList.add("dark");
+  localStorage.setItem("theme", "dark");
+});
+
+//  Dark mode toggle button on reducing to navbar
+const lightBtnNav = document.getElementById("light-mode-nav");
+const darkBtnNav = document.getElementById("dark-mode-nav");
+lightBtnNav.addEventListener("click", () => {
+  html.classList.remove("dark");
+  localStorage.setItem("theme", "light");
+});
+darkBtnNav.addEventListener("click", () => {
   html.classList.add("dark");
   localStorage.setItem("theme", "dark");
 });

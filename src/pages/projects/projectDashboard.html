@@ -10,20 +10,22 @@
     <title>Projects Dashboard</title>
     <link rel="stylesheet" href="/dist/output.css" />
   </head>
-  <body>
+  <body
+    class="bg-[#f8fafc] dark:bg-[#121212] text-text-dark dark:text-text-off transition-colors duration-300"
+  >
     <!-------------------- Dark mode toggle button ----------------->
     <section>
       <div class="flex justify-end px-4 pt-3">
         <div
-          class="switch px-3 py-1 rounded-full space-x-2 max-w-20 bg-stone-100 hover:bg-stone-200 border border-stone-300 shadow-sm duration-300"
+          class="switch px-3 py-1 rounded-full space-x-2 max-w-20 bg-stone-700 hover:bg-stone-800 border border-orange-300 dark:border-orange-400 shadow-sm duration-300"
         >
           <i
             id="light-mode"
-            class="fa-regular fa-sun dark:text-stone-500 cursor-pointer"
+            class="fa-regular fa-sun text-background-yellow dark:text-stone-500 cursor-pointer"
           ></i>
           <i
             id="dark-mode"
-            class="fa-solid fa-moon text-stone-300 cursor-pointer"
+            class="fa-solid fa-moon text-stone-300/40 dark:text-white cursor-pointer"
           ></i>
         </div>
       </div>
@@ -37,7 +39,7 @@
           <a
             href="/index.html"
             id="logo"
-            class="text-4xl font-bold md:text-5xl transistion-all duration-300 ease-in-out"
+            class="text-4xl dark:text-white font-bold md:text-5xl transistion-all duration-300 ease-in-out"
             >Shazid</a
           >
           <div id="nav-links" class="hidden lg:flex space-x-6">
@@ -47,7 +49,9 @@
               >Home</a
             >
 
-            <a href="#Services" class="hover:text-orange-400 md:text-xl lg:text-2xl"
+            <a
+              href="#Services"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
               >Services</a
             >
             <a
@@ -71,26 +75,45 @@
               >Contact Me</a
             >
           </div>
+          <!---------------   Dark mode switch for desktop scroll ---------------->
+          <div id="dark_switch" class="hidden">
+            <div class="flex justify-end px-6 pt-1 lg:px-4">
+              <div
+                class="switch px-2 py-[2px] rounded-full space-x-2 max-w-20 bg-stone-700 hover:bg-stone-800 border border-orange-300 dark:border-orange-400 shadow-sm duration-300"
+              >
+                <i
+                  id="light-mode-nav"
+                  class="fa-regular fa-sun fa-sm text-background-yellow dark:text-stone-500 cursor-pointer"
+                ></i>
+                <i
+                  id="dark-mode-nav"
+                  class="fa-solid fa-moon fa-sm text-stone-300/40 dark:text-white cursor-pointer"
+                ></i>
+              </div>
+            </div>
+          </div>
           <button id="menu-btn" class="block relative w-12 h-12 lg:hidden">
             <span
-              class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary -translate-y-2 transition-all duration-300"
+              class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary dark:bg-slate-300 -translate-y-2 transition-all duration-300"
             ></span>
             <span
-              class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary transition-all duration-300"
+              class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary dark:bg-slate-300 transition-all duration-300"
             ></span>
             <span
-              class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary translate-y-2 transition-all duration-300"
+              class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary dark:bg-slate-300 translate-y-2 transition-all duration-300"
             ></span>
           </button>
         </div>
         <div
           id="mobile-menu"
-          class="absolute left-0 top-full w-full bg-[#f8fafc] shadow-lg py-10 px-6 space-y-6 text-lg text-center scale-y-0 font-bold transform origin-top transition-all duration-200 z-50"
+          class="absolute left-0 top-full w-full bg-[#f8fafc] dark:bg-[#121212] shadow-lg py-10 px-6 space-y-6 text-lg text-center scale-y-0 font-bold transform origin-top transition-all duration-200 z-50"
         >
           <a href="/index.html" class="block hover:text-orange-400">Home</a>
 
           <a href="#services" class="block hover:text-orange-400">Services</a>
-          <a href="./projectDashboard.html" class="block hover:text-orange-400">Projects</a>
+          <a href="./projectDashboard.html" class="block hover:text-orange-400"
+            >Projects</a
+          >
           <a href="#about" class="block hover:text-orange-400">About</a>
           <a
             href="./pages/blogs/blog-menu.html"
@@ -114,7 +137,7 @@
             Portfolio
           </p>
           <h1
-            class="text-5xl text-text-dark font-extrabold md:leading-[5.8rem] md:tracking-wide md:text-8xl"
+            class="text-5xl text-text-dark dark:text-stone-400 font-extrabold md:leading-[5.8rem] md:tracking-wide md:text-8xl"
           >
             Work That <br /><span class="text-orange-400 italic">Speaks</span>
             <br />
@@ -163,26 +186,26 @@
           <div
             class="px-8 py-4 rounded-full shadow-sm grid grid-cols-2 gap-3 md:grid-cols-4 md:bg-stone-200"
           >
-          <!--------------- Control Buttons -------------->
+            <!--------------- Control Buttons -------------->
             <button
               type="button"
-              class="tab-button active  text-gray-500 px-6 font-semibold"
+              class="tab-button active text-gray-500 px-6 font-semibold"
               data-category="tabAll"
-              >
+            >
               All Projects
             </button>
             <button
               type="button"
               class="tab-button bg-transparent py-2 px-6 rounded-full text-gray-500 font-semibold ring-stone-400 hover:ring-1 transition-all duration-300"
-            data-category="tabWeb"
-              >
+              data-category="tabWeb"
+            >
               Web & SEO
             </button>
             <button
               type="button"
               class="tab-button bg-transparent py-2 px-6 rounded-full text-gray-500 font-semibold ring-stone-400 hover:ring-1 transition-all duration-300"
               data-category="tabAmazon"
-              >
+            >
               Amazon
             </button>
             <h3 class="project-count text-gray-500 pt-2 pl-6">6 projects</h3>
@@ -191,7 +214,9 @@
         <!------------------------  Project Cards  ---------------------------->
 
         <!-------  Top Cards  ------------>
-        <div class="card-container active grid grid-cols-1 gap-4 mx-3 mt-16 md:grid-cols-2 lg:grid-cols-3">
+        <div
+          class="card-container active grid grid-cols-1 gap-4 mx-3 mt-16 md:grid-cols-2 lg:grid-cols-3"
+        >
           <!----------- Card#1 --------->
           <div class="panel-tabWeb group lg:col-span-2">
             <div
@@ -299,7 +324,7 @@
               </div>
 
               <!-- Content -->
-              <div class=" space-y-4 p-7 md:p-14 lg:p-8">
+              <div class="space-y-4 p-7 md:p-14 lg:p-8">
                 <!-- Top Tags -->
                 <div class="flex flex-wrap gap-2 text-xs font-medium">
                   <span
@@ -364,7 +389,9 @@
           </div>
         </div>
         <!-------  Middle Card  ------------>
-        <div class="card-container grid grid-cols-1 gap-4 mx-3 mt-8 md:grid-cols-2">
+        <div
+          class="card-container grid grid-cols-1 gap-4 mx-3 mt-8 md:grid-cols-2"
+        >
           <!----------- Middle Card#1 --------->
           <div class="panel-tabWeb group">
             <div
@@ -542,7 +569,9 @@
           </div>
         </div>
         <!-------  Lower Cards   ---------->
-        <div class="card-container grid grid-cols-1 gap-4 mx-3 mt-8 md:grid-cols-2 lg:grid-cols-3">
+        <div
+          class="card-container grid grid-cols-1 gap-4 mx-3 mt-8 md:grid-cols-2 lg:grid-cols-3"
+        >
           <!----------- Lower Card#1 --------->
           <div class="panel-tabWeb group">
             <div
@@ -750,102 +779,279 @@
     </section>
 
     <!-------------- Testimonial Section -------------->
-  <!-- Testimonials Section -->
-  <section class="w-full max-w-6xl mx-auto px-6 py-12">
+    <!-- Testimonials Section -->
+    <section class="w-full max-w-6xl mx-auto px-6 py-12">
+      <!-- Header -->
+      <p
+        class="text-center text-xs font-medium tracking-widest uppercase text-gray-400 mb-2"
+      >
+        What people say
+      </p>
+      <h2
+        class="font-serif text-center text-4xl font-medium text-gray-900 dark:text-stone-400 mb-10 leading-snug"
+      >
+        Trusted by teams who
+        <em class="italic text-[#5DCAA5]"> care</em>
+        about quality
+      </h2>
 
-    <!-- Header -->
-    <p class="text-center text-xs font-medium tracking-widest uppercase text-gray-400 mb-2">
-      What people say
-    </p>
-    <h2 class="font-serif text-center text-4xl font-medium text-gray-900 mb-10 leading-snug">
-      Trusted by teams who
-      <em class="italic text-[#5DCAA5]"> care</em>
-      about quality
-    </h2>
+      <!-- Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <!-- Card 1 — Teal -->
+        <div
+          class="relative bg-white border border-gray-100 rounded-xl p-7 flex flex-col gap-5 transition-colors duration-200 hover:border-gray-200"
+        >
+          <!-- Top accent bar -->
+          <div
+            class="absolute top-0 left-6 w-10 h-[3px] rounded-b-sm bg-[#5DCAA5]"
+          ></div>
 
-    <!-- Cards Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <!-- Opening quote mark -->
+          <div
+            class="font-serif text-6xl leading-none italic font-medium select-none text-[#9FE1CB]"
+          >
+            "
+          </div>
 
-      <!-- Card 1 — Teal -->
-      <div class="relative bg-white border border-gray-100 rounded-xl p-7 flex flex-col gap-5 transition-colors duration-200 hover:border-gray-200">
-        <!-- Top accent bar -->
-        <div class="absolute top-0 left-6 w-10 h-[3px] rounded-b-sm bg-[#5DCAA5]"></div>
+          <!-- Quote text -->
+          <p
+            class="font-serif italic text-base leading-relaxed text-gray-800 flex-1"
+          >
+            This product completely changed how our team collaborates. The
+            clarity it brings to every workflow is something I didn't know I was
+            missing until I had it.
+          </p>
 
-        <!-- Opening quote mark -->
-        <div class="font-serif text-6xl leading-none italic font-medium select-none text-[#9FE1CB]">"</div>
+          <!-- Star rating -->
+          <div class="flex gap-1">
+            <svg
+              class="w-3.5 h-3.5 text-[#1D9E75]"
+              viewBox="0 0 14 14"
+              fill="currentColor"
+            >
+              <path
+                d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"
+              />
+            </svg>
+            <svg
+              class="w-3.5 h-3.5 text-[#1D9E75]"
+              viewBox="0 0 14 14"
+              fill="currentColor"
+            >
+              <path
+                d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"
+              />
+            </svg>
+            <svg
+              class="w-3.5 h-3.5 text-[#1D9E75]"
+              viewBox="0 0 14 14"
+              fill="currentColor"
+            >
+              <path
+                d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"
+              />
+            </svg>
+            <svg
+              class="w-3.5 h-3.5 text-[#1D9E75]"
+              viewBox="0 0 14 14"
+              fill="currentColor"
+            >
+              <path
+                d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"
+              />
+            </svg>
+            <svg
+              class="w-3.5 h-3.5 text-[#1D9E75]"
+              viewBox="0 0 14 14"
+              fill="currentColor"
+            >
+              <path
+                d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"
+              />
+            </svg>
+          </div>
 
-        <!-- Quote text -->
-        <p class="font-serif italic text-base leading-relaxed text-gray-800 flex-1">
-          This product completely changed how our team collaborates. The clarity it brings to every workflow is something I didn't know I was missing until I had it.
-        </p>
-
-        <!-- Star rating -->
-        <div class="flex gap-1">
-          <svg class="w-3.5 h-3.5 text-[#1D9E75]" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
-          <svg class="w-3.5 h-3.5 text-[#1D9E75]" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
-          <svg class="w-3.5 h-3.5 text-[#1D9E75]" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
-          <svg class="w-3.5 h-3.5 text-[#1D9E75]" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
-          <svg class="w-3.5 h-3.5 text-[#1D9E75]" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
+          <!-- Author -->
+          <div class="flex items-center gap-3.5 pt-4 border-t border-gray-100">
+            <div
+              class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium shrink-0 text-[#0F6E56] bg-[#C7EDDF]"
+            >
+              SR
+            </div>
+            <div>
+              <p class="text-sm font-medium text-gray-900 mb-0.5">
+                Sophia Reyes
+              </p>
+              <p class="text-xs font-light text-gray-400">
+                Head of Product · Luminary Co.
+              </p>
+            </div>
+          </div>
         </div>
 
-        <!-- Author -->
-        <div class="flex items-center gap-3.5 pt-4 border-t border-gray-100">
-          <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium shrink-0 text-[#0F6E56] bg-[#C7EDDF]">SR</div>
-          <div>
-            <p class="text-sm font-medium text-gray-900 mb-0.5">Sophia Reyes</p>
-            <p class="text-xs font-light text-gray-400">Head of Product · Luminary Co.</p>
+        <!-- Card 2 — Purple -->
+        <div
+          class="relative bg-white border border-gray-100 rounded-xl p-7 flex flex-col gap-5 transition-colors duration-200 hover:border-gray-200"
+        >
+          <div
+            class="absolute top-0 left-6 w-10 h-[3px] rounded-b-sm bg-[#7F77DD]"
+          ></div>
+          <div
+            class="font-serif text-6xl leading-none italic font-medium select-none text-[#CECBF6]"
+          >
+            "
+          </div>
+          <p
+            class="font-serif italic text-base leading-relaxed text-gray-800 flex-1"
+          >
+            Onboarding was a breeze. Within a week, our entire engineering team
+            was up to speed — and within a month, we shipped faster than we ever
+            had before.
+          </p>
+          <div class="flex gap-1">
+            <svg
+              class="w-3.5 h-3.5 text-[#7F77DD]"
+              viewBox="0 0 14 14"
+              fill="currentColor"
+            >
+              <path
+                d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"
+              />
+            </svg>
+            <svg
+              class="w-3.5 h-3.5 text-[#7F77DD]"
+              viewBox="0 0 14 14"
+              fill="currentColor"
+            >
+              <path
+                d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"
+              />
+            </svg>
+            <svg
+              class="w-3.5 h-3.5 text-[#7F77DD]"
+              viewBox="0 0 14 14"
+              fill="currentColor"
+            >
+              <path
+                d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"
+              />
+            </svg>
+            <svg
+              class="w-3.5 h-3.5 text-[#7F77DD]"
+              viewBox="0 0 14 14"
+              fill="currentColor"
+            >
+              <path
+                d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"
+              />
+            </svg>
+            <svg
+              class="w-3.5 h-3.5 text-[#7F77DD]"
+              viewBox="0 0 14 14"
+              fill="currentColor"
+            >
+              <path
+                d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"
+              />
+            </svg>
+          </div>
+          <div class="flex items-center gap-3.5 pt-4 border-t border-gray-100">
+            <div
+              class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium shrink-0 text-[#534AB7] bg-[#cdcaff]"
+            >
+              AM
+            </div>
+            <div>
+              <p class="text-sm font-medium text-gray-900 mb-0.5">
+                Arjun Mehta
+              </p>
+              <p class="text-xs font-light text-gray-400">CTO · Orbit Labs</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 — Coral -->
+        <div
+          class="relative bg-white border border-gray-100 rounded-xl p-7 flex flex-col gap-5 transition-colors duration-200 hover:border-gray-200"
+        >
+          <div
+            class="absolute top-0 left-6 w-10 h-[3px] rounded-b-sm bg-[#D85A30]"
+          ></div>
+          <div
+            class="font-serif text-6xl leading-none italic font-medium select-none text-[#F5C4B3]"
+          >
+            "
+          </div>
+          <p
+            class="font-serif italic text-base leading-relaxed text-gray-800 flex-1"
+          >
+            The support team is exceptional. Every question I've had was
+            answered thoughtfully and quickly. It genuinely feels like they're
+            invested in our success.
+          </p>
+          <div class="flex gap-1">
+            <svg
+              class="w-3.5 h-3.5 text-[#D85A30]"
+              viewBox="0 0 14 14"
+              fill="currentColor"
+            >
+              <path
+                d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"
+              />
+            </svg>
+            <svg
+              class="w-3.5 h-3.5 text-[#D85A30]"
+              viewBox="0 0 14 14"
+              fill="currentColor"
+            >
+              <path
+                d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"
+              />
+            </svg>
+            <svg
+              class="w-3.5 h-3.5 text-[#D85A30]"
+              viewBox="0 0 14 14"
+              fill="currentColor"
+            >
+              <path
+                d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"
+              />
+            </svg>
+            <svg
+              class="w-3.5 h-3.5 text-[#D85A30]"
+              viewBox="0 0 14 14"
+              fill="currentColor"
+            >
+              <path
+                d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"
+              />
+            </svg>
+            <svg
+              class="w-3.5 h-3.5 text-[#D85A30]"
+              viewBox="0 0 14 14"
+              fill="currentColor"
+            >
+              <path
+                d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"
+              />
+            </svg>
+          </div>
+          <div class="flex items-center gap-3.5 pt-4 border-t border-gray-100">
+            <div
+              class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium shrink-0 text-[#993C1D] bg-[#FAECE7]"
+            >
+              NC
+            </div>
+            <div>
+              <p class="text-sm font-medium text-gray-900 mb-0.5">Naomi Chen</p>
+              <p class="text-xs font-light text-gray-400">
+                Founder · Driftwood Studio
+              </p>
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- Card 2 — Purple -->
-      <div class="relative bg-white border border-gray-100 rounded-xl p-7 flex flex-col gap-5 transition-colors duration-200 hover:border-gray-200">
-        <div class="absolute top-0 left-6 w-10 h-[3px] rounded-b-sm bg-[#7F77DD]"></div>
-        <div class="font-serif text-6xl leading-none italic font-medium select-none text-[#CECBF6]">"</div>
-        <p class="font-serif italic text-base leading-relaxed text-gray-800 flex-1">
-          Onboarding was a breeze. Within a week, our entire engineering team was up to speed — and within a month, we shipped faster than we ever had before.
-        </p>
-        <div class="flex gap-1">
-          <svg class="w-3.5 h-3.5 text-[#7F77DD]" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
-          <svg class="w-3.5 h-3.5 text-[#7F77DD]" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
-          <svg class="w-3.5 h-3.5 text-[#7F77DD]" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
-          <svg class="w-3.5 h-3.5 text-[#7F77DD]" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
-          <svg class="w-3.5 h-3.5 text-[#7F77DD]" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
-        </div>
-        <div class="flex items-center gap-3.5 pt-4 border-t border-gray-100">
-          <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium shrink-0 text-[#534AB7] bg-[#cdcaff]">AM</div>
-          <div>
-            <p class="text-sm font-medium text-gray-900 mb-0.5">Arjun Mehta</p>
-            <p class="text-xs font-light text-gray-400">CTO · Orbit Labs</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 — Coral -->
-      <div class="relative bg-white border border-gray-100 rounded-xl p-7 flex flex-col gap-5 transition-colors duration-200 hover:border-gray-200">
-        <div class="absolute top-0 left-6 w-10 h-[3px] rounded-b-sm bg-[#D85A30]"></div>
-        <div class="font-serif text-6xl leading-none italic font-medium select-none text-[#F5C4B3]">"</div>
-        <p class="font-serif italic text-base leading-relaxed text-gray-800 flex-1">
-          The support team is exceptional. Every question I've had was answered thoughtfully and quickly. It genuinely feels like they're invested in our success.
-        </p>
-        <div class="flex gap-1">
-          <svg class="w-3.5 h-3.5 text-[#D85A30]" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
-          <svg class="w-3.5 h-3.5 text-[#D85A30]" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
-          <svg class="w-3.5 h-3.5 text-[#D85A30]" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
-          <svg class="w-3.5 h-3.5 text-[#D85A30]" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
-          <svg class="w-3.5 h-3.5 text-[#D85A30]" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
-        </div>
-        <div class="flex items-center gap-3.5 pt-4 border-t border-gray-100">
-          <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium shrink-0 text-[#993C1D] bg-[#FAECE7]">NC</div>
-          <div>
-            <p class="text-sm font-medium text-gray-900 mb-0.5">Naomi Chen</p>
-            <p class="text-xs font-light text-gray-400">Founder · Driftwood Studio</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
+    </section>
     <!------------  Final CTA   ------------->
     <section id="contact" class="py-20 px-6">
       <div class="max-w-5xl mx-auto">

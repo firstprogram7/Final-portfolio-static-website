@@ -13,15 +13,23 @@
     <link rel="stylesheet" href="/dist/output.css" />
     <title>Blogs</title>
   </head>
-  <body>
+  <body
+    class="bg-[#f8fafc] dark:bg-[#121212] text-text-dark dark:text-text-off transition-colors duration-300"
+  >
     <!-------------------- Dark mode toggle button ----------------->
     <section>
       <div class="flex justify-end px-4 pt-3">
         <div
-          class="switch px-3 py-1 rounded-full space-x-2 max-w-20 bg-stone-100 hover:bg-stone-200 border border-stone-300 shadow-sm duration-300"
+          class="switch px-3 py-1 rounded-full space-x-2 max-w-20 bg-stone-700 hover:bg-stone-800 border border-orange-300 dark:border-orange-400 shadow-sm duration-300"
         >
-          <i class="fa-regular fa-sun dark:text-stone-500 cursor-pointer"></i>
-          <i class="fa-solid fa-moon text-stone-300 cursor-pointer"></i>
+          <i
+            id="light-mode"
+            class="fa-regular fa-sun text-background-yellow dark:text-stone-500 cursor-pointer"
+          ></i>
+          <i
+            id="dark-mode"
+            class="fa-solid fa-moon text-stone-300/40 dark:text-white cursor-pointer"
+          ></i>
         </div>
       </div>
     </section>
@@ -34,7 +42,7 @@
           <a
             href="/index.html"
             id="logo"
-            class="text-4xl font-bold md:text-5xl transistion-all duration-300 ease-in-out"
+            class="text-4xl dark:text-white font-bold md:text-5xl transistion-all duration-300 ease-in-out"
             >Shazid</a
           >
           <div id="nav-links" class="hidden lg:flex space-x-6">
@@ -70,21 +78,38 @@
               >Contact Me</a
             >
           </div>
+          <!---------------   Dark mode switch for desktop scroll ---------------->
+          <div id="dark_switch" class="hidden">
+            <div class="flex justify-end px-6 pt-1 lg:px-4">
+              <div
+                class="switch px-2 py-[2px] rounded-full space-x-2 max-w-20 bg-stone-700 hover:bg-stone-800 border border-orange-300 dark:border-orange-400 shadow-sm duration-300"
+              >
+                <i
+                  id="light-mode-nav"
+                  class="fa-regular fa-sun fa-sm text-background-yellow dark:text-stone-500 cursor-pointer"
+                ></i>
+                <i
+                  id="dark-mode-nav"
+                  class="fa-solid fa-moon fa-sm text-stone-300/40 dark:text-white cursor-pointer"
+                ></i>
+              </div>
+            </div>
+          </div>
           <button id="menu-btn" class="block relative w-12 h-12 lg:hidden">
             <span
-              class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary -translate-y-2 transition-all duration-300"
+              class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary dark:bg-slate-300 -translate-y-2 transition-all duration-300"
             ></span>
             <span
-              class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary transition-all duration-300"
+              class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary dark:bg-slate-300 transition-all duration-300"
             ></span>
             <span
-              class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary translate-y-2 transition-all duration-300"
+              class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary dark:bg-slate-300 translate-y-2 transition-all duration-300"
             ></span>
           </button>
         </div>
         <div
           id="mobile-menu"
-          class="absolute left-0 top-full w-full bg-[#f8fafc] shadow-lg py-10 px-6 space-y-6 text-lg text-center scale-y-0 font-bold transform origin-top transition-all duration-200 z-50"
+          class="absolute left-0 top-full w-full bg-[#f8fafc] dark:bg-[#121212] shadow-lg py-10 px-6 space-y-6 text-lg text-center scale-y-0 font-bold transform origin-top transition-all duration-200 z-50"
         >
           <a href="/index.html" class="block hover:text-orange-400">Home</a>
 
@@ -114,7 +139,9 @@
         <h2 class="text-4xl text-orange-400 font-bold md:text-5xl">
           Blogs & Articles
         </h2>
-        <p class="text-2xl font-semibold text-gray-500 md:text-3xl">
+        <p
+          class="text-2xl font-semibold text-gray-500 dark:text-stone-400 md:text-3xl"
+        >
           UX, Code & Beyond
         </p>
         <p class="text-xl font-semibold md:text-2xl">
@@ -424,9 +451,7 @@
       <div
         class="text-center grid grid-cols-2 md:space-x-10 gap-y-3 md:block text-2xl font-medium"
       >
-        <a
-          href="/index.html"
-          class="hover:text-orange-400 duration-200"
+        <a href="/index.html" class="hover:text-orange-400 duration-200"
           >Home</a
         >
         <a href="/src/about.html" class="hover:text-orange-400 duration-200"

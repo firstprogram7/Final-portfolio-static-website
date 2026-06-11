@@ -88,6 +88,23 @@
               >Contact Me</a
             >
           </div>
+          <!---------------   Dark mode switch for desktop scroll ---------------->
+          <div id="dark_switch" class="hidden">
+            <div class="flex justify-end px-6 pt-1 lg:px-4">
+              <div
+                class="switch px-2 py-[2px] rounded-full space-x-2 max-w-20 bg-stone-700 hover:bg-stone-800 border border-orange-300 dark:border-orange-400 shadow-sm duration-300"
+              >
+                <i
+                  id="light-mode-nav"
+                  class="fa-regular fa-sun fa-sm text-background-yellow dark:text-stone-500 cursor-pointer"
+                ></i>
+                <i
+                  id="dark-mode-nav"
+                  class="fa-solid fa-moon fa-sm text-stone-300/40 dark:text-white cursor-pointer"
+                ></i>
+              </div>
+            </div>
+          </div>
           <button id="menu-btn" class="block relative w-12 h-12 lg:hidden">
             <span
               class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary dark:bg-slate-300 -translate-y-2 transition-all duration-300"
@@ -109,14 +126,20 @@
           <a href="./services.html" class="block hover:text-orange-400"
             >Services</a
           >
-          <a href="./pages/projects/projectDashboard.html" class="block hover:text-orange-400">Projects</a>
+          <a
+            href="./pages/projects/projectDashboard.html"
+            class="block hover:text-orange-400"
+            >Projects</a
+          >
           <a href="#about" class="block hover:text-orange-400">About</a>
           <a
             href="./src/pages/blogs/blog-menu.html"
             class="block hover:text-orange-400"
             >Blogs</a
           >
-          <a href="/src/contact.html" class="block hover:text-orange-400">Contact Me</a>
+          <a href="/src/contact.html" class="block hover:text-orange-400"
+            >Contact Me</a
+          >
         </div>
       </nav>
     </header>
@@ -1195,7 +1218,9 @@
         <a href="./services.html" class="hover:text-orange-400 duration-200"
           >Services</a
         >
-        <a href="./pages/projects/projectDashboard.html" class="hover:text-orange-400 duration-200"
+        <a
+          href="./pages/projects/projectDashboard.html"
+          class="hover:text-orange-400 duration-200"
           >Projects</a
         >
         <a
