@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
     <title>Pet Sitters Project</title>
     <!-- <script src="https://cdn.tailwindcss.com/3.4.17"></script> -->
     <link
@@ -28,8 +36,10 @@
     </section>
     <!--------------------    Navigation bar    ----------------->
     <header id="main-header" class="sticky top-0 z-50 scroll-mt-20">
-      <nav class="container mx-auto max-w-6xl"> 
-        <div class="flex justify-between items-center py-4 px-8  md:px-[55px]  lg:px-0"> 
+      <nav class="container mx-auto max-w-6xl">
+        <div
+          class="flex justify-between items-center py-4 px-8 md:px-[55px] lg:px-0"
+        >
           <a
             href="/index.html"
             id="logo"
@@ -39,7 +49,7 @@
           <div id="nav-links" class="hidden lg:flex space-x-6">
             <a
               href="/index.html"
-              class="hover:text-orange-400 md:text-xl lg:text-2xl transistion-all duration-150  ease-in-out"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl transistion-all duration-150 ease-in-out"
               >Home</a
             >
 
@@ -53,7 +63,7 @@
               class="hover:text-orange-400 md:text-xl lg:text-2xl"
               >Projects</a
             >
-                        <a
+            <a
               href="/src/about.html"
               class="hover:text-orange-400 md:text-xl lg:text-2xl"
               >About</a
@@ -90,8 +100,12 @@
           <a href="/src/services.html" class="block hover:text-orange-400"
             >Services</a
           >
-          <a href="./projectDashboard.html" class="block hover:text-orange-400">Projects</a>
-                    <a href="/src/about.html" class="block hover:text-orange-400">About</a>
+          <a href="./projectDashboard.html" class="block hover:text-orange-400"
+            >Projects</a
+          >
+          <a href="/src/about.html" class="block hover:text-orange-400"
+            >About</a
+          >
           <a href="./blog-menu.html" class="block hover:text-orange-400"
             >Blogs</a
           >
@@ -535,11 +549,15 @@
       <div
         class="text-center grid grid-cols-2 md:space-x-10 gap-y-3 md:block text-2xl font-medium"
       >
-        <a href="/src/about.html" class="hover:text-orange-400 duration-200">About</a>
+        <a href="/src/about.html" class="hover:text-orange-400 duration-200"
+          >About</a
+        >
         <a href="/src/services.html" class="hover:text-orange-400 duration-200"
           >Services</a
         >
-        <a href="./projectDashboard.html" class="hover:text-orange-400 duration-200"
+        <a
+          href="./projectDashboard.html"
+          class="hover:text-orange-400 duration-200"
           >Projects</a
         >
         <a
