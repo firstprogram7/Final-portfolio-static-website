@@ -13,22 +13,30 @@
     <link rel="stylesheet" href="/dist/output.css" />
     <title>My backend learning journey</title>
   </head>
-  <body>
+  <body  class="bg-[#f8fafc] dark:bg-[#121212] text-text-dark dark:text-text-off transition-colors duration-300">
     <!-------------------- Dark mode toggle button ----------------->
     <section>
       <div class="flex justify-end px-4 pt-3">
         <div
-          class="switch px-3 py-1 rounded-full space-x-2 max-w-20 bg-stone-100 hover:bg-stone-200 border border-stone-300 shadow-sm duration-300"
+         class="switch px-3 py-1 rounded-full space-x-2 max-w-20 bg-stone-700 hover:bg-stone-800 border border-orange-300 dark:border-orange-400 shadow-sm duration-300"
         >
-          <i class="fa-regular fa-sun dark:text-stone-500 cursor-pointer"></i>
-          <i class="fa-solid fa-moon text-stone-300 cursor-pointer"></i>
+           <i
+            id="light-mode"
+            class="fa-regular fa-sun text-background-yellow dark:text-stone-500 cursor-pointer"
+          ></i>
+          <i
+            id="dark-mode"
+            class="fa-solid fa-moon text-stone-300/40 dark:text-white cursor-pointer"
+          ></i>
         </div>
       </div>
     </section>
     <!--------------------    Navigation bar    ----------------->
     <header id="main-header" class="sticky top-0 z-50 scroll-mt-20">
-      <nav class="container mx-auto max-w-6xl"> 
-        <div class="flex justify-between items-center py-4 px-8  md:px-[55px]  lg:px-0">
+      <nav class="container mx-auto max-w-6xl">
+        <div
+          class="flex justify-between items-center py-4 px-8 md:px-[55px] lg:px-0"
+        >
           <a
             href="/index.html"
             id="logo"
@@ -38,7 +46,7 @@
           <div id="nav-links" class="hidden lg:flex space-x-6">
             <a
               href="/index.html"
-              class="hover:text-orange-400 md:text-xl lg:text-2xl transistion-all duration-150  ease-in-out"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl transistion-all duration-150 ease-in-out"
               >Home</a
             >
 
@@ -52,7 +60,7 @@
               class="hover:text-orange-400 md:text-xl lg:text-2xl"
               >Projects</a
             >
-                        <a
+            <a
               href="/src/about.html"
               class="hover:text-orange-400 md:text-xl lg:text-2xl"
               >About</a
@@ -68,29 +76,53 @@
               >Contact Me</a
             >
           </div>
+          <!---------------   Dark mode switch for desktop scroll ---------------->
+          <div id="dark_switch" class="hidden">
+            <div class="flex justify-end px-6 pt-1 lg:px-4">
+              <div
+                class="switch px-2 py-[2px] rounded-full space-x-2 max-w-20 bg-stone-700 hover:bg-stone-800 border border-orange-300 dark:border-orange-400 shadow-sm duration-300"
+              >
+                <i
+                  id="light-mode-nav"
+                  class="fa-regular fa-sun fa-sm text-background-yellow dark:text-stone-500 cursor-pointer"
+                ></i>
+                <i
+                  id="dark-mode-nav"
+                  class="fa-solid fa-moon fa-sm text-stone-300/40 dark:text-white cursor-pointer"
+                ></i>
+              </div>
+            </div>
+          </div>
+
           <button id="menu-btn" class="block relative w-12 h-12 lg:hidden">
             <span
-              class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary -translate-y-2 transition-all duration-300"
+              class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary dark:bg-slate-300 -translate-y-2 transition-all duration-300"
             ></span>
             <span
-              class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary transition-all duration-300"
+              class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary dark:bg-slate-300 transition-all duration-300"
             ></span>
             <span
-              class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary translate-y-2 transition-all duration-300"
+              class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary dark:bg-slate-300 translate-y-2 transition-all duration-300"
             ></span>
           </button>
         </div>
         <div
           id="mobile-menu"
-          class="absolute left-0 top-full w-full bg-[#f8fafc] shadow-lg py-10 px-6 space-y-6 text-lg text-center scale-y-0 font-bold transform origin-top transition-all duration-200 z-50"
+          class="absolute left-0 top-full w-full bg-[#f8fafc] dark:bg-[#121212] shadow-lg py-10 px-6 space-y-6 text-lg text-center scale-y-0 font-bold transform origin-top transition-all duration-200 z-50"
         >
           <a href="/index.html" class="block hover:text-orange-400">Home</a>
 
           <a href="/src/services.html" class="block hover:text-orange-400"
             >Services</a
           >
-          <a href="../projects/projectDashboard.html" class="block hover:text-orange-400">Projects</a>
-                    <a href="/src/about.html" class="block hover:text-orange-400">About</a>
+          <a
+            href="../projects/projectDashboard.html"
+            class="block hover:text-orange-400"
+            >Projects</a
+          >
+          <a href="/src/about.html" class="block hover:text-orange-400"
+            >About</a
+          >
           <a href="./blog-menu.html" class="block hover:text-orange-400"
             >Blogs</a
           >
@@ -135,7 +167,7 @@
       <!-- Key take away section-->
       <section class="mt-10">
         <div
-          class="max-w-5xl bg-gray-300 p-7 mx-3 space-y-4 rounded-3xl md:p-20 md:mx-auto"
+          class="max-w-5xl bg-gray-300 dark:bg-stone-700 p-7 mx-3 space-y-4 rounded-3xl md:p-20 md:mx-auto"
         >
           <h2 class="text-3xl font-semibold">Key takeaways</h2>
           <ul
@@ -734,11 +766,15 @@
       <div
         class="text-center grid grid-cols-2 md:space-x-10 gap-y-3 md:block text-2xl font-medium"
       >
-        <a href="/src/about.html" class="hover:text-orange-400 duration-200">About</a>
+        <a href="/src/about.html" class="hover:text-orange-400 duration-200"
+          >About</a
+        >
         <a href="/src/services.html" class="hover:text-orange-400 duration-200"
           >Services</a
         >
-        <a href="../projects/projectDashboard.html" class="hover:text-orange-400 duration-200"
+        <a
+          href="../projects/projectDashboard.html"
+          class="hover:text-orange-400 duration-200"
           >Projects</a
         >
         <a href="./blog-menu.html" class="hover:text-orange-400 duration-200"

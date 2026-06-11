@@ -37,7 +37,7 @@ window.addEventListener("scroll", () => {
   const navHeader = document.getElementById("main-header");
   const logo = document.getElementById("logo");
   const navLinks = document.querySelectorAll("#nav-links a");
-const activateDarkSwitch = document.getElementById("dark_switch");
+  const activateDarkSwitch = document.getElementById("dark_switch");
   if (window.scrollY > 50) {
     // 1. Change background color
     navHeader.classList.add(
@@ -56,7 +56,9 @@ const activateDarkSwitch = document.getElementById("dark_switch");
       link.classList.add("text-sm");
     });
     // 4. Show the dark mode toggle button
-    activateDarkSwitch.classList.remove("hidden");
+    if (window.innerWidth >= 1024) {
+      activateDarkSwitch.classList.remove("hidden");
+    }
   } else {
     // Reset everything when back at the top
     navHeader.classList.remove("bg-white", "shadow-md", "dark:bg-[#121212]");
@@ -94,7 +96,6 @@ darkBtnNav.addEventListener("click", () => {
   localStorage.setItem("theme", "dark");
 });
 
-
 // SERVICES TAB CONTROLS
 const tabBtns = document.querySelectorAll(".tab-btn");
 const tabPanels = document.querySelectorAll(".tab-panel, .tab-panel-all");
@@ -119,4 +120,3 @@ tabBtns.forEach((btn) => {
     }
   });
 });
-

@@ -51,6 +51,7 @@ window.addEventListener("scroll", () => {
   const logo = document.getElementById("logo");
   const navLinks = document.querySelectorAll("#nav-links a");
   const activateDarkSwitch = document.getElementById("dark_switch");
+
   if (window.scrollY > 50) {
     // 1. Change background color
     navHeader.classList.add(
@@ -69,7 +70,9 @@ window.addEventListener("scroll", () => {
       link.classList.add("text-sm");
     });
     // 4. Show the dark mode toggle button
-    activateDarkSwitch.classList.remove("hidden");
+    if (window.innerWidth >= 1024) {
+      activateDarkSwitch.classList.remove("hidden");
+    }
   } else {
     // Reset everything when back at the top
     navHeader.classList.remove("bg-white", "shadow-md", "dark:bg-[#121212]");
