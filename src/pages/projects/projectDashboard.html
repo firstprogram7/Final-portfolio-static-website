@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <title>Projects Dashboard</title>
+    <link rel="stylesheet" href="/dist/output.css" />
+  </head>
+  <body>
+    <!-------------------- Dark mode toggle button ----------------->
+    <section>
+      <div class="flex justify-end px-4 pt-3">
+        <div
+          class="switch px-3 py-1 rounded-full space-x-2 max-w-20 bg-stone-100 hover:bg-stone-200 border border-stone-300 shadow-sm duration-300"
+        >
+          <i
+            id="light-mode"
+            class="fa-regular fa-sun dark:text-stone-500 cursor-pointer"
+          ></i>
+          <i
+            id="dark-mode"
+            class="fa-solid fa-moon text-stone-300 cursor-pointer"
+          ></i>
+        </div>
+      </div>
+    </section>
+    <!--------------------    Navigation bar    ----------------->
+    <header id="main-header" class="sticky top-0 z-50 scroll-mt-20">
+      <nav class="container mx-auto max-w-6xl">
+        <div
+          class="flex justify-between items-center py-4 px-8 md:px-[55px] lg:px-0"
+        >
+          <a
+            href="/index.html"
+            id="logo"
+            class="text-4xl font-bold md:text-5xl transistion-all duration-300 ease-in-out"
+            >Shazid</a
+          >
+          <div id="nav-links" class="hidden lg:flex space-x-6">
+            <a
+              href="/index.html"
+              class="md:text-xl lg:text-2xl transistion-all duration-150 ease-in-out"
+              >Home</a
+            >
+
+            <a href="#Services" class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >Services</a
+            >
+            <a
+              href="./projectDashboard.html"
+              class="text-orange-400 md:text-xl lg:text-2xl"
+              >Projects</a
+            >
+            <a
+              href="/src/about.html"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >About</a
+            >
+            <a
+              href="../blogs/blog-menu.html"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >Blogs</a
+            >
+            <a
+              href="/src/contact.html"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >Contact Me</a
+            >
+          </div>
+          <button id="menu-btn" class="block relative w-12 h-12 lg:hidden">
+            <span
+              class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary -translate-y-2 transition-all duration-300"
+            ></span>
+            <span
+              class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary transition-all duration-300"
+            ></span>
+            <span
+              class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary translate-y-2 transition-all duration-300"
+            ></span>
+          </button>
+        </div>
+        <div
+          id="mobile-menu"
+          class="absolute left-0 top-full w-full bg-[#f8fafc] shadow-lg py-10 px-6 space-y-6 text-lg text-center scale-y-0 font-bold transform origin-top transition-all duration-200 z-50"
+        >
+          <a href="/index.html" class="block hover:text-orange-400">Home</a>
+
+          <a href="#services" class="block hover:text-orange-400">Services</a>
+          <a href="./projectDashboard.html" class="block hover:text-orange-400">Projects</a>
+          <a href="#about" class="block hover:text-orange-400">About</a>
+          <a
+            href="./pages/blogs/blog-menu.html"
+            class="block hover:text-orange-400"
+            >Blogs</a
+          >
+          <a href="./contact.html" class="block hover:text-orange-400"
+            >Contact Me</a
+          >
+        </div>
+      </nav>
+    </header>
+    <!--------------------- Hero section ----------------->
+    <section class="mt-16">
+      <div class="hero-grid"></div>
+      <div class="max-w-6xl mx-auto p-6">
+        <div class="space-y-5">
+          <p
+            class="text-xl text-orange-400 pl-2 font-semibold tracking-wider uppercase"
+          >
+            Portfolio
+          </p>
+          <h1
+            class="text-5xl text-text-dark font-extrabold md:leading-[5.8rem] md:tracking-wide md:text-8xl"
+          >
+            Work That <br /><span class="text-orange-400 italic">Speaks</span>
+            <br />
+            Results
+          </h1>
+          <p class="text-xl text-slate-500 max-w-3xl">
+            Real Projects > Real Results. From stanning website to Amazon
+            account to full digital transformations. Here's what we've build for
+            clients.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 mt-7 p-4 md:grid-cols-4">
+          <div
+            class="py-2 px-6 space-y-2 border-stone-400 border-b-[1px] border-r-[1px] md:border-b-0"
+          >
+            <h2 class="text-6xl text-[#2a9d8f] font-bold">50+</h2>
+            <p class="text-xl text-stone-500 font-medium">Projects Completed</p>
+          </div>
+          <div
+            class="py-2 px-6 space-y-2 border-stone-400 border-b-[1px] md:border-b-0 md:border-r-[1px]"
+          >
+            <h2 class="text-6xl text-[#e9c46a] font-bold">30+</h2>
+            <p class="text-xl text-stone-500 font-medium">Amazon Sellers</p>
+          </div>
+          <div
+            class="py-2 px-6 space-y-2 border-stone-400 border-r-[1px] md:border-b-0"
+          >
+            <h2 class="text-6xl text-[#f4a261] font-bold">3X</h2>
+            <p class="text-xl text-stone-500 font-medium">
+              Avg. Traffic Growth
+            </p>
+          </div>
+          <div class="py-2 px-6 space-y-2">
+            <h2 class="text-6xl text-[#e76f51] font-bold">98%</h2>
+            <p class="text-xl text-stone-500 font-medium">
+              Client Satisfaction
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--------------- Card Display -------------->
+    <section id="project-cards">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex justify-center items-center">
+          <div
+            class="px-8 py-4 rounded-full shadow-sm grid grid-cols-2 gap-3 md:grid-cols-4 md:bg-stone-200"
+          >
+          <!--------------- Control Buttons -------------->
+            <button
+              type="button"
+              class="tab-button active  text-gray-500 px-6 font-semibold"
+              data-category="tabAll"
+              >
+              All Projects
+            </button>
+            <button
+              type="button"
+              class="tab-button bg-transparent py-2 px-6 rounded-full text-gray-500 font-semibold ring-stone-400 hover:ring-1 transition-all duration-300"
+            data-category="tabWeb"
+              >
+              Web & SEO
+            </button>
+            <button
+              type="button"
+              class="tab-button bg-transparent py-2 px-6 rounded-full text-gray-500 font-semibold ring-stone-400 hover:ring-1 transition-all duration-300"
+              data-category="tabAmazon"
+              >
+              Amazon
+            </button>
+            <h3 class="project-count text-gray-500 pt-2 pl-6">6 projects</h3>
+          </div>
+        </div>
+        <!------------------------  Project Cards  ---------------------------->
+
+        <!-------  Top Cards  ------------>
+        <div class="card-container active grid grid-cols-1 gap-4 mx-3 mt-16 md:grid-cols-2 lg:grid-cols-3">
+          <!----------- Card#1 --------->
+          <div class="panel-tabWeb group lg:col-span-2">
+            <div
+              class="bg-stone-200 dark:bg-slate-900 rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+            >
+              <!-- Image -->
+              <div class="overflow-hidden">
+                <img
+                  src="/img/eyeclinic.jpg"
+                  alt="Clinical Website"
+                  class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+
+              <!-- Content -->
+              <div class="p-10 space-y-5">
+                <!-- Top Tags -->
+                <div class="flex flex-wrap gap-2 text-xs font-medium">
+                  <span
+                    class="px-2 py-1 bg-orange-100 text-orange-600 rounded-full"
+                    >WEB</span
+                  >
+                  <span class="px-2 py-1 bg-blue-100 text-blue-600 rounded-full"
+                    >SEO</span
+                  >
+                  <span
+                    class="px-2 py-1 bg-green-100 text-green-600 rounded-full"
+                    >↑ 186% Traffic</span
+                  >
+                </div>
+
+                <!-- Title + Description -->
+                <div>
+                  <h2
+                    class="text-lg font-semibold text-slate-800 dark:text-white"
+                  >
+                    Clinical Website
+                  </h2>
+                  <p
+                    class="text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed"
+                  >
+                    Website design + full local SEO strategy for an eye
+                    specialist clinic. Achieved page 1 rankings for 6 key local
+                    terms within 3 months, driving consistent appointment
+                    bookings.
+                  </p>
+                </div>
+
+                <!-- Bottom Section -->
+                <div
+                  class="flex items-center justify-between pt-3 border-t border-slate-200 dark:border-slate-700"
+                >
+                  <!-- Skills -->
+                  <div class="flex gap-2 text-xs text-slate-500">
+                    <span
+                      class="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-md"
+                      >Local SEO</span
+                    >
+                    <span
+                      class="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-md"
+                      >Web Design</span
+                    >
+                  </div>
+
+                  <!-- CTA -->
+                  <a
+                    href="#"
+                    class="text-sm font-medium text-orange-500 hover:text-orange-600 flex items-center gap-1 group/link"
+                  >
+                    View Case
+                    <span
+                      class="transition-transform duration-300 group-hover/link:translate-x-1"
+                      >→</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!----------- Card#2 --------->
+          <div class="panel-tabAmazon group md:col-span-1">
+            <div
+              class="bg-stone-200 dark:bg-slate-900 rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+            >
+              <div
+                class="overflow-hidden flex items-center justify-center bg-slate-100 h-52"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  class="text-orange-400 w-52 h-52 transition-transform duration-500 group-hover:scale-110"
+                >
+                  <path d="M12 16v5" />
+                  <path d="M16 14v7" />
+                  <path d="M20 10v11" />
+                  <path
+                    d="m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15"
+                  />
+                  <path d="M4 18v3" />
+                  <path d="M8 14v7" />
+                </svg>
+              </div>
+
+              <!-- Content -->
+              <div class=" space-y-4 p-7 md:p-14 lg:p-8">
+                <!-- Top Tags -->
+                <div class="flex flex-wrap gap-2 text-xs font-medium">
+                  <span
+                    class="px-2 py-1 bg-orange-300 text-text-dark rounded-full"
+                    >Amazon</span
+                  >
+                  <span
+                    class="px-2 py-1 bg-green-100 text-green-600 rounded-full"
+                    >ACoS ↓ 42%</span
+                  >
+                  <!-- <span
+                    class="px-2 py-1 bg-green-100 text-green-600 rounded-full"
+                    >↑ 186% Traffic</span
+                  > -->
+                </div>
+
+                <!-- Title + Description -->
+                <div>
+                  <h2
+                    class="text-lg font-semibold text-slate-800 dark:text-white"
+                  >
+                    Amazon Account Turnaround
+                  </h2>
+                  <p
+                    class="text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed"
+                  >
+                    Full account audit, listing optimization, and PPC
+                    restructure that doubled monthly revenue in 6 months.
+                  </p>
+                </div>
+
+                <!-- Bottom Section -->
+                <div
+                  class="flex items-center justify-between pt-3 border-t border-slate-200 dark:border-slate-700"
+                >
+                  <!-- Skills -->
+                  <div class="flex gap-2 text-xs text-slate-500">
+                    <span
+                      class="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-md"
+                      >Local SEO</span
+                    >
+                    <span
+                      class="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-md"
+                      >Web Design</span
+                    >
+                  </div>
+
+                  <!-- CTA -->
+                  <a
+                    href="#"
+                    class="text-sm font-medium text-orange-500 hover:text-orange-600 flex items-center gap-1 group/link"
+                  >
+                    View Case
+                    <span
+                      class="transition-transform duration-300 group-hover/link:translate-x-1"
+                      >→</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-------  Middle Card  ------------>
+        <div class="card-container grid grid-cols-1 gap-4 mx-3 mt-8 md:grid-cols-2">
+          <!----------- Middle Card#1 --------->
+          <div class="panel-tabWeb group">
+            <div
+              class="bg-stone-200 dark:bg-slate-900 rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+            >
+              <!-- Image -->
+              <div class="overflow-hidden">
+                <img
+                  src="/img/petsitter_new.png"
+                  alt="Clinical Website"
+                  class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+
+              <!-- Content -->
+              <div class="p-10 space-y-5">
+                <!-- Top Tags -->
+                <div class="flex flex-wrap gap-2 text-xs font-medium">
+                  <span
+                    class="px-2 py-1 bg-orange-100 text-orange-600 rounded-full"
+                    >WEB</span
+                  >
+                  <span class="px-2 py-1 bg-blue-100 text-blue-600 rounded-full"
+                    >SEO</span
+                  >
+                  <span
+                    class="px-2 py-1 bg-green-100 text-green-600 rounded-full"
+                    >Web Design</span
+                  >
+                </div>
+
+                <!-- Title + Description -->
+                <div>
+                  <h2
+                    class="text-lg font-semibold text-slate-800 dark:text-white"
+                  >
+                    Clinical Website
+                  </h2>
+                  <p
+                    class="text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed"
+                  >
+                    Website design + full local SEO strategy for an eye
+                    specialist clinic. Achieved page 1 rankings for 6 key local
+                    terms within 3 months, driving consistent appointment
+                    bookings.
+                  </p>
+                </div>
+
+                <!-- Bottom Section -->
+                <div
+                  class="flex items-center justify-between pt-3 border-t border-slate-200 dark:border-slate-700"
+                >
+                  <!-- Skills -->
+                  <div class="flex gap-2 text-xs text-slate-500">
+                    <span
+                      class="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-md"
+                      >Local SEO</span
+                    >
+                    <span
+                      class="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-md"
+                      >Web Design</span
+                    >
+                  </div>
+
+                  <!-- CTA -->
+                  <a
+                    href="#"
+                    class="text-sm font-medium text-orange-500 hover:text-orange-600 flex items-center gap-1 group/link"
+                  >
+                    View Case
+                    <span
+                      class="transition-transform duration-300 group-hover/link:translate-x-1"
+                      >→</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!----------- Middle Card#2 --------->
+          <div class="panel-tabAmazon group">
+            <div
+              class="bg-stone-200 dark:bg-slate-900 rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+            >
+              <div
+                class="overflow-hidden flex items-center justify-center bg-slate-100 h-52"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="text-orange-400 w-48 h-48 transition-transform duration-500 group-hover:scale-110"
+                >
+                  <path d="M12 22v-9" />
+                  <path
+                    d="M15.17 2.21a1.67 1.67 0 0 1 1.63 0L21 4.57a1.93 1.93 0 0 1 0 3.36L8.82 14.79a1.655 1.655 0 0 1-1.64 0L3 12.43a1.93 1.93 0 0 1 0-3.36z"
+                  />
+                  <path
+                    d="M20 13v3.87a2.06 2.06 0 0 1-1.11 1.83l-6 3.08a1.93 1.93 0 0 1-1.78 0l-6-3.08A2.06 2.06 0 0 1 4 16.87V13"
+                  />
+                  <path
+                    d="M21 12.43a1.93 1.93 0 0 0 0-3.36L8.83 2.2a1.64 1.64 0 0 0-1.63 0L3 4.57a1.93 1.93 0 0 0 0 3.36l12.18 6.86a1.636 1.636 0 0 0 1.63 0z"
+                  />
+                </svg>
+              </div>
+
+              <!-- Content -->
+              <div class="p-12 space-y-6">
+                <!-- Top Tags -->
+                <div class="flex flex-wrap gap-2 text-xs font-medium">
+                  <span
+                    class="px-2 py-1 bg-orange-300 text-text-dark rounded-full"
+                    >Amazon</span
+                  >
+                  <span
+                    class="px-2 py-1 bg-green-100 text-green-600 rounded-full"
+                    >↑ 100% AHR</span
+                  >
+                  <span class="px-2 py-1 bg-blue-100 text-blue-600 rounded-full"
+                    >Return Rate ↓ 27%
+                  </span>
+                </div>
+
+                <!-- Title + Description -->
+                <div>
+                  <h2
+                    class="text-lg font-semibold text-slate-800 dark:text-white"
+                  >
+                    Amazon Account Management
+                  </h2>
+                  <p
+                    class="text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed"
+                  >
+                    Full account management, listing optimization, and PPC
+                    restructure that doubled monthly revenue in 6 months.
+                  </p>
+                </div>
+
+                <!-- Bottom Section -->
+                <div
+                  class="flex items-center justify-between pt-3 border-t border-slate-200 dark:border-slate-700"
+                >
+                  <!-- Skills -->
+                  <div class="flex gap-2 text-xs text-slate-500">
+                    <span
+                      class="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-md"
+                      >Local SEO</span
+                    >
+                    <span
+                      class="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-md"
+                      >Web Design</span
+                    >
+                  </div>
+
+                  <!-- CTA -->
+                  <a
+                    href="#"
+                    class="text-sm font-medium text-orange-500 hover:text-orange-600 flex items-center gap-1 group/link"
+                  >
+                    View Case
+                    <span
+                      class="transition-transform duration-300 group-hover/link:translate-x-1"
+                      >→</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-------  Lower Cards   ---------->
+        <div class="card-container grid grid-cols-1 gap-4 mx-3 mt-8 md:grid-cols-2 lg:grid-cols-3">
+          <!----------- Lower Card#1 --------->
+          <div class="panel-tabWeb group">
+            <div
+              class="bg-stone-200 dark:bg-slate-900 rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+            >
+              <!-- Image -->
+              <div class="overflow-hidden">
+                <img
+                  src="/img/petsitter_new.png"
+                  alt="Clinical Website"
+                  class="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+
+              <!-- Content -->
+              <div class="p-10 space-y-5">
+                <!-- Top Tags -->
+                <div class="flex flex-wrap gap-2 text-xs font-medium">
+                  <span
+                    class="px-2 py-1 bg-orange-100 text-orange-600 rounded-full"
+                    >WEB</span
+                  >
+                  <span class="px-2 py-1 bg-blue-100 text-blue-600 rounded-full"
+                    >SEO</span
+                  >
+                  <span
+                    class="px-2 py-1 bg-green-100 text-green-600 rounded-full"
+                    >Web Design</span
+                  >
+                </div>
+
+                <!-- Title + Description -->
+                <div>
+                  <h2
+                    class="text-lg font-semibold text-slate-800 dark:text-white"
+                  >
+                    Clinical Website
+                  </h2>
+                  <p
+                    class="text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed"
+                  >
+                    Website design + full local SEO strategy for an eye
+                    specialist clinic. Achieved page 1 rankings for 6 key local
+                    terms within 3 months, driving consistent appointment
+                    bookings.
+                  </p>
+                </div>
+
+                <!-- Bottom Section -->
+                <div
+                  class="flex items-center justify-between pt-3 border-t border-slate-200 dark:border-slate-700"
+                >
+                  <!-- Skills -->
+                  <div class="flex gap-2 text-xs text-slate-500">
+                    <span
+                      class="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-md"
+                      >Local SEO</span
+                    >
+                    <span
+                      class="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-md"
+                      >Web Design</span
+                    >
+                  </div>
+
+                  <!-- CTA -->
+                  <a
+                    href="#"
+                    class="text-sm font-medium text-orange-500 hover:text-orange-600 flex items-center gap-1 group/link"
+                  >
+                    View Case
+                    <span
+                      class="transition-transform duration-300 group-hover/link:translate-x-1"
+                      >→</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!----------- Lower Card#2 --------->
+          <div class="panel-tabAmazon group">
+            <div
+              class="bg-stone-200 dark:bg-slate-900 rounded-2xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+            >
+              <div
+                class="overflow-hidden flex items-center justify-center bg-slate-100 h-52"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="text-orange-400 w-48 h-48 transition-transform duration-500 group-hover:scale-110"
+                >
+                  <path d="M12 22v-9" />
+                  <path
+                    d="M15.17 2.21a1.67 1.67 0 0 1 1.63 0L21 4.57a1.93 1.93 0 0 1 0 3.36L8.82 14.79a1.655 1.655 0 0 1-1.64 0L3 12.43a1.93 1.93 0 0 1 0-3.36z"
+                  />
+                  <path
+                    d="M20 13v3.87a2.06 2.06 0 0 1-1.11 1.83l-6 3.08a1.93 1.93 0 0 1-1.78 0l-6-3.08A2.06 2.06 0 0 1 4 16.87V13"
+                  />
+                  <path
+                    d="M21 12.43a1.93 1.93 0 0 0 0-3.36L8.83 2.2a1.64 1.64 0 0 0-1.63 0L3 4.57a1.93 1.93 0 0 0 0 3.36l12.18 6.86a1.636 1.636 0 0 0 1.63 0z"
+                  />
+                </svg>
+              </div>
+
+              <!-- Content -->
+              <div class="p-12 space-y-6">
+                <!-- Top Tags -->
+                <div class="flex flex-wrap gap-2 text-xs font-medium">
+                  <span
+                    class="px-2 py-1 bg-orange-300 text-text-dark rounded-full"
+                    >Amazon</span
+                  >
+                  <span
+                    class="px-2 py-1 bg-green-100 text-green-600 rounded-full"
+                    >↑ 100% AHR</span
+                  >
+                  <span class="px-2 py-1 bg-blue-100 text-blue-600 rounded-full"
+                    >Return Rate ↓ 27%
+                  </span>
+                </div>
+
+                <!-- Title + Description -->
+                <div>
+                  <h2
+                    class="text-lg font-semibold text-slate-800 dark:text-white"
+                  >
+                    Amazon Account Management
+                  </h2>
+                  <p
+                    class="text-sm text-slate-600 dark:text-slate-400 mt-2 leading-relaxed"
+                  >
+                    Full account management, listing optimization, and PPC
+                    restructure that doubled monthly revenue in 6 months.
+                  </p>
+                </div>
+
+                <!-- Bottom Section -->
+                <div
+                  class="flex items-center justify-between pt-3 border-t border-slate-200 dark:border-slate-700"
+                >
+                  <!-- Skills -->
+                  <div class="flex gap-2 text-xs text-slate-500">
+                    <span
+                      class="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-md"
+                      >Local SEO</span
+                    >
+                    <span
+                      class="bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-md"
+                      >Web Design</span
+                    >
+                  </div>
+
+                  <!-- CTA -->
+                  <a
+                    href="#"
+                    class="text-sm font-medium text-orange-500 hover:text-orange-600 flex items-center gap-1 group/link"
+                  >
+                    View Case
+                    <span
+                      class="transition-transform duration-300 group-hover/link:translate-x-1"
+                      >→</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!----------- Lower Card#3 --------->
+          <div class="group">
+            <div
+              class="h-full flex flex-col items-center justify-center text-center border-2 border-dashed border-slate-300 dark:border-slate-700 rounded-2xl p-8 bg-white/50 dark:bg-slate-900/50 backdrop-blur-sm transition-all duration-300 hover:border-orange-400 hover:bg-orange-50/40 dark:hover:bg-slate-800 hover:-translate-y-1"
+            >
+              <!-- Icon -->
+              <div
+                class="w-12 h-12 flex items-center justify-center rounded-full border border-slate-300 dark:border-slate-600 text-xl font-semibold text-slate-500 transition-all duration-300 group-hover:text-orange-500 group-hover:border-orange-400"
+              >
+                +
+              </div>
+
+              <!-- Title -->
+              <h2
+                class="mt-4 text-lg font-semibold text-slate-800 dark:text-white"
+              >
+                More Coming Soon
+              </h2>
+
+              <!-- Description -->
+              <p
+                class="mt-2 text-sm text-slate-600 dark:text-slate-400 max-w-xs"
+              >
+                New projects are added here regularly.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-------------- Testimonial Section -------------->
+  <!-- Testimonials Section -->
+  <section class="w-full max-w-6xl mx-auto px-6 py-12">
+
+    <!-- Header -->
+    <p class="text-center text-xs font-medium tracking-widest uppercase text-gray-400 mb-2">
+      What people say
+    </p>
+    <h2 class="font-serif text-center text-4xl font-medium text-gray-900 mb-10 leading-snug">
+      Trusted by teams who
+      <em class="italic text-[#5DCAA5]"> care</em>
+      about quality
+    </h2>
+
+    <!-- Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+      <!-- Card 1 — Teal -->
+      <div class="relative bg-white border border-gray-100 rounded-xl p-7 flex flex-col gap-5 transition-colors duration-200 hover:border-gray-200">
+        <!-- Top accent bar -->
+        <div class="absolute top-0 left-6 w-10 h-[3px] rounded-b-sm bg-[#5DCAA5]"></div>
+
+        <!-- Opening quote mark -->
+        <div class="font-serif text-6xl leading-none italic font-medium select-none text-[#9FE1CB]">"</div>
+
+        <!-- Quote text -->
+        <p class="font-serif italic text-base leading-relaxed text-gray-800 flex-1">
+          This product completely changed how our team collaborates. The clarity it brings to every workflow is something I didn't know I was missing until I had it.
+        </p>
+
+        <!-- Star rating -->
+        <div class="flex gap-1">
+          <svg class="w-3.5 h-3.5 text-[#1D9E75]" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
+          <svg class="w-3.5 h-3.5 text-[#1D9E75]" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
+          <svg class="w-3.5 h-3.5 text-[#1D9E75]" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
+          <svg class="w-3.5 h-3.5 text-[#1D9E75]" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
+          <svg class="w-3.5 h-3.5 text-[#1D9E75]" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
+        </div>
+
+        <!-- Author -->
+        <div class="flex items-center gap-3.5 pt-4 border-t border-gray-100">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium shrink-0 text-[#0F6E56] bg-[#C7EDDF]">SR</div>
+          <div>
+            <p class="text-sm font-medium text-gray-900 mb-0.5">Sophia Reyes</p>
+            <p class="text-xs font-light text-gray-400">Head of Product · Luminary Co.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 — Purple -->
+      <div class="relative bg-white border border-gray-100 rounded-xl p-7 flex flex-col gap-5 transition-colors duration-200 hover:border-gray-200">
+        <div class="absolute top-0 left-6 w-10 h-[3px] rounded-b-sm bg-[#7F77DD]"></div>
+        <div class="font-serif text-6xl leading-none italic font-medium select-none text-[#CECBF6]">"</div>
+        <p class="font-serif italic text-base leading-relaxed text-gray-800 flex-1">
+          Onboarding was a breeze. Within a week, our entire engineering team was up to speed — and within a month, we shipped faster than we ever had before.
+        </p>
+        <div class="flex gap-1">
+          <svg class="w-3.5 h-3.5 text-[#7F77DD]" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
+          <svg class="w-3.5 h-3.5 text-[#7F77DD]" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
+          <svg class="w-3.5 h-3.5 text-[#7F77DD]" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
+          <svg class="w-3.5 h-3.5 text-[#7F77DD]" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
+          <svg class="w-3.5 h-3.5 text-[#7F77DD]" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
+        </div>
+        <div class="flex items-center gap-3.5 pt-4 border-t border-gray-100">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium shrink-0 text-[#534AB7] bg-[#cdcaff]">AM</div>
+          <div>
+            <p class="text-sm font-medium text-gray-900 mb-0.5">Arjun Mehta</p>
+            <p class="text-xs font-light text-gray-400">CTO · Orbit Labs</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 — Coral -->
+      <div class="relative bg-white border border-gray-100 rounded-xl p-7 flex flex-col gap-5 transition-colors duration-200 hover:border-gray-200">
+        <div class="absolute top-0 left-6 w-10 h-[3px] rounded-b-sm bg-[#D85A30]"></div>
+        <div class="font-serif text-6xl leading-none italic font-medium select-none text-[#F5C4B3]">"</div>
+        <p class="font-serif italic text-base leading-relaxed text-gray-800 flex-1">
+          The support team is exceptional. Every question I've had was answered thoughtfully and quickly. It genuinely feels like they're invested in our success.
+        </p>
+        <div class="flex gap-1">
+          <svg class="w-3.5 h-3.5 text-[#D85A30]" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
+          <svg class="w-3.5 h-3.5 text-[#D85A30]" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
+          <svg class="w-3.5 h-3.5 text-[#D85A30]" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
+          <svg class="w-3.5 h-3.5 text-[#D85A30]" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
+          <svg class="w-3.5 h-3.5 text-[#D85A30]" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
+        </div>
+        <div class="flex items-center gap-3.5 pt-4 border-t border-gray-100">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium shrink-0 text-[#993C1D] bg-[#FAECE7]">NC</div>
+          <div>
+            <p class="text-sm font-medium text-gray-900 mb-0.5">Naomi Chen</p>
+            <p class="text-xs font-light text-gray-400">Founder · Driftwood Studio</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+    <!------------  Final CTA   ------------->
+    <section id="contact" class="py-20 px-6">
+      <div class="max-w-5xl mx-auto">
+        <div
+          class="relative overflow-hidden text-center bg-slate-900 rounded-3xl px-6 py-12 md:px-12 md:py-16 shadow-[0_20px_60px_-15px_rgba(251,146,60,0.45),0_10px_30px_-10px_rgba(0,0,0,0.6)]"
+        >
+          <!-- Glow Effects -->
+          <div
+            class="absolute -top-20 -20 w-[300px] h-[300px] bg-orange-400 rounded-full blur-[100px] opacity-20"
+          ></div>
+          <div
+            class="absolute -bottom-16 -16 w-[250px] h-[250px] bg-pink-400 rounded-full blur-[80px] opacity-10"
+          ></div>
+
+          <!-- Content -->
+          <div class="relative z-10">
+            <p
+              class="font-syne text-xs font-bold tracking-[0.18em] text-orange-400 uppercase mb-4"
+            >
+              Ready to Start?
+            </p>
+
+            <h2
+              class="text-3xl md:text-5xl font-extrabold text-stone-100 leading-tight tracking-tight mb-5"
+            >
+              Let's Build Something<br />That Actually Grows.
+            </h2>
+
+            <p
+              class="text-base text-stone-400 max-w-md mx-auto leading-relaxed mb-10"
+            >
+              Book a free 30-minute consultation. No pressure, no commitment —
+              just a clear plan for your business.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-4">
+              <!-- Primary CTA -->
+              <a
+                href="mailto:hello@digitalecho365.com"
+                class="bg-orange-400 hover:bg-orange-500 text-slate-900 font-syne font-bold text-sm px-8 py-3 rounded-full transition-all duration-300"
+              >
+                Book Free Consultation
+              </a>
+
+              <!-- Secondary CTA -->
+              <a
+                href="#services-container"
+                class="border-2 border-stone-600 text-stone-400 hover:border-stone-400 hover:text-stone-100 font-syne font-bold text-sm px-8 py-3 rounded-full transition-all duration-300"
+              >
+                View All Services
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--------------- Footer Section ---------------->
+    <footer class="mb-7 mt-16 mb:mt-20">
+      <div
+        class="text-center grid grid-cols-2 md:space-x-10 gap-y-3 md:block text-2xl font-medium"
+      >
+        <a href="/index.html" class="hover:text-orange-400 duration-200"
+          >Home</a
+        >
+        <a href="#about" class="hover:text-orange-400 duration-200">About</a>
+
+        <a href="/src/services.html" class="hover:text-orange-400 duration-200"
+          >Services</a
+        >
+        <a
+          href="./src/pages/blogs/blog-menu.html"
+          class="hover:text-orange-400 duration-200"
+          >Blogs</a
+        >
+      </div>
+      <div class="text-center my-7 py-10 text-4xl md:text-5xl">
+        <a href="https://github.com/firstprogram7"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/shazid-rahman/"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+      </div>
+      <p
+        class="font-semibold text-textColorLight text-center mt-10 px-3 md:mt-14"
+      >
+        Copyright &copy 2026 Shazid. All rights reserved.
+      </p>
+    </footer>
+    <script src="/main.js"></script>
+  </body>
+</html>

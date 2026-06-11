@@ -1,3 +1,16 @@
+// Subscribe button function blog-menu-page
+// it gives error = Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')
+// at HTMLDocument.<anonymous> (main.js:7:8)
+// document.addEventListener("DOMContentLoaded", () => {
+//   const form = document.getElementById("subscribeForm");
+//   const subscribeMessage = document.getElementById("subscribeMessage");
+
+//   form.addEventListener("submit", (e) => {
+//     e.preventDefault();
+//     subscribeMessage.classList.remove("hidden");
+//   });
+// });
+// Navbar Function
 const btn = document.getElementById("menu-btn");
 const menu = document.getElementById("mobile-menu");
 const links = menu.querySelectorAll("a");
@@ -47,7 +60,7 @@ window.addEventListener("scroll", () => {
       "duration-150",
       "shadow-md",
       "z-50"
-    );   
+    );
     // 2. Shrink logo
     logo.classList.replace("md:text-5xl", "text-2xl");
     // 3. Shring nav links to text-sm
@@ -73,15 +86,14 @@ const lightBtn = document.getElementById("light-mode");
 const darkBtn = document.getElementById("dark-mode");
 lightBtn.addEventListener("click", () => {
   html.classList.remove("dark");
-  localStorage.setItem("theme","light");
+  localStorage.setItem("theme", "light");
 });
 darkBtn.addEventListener("click", () => {
   html.classList.add("dark");
-  localStorage.setItem("theme","dark");
+  localStorage.setItem("theme", "dark");
 });
 
-
-// Card stack function
+// Card stack function (Landing page)
 let lastScrollTop = 0;
 
 window.addEventListener("scroll", () => {
@@ -135,4 +147,69 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Subscribe button function blog menu page
+// Services Pages service cards
+// 1. Use querySelectorAll to get a NodeList (so .forEach works)
+// const tabBtns = document.querySelectorAll(".tab-btn");
+// const tabPanels = document.querySelectorAll(".tab-panel");
+
+// tabBtns.forEach((btn) => {
+//   btn.addEventListener("click", () => {
+//     // Remove active styles from ALL buttons
+//     tabBtns.forEach((b) => b.classList.remove("active", "text-orange-400"));
+
+//     // Hide ALL panels
+//     tabPanels.forEach((p) => {
+//       p.classList.remove("active");
+//       p.style.display = "none";
+//     });
+
+//     // Add active style to the clicked button
+//     btn.classList.add("active", "text-orange-400");
+
+//     const target = btn.dataset.tab;
+
+//     if (target === "all") {
+//       // Show everything
+//       tabPanels.forEach((p) => {
+//         p.classList.add("active");
+//         p.style.display = "grid";
+//       });
+//     } else {
+//       // Show only the specific panel matching "tab-web" or "tab-amazon"
+//       const panel = document.getElementById("tab-" + target);
+//       if (panel) {
+//         panel.classList.add("active");
+//         panel.style.display = "grid";
+//       }
+//     }
+//   });
+// });
+
+// Project tab control
+const tabButtons = document.querySelectorAll(".tab-button");
+const panels = document.querySelectorAll("[class*='panel-']");
+const projectCount = document.querySelector(".project-count");
+
+tabButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    tabButtons.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+    const tabData = btn.dataset.category;
+    console.log(tabData);
+    panels.forEach((panel) => {
+      if (tabData === "tabAll") {
+        panel.style.display = "block";
+        const total = document.querySelectorAll("[class*='panel-']").length;
+        projectCount.textContent = total + " projects";
+      } else if (panel.classList.contains(`panel-${tabData}`)) {
+        panel.style.display = "block";
+        const count = document.querySelectorAll(`.panel-${tabData}`).length;
+        projectCount.textContent = count + " projects";
+      } else {
+        panel.style.display = "none";
+        const count2 = document.querySelectorAll(`.panel-${tabData}`).length;
+        projectCount.textContent = count2 + " projects";
+      }
+    });
+  });
+});

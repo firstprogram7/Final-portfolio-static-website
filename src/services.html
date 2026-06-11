@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <title>Services</title>
+    <link rel="stylesheet" href="/dist/output.css" />
+  </head>
+  <body >
+    <!-------------------- Dark mode toggle button ----------------->
+    <section>
+      <div class="flex justify-end px-4 pt-3">
+        <div
+          class="switch px-3 py-1 rounded-full space-x-2 max-w-20 bg-stone-100 hover:bg-stone-200 border border-stone-300 shadow-sm duration-300"
+        >
+          <i id="light-mode" class="fa-regular fa-sun dark:text-stone-500 cursor-pointer"></i>
+          <i id="dark-mode"  class="fa-solid fa-moon text-stone-300 cursor-pointer"></i>
+        </div>
+      </div>
+    </section>
+    <!--------------------    Navigation bar    ----------------->
+    <header id="main-header" class="sticky top-0 z-50 scroll-mt-20">
+      <nav class="container mx-auto max-w-6xl">
+        <div
+          class="flex justify-between items-center py-4 px-8 md:px-[55px] lg:px-0"
+        >
+          <a
+            href="/index.html"
+            id="logo"
+            class="text-4xl font-bold md:text-5xl transistion-all duration-300 ease-in-out"
+            >Shazid</a
+          >
+          <div id="nav-links" class="hidden lg:flex space-x-6">
+            <a
+              href="/index.html"
+              class="md:text-xl lg:text-2xl transistion-all duration-150 ease-in-out"
+              >Home</a
+            >
+
+            <a
+              href="#Services"
+              class="text-orange-400 md:text-xl lg:text-2xl"
+              >Services</a
+            >
+            <a
+              href="./pages/projects/projectDashboard.html"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >Projects</a
+            >
+            <a
+              href="/src/about.html"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >About</a
+            >
+            <a
+              href="./pages/blogs/blog-menu.html"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >Blogs</a
+            >
+            <a
+              href="./contact.html"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl"
+              >Contact Me</a
+            >
+          </div>
+          <button id="menu-btn" class="block relative w-12 h-12 lg:hidden">
+            <span
+              class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary -translate-y-2 transition-all duration-300"
+            ></span>
+            <span
+              class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary transition-all duration-300"
+            ></span>
+            <span
+              class="absolute left-0 top-1/2 w-8 h-0.5 bg-primary translate-y-2 transition-all duration-300"
+            ></span>
+          </button>
+        </div>
+        <div
+          id="mobile-menu"
+          class="absolute left-0 top-full w-full bg-[#f8fafc] shadow-lg py-10 px-6 space-y-6 text-lg text-center scale-y-0 font-bold transform origin-top transition-all duration-200 z-50"
+        >
+          <a href="/index.html" class="block hover:text-orange-400">Home</a>
+
+          <a href="#services" class="block hover:text-orange-400">Services</a>
+          <a href="./pages/projects/projectDashboard.html" class="block hover:text-orange-400">Projects</a>
+          <a href="#about" class="block hover:text-orange-400">About</a>
+          <a
+            href="./pages/blogs/blog-menu.html"
+            class="block hover:text-orange-400"
+            >Blogs</a
+          >
+          <a href="./contact.html" class="block hover:text-orange-400"
+            >Contact Me</a
+          >
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!--------- Hero section --------->
+      <section class="mt-16">
+        <div class="max-w-6xl mx-auto p-10">
+          <div class="space-y-3 text-center md:text-left">
+            <p
+              class="text-lg uppercase font-semibold pl-3 tracking-[0.2em] text-orange-400 "
+            >
+              What we offer
+            </p>
+            <h1 class="text-6xl text-text-dark font-bold md:text-8xl ">
+              Services Built for <br /><span class="italic text-orange-400"
+                >Real Growth</span
+              >
+            </h1>
+            <p class="text-xl text-gray-500 md:text-2xl ">
+              From high-converting websites and SEO dominance to full Amazon
+              account management. <br />
+              We handle the digital heavy lifting so you can focus on scaling.
+            </p>
+          </div>
+          <div
+            class="flex justify-center items-center flex-wrap gap-4 md:justify-start pt-9"
+          >
+            <a
+              href="#services"
+              class="px-12 py-4 text-xl text-white font-semibold bg-orange-400 hover:bg-orange-500 rounded-full shadow-lg cursor-pointer "
+              >Explore Services <span>→</span></a
+            >
+            <a
+              href="#"
+              class="px-8 py-4 text-xl font-semibold bg-stone-500 hover:bg-stone-600 text-white rounded-full shadow-lg cursor-pointer md:px-16 "
+              >Book Free Consultation</a
+            >
+          </div>
+          <!---------- Service achivement cards-->
+          <div
+            class="grid grid-cols-2 py-4 mt-16 md:grid-cols-4 bg-stone-300 rounded-lg shadow-sm"
+          >
+            <div
+              class="py-2 px-6 space-y-2 border-stone-400 border-b-[1px] border-r-[1px] md:border-b-0"
+            >
+              <h2 class="text-5xl font-semibold text-orange-400">50+</h2>
+              <p class="text-gray-600">Projects Delivered</p>
+            </div>
+            <div
+              class="py-2 px-6 space-y-2 border-stone-400 border-b-[1px] border-r-[1px] md:border-b-0"
+            >
+              <h2 class="text-5xl font-semibold text-[#2a9d8f]">3<span>X</span></h2>
+              <p class="text-gray-600">Traffic Growth</p>
+            </div>
+            <div class="py-2 px-6 space-y-2 border-stone-400 border-r-[1px]">
+              <h2 class="text-5xl font-semibold text-[#e76f51]">30+</h2>
+              <p class="text-gray-600">Amazon Sellers Helped</p>
+            </div>
+            <div class="py-2 px-6 space-y-2">
+              <h2 class="text-5xl font-semibold text-[#264653]">98%</h2>
+              <p class="text-gray-600">Client Satisfaction</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!------------- Services --------------->
+      <section id="services">
+        <div class="max-w-6xl mx-auto p-4 md:p-10">
+          <!-- Tab switcher -->
+          <div class="flex items-center justify-between flex-wrap gap-6 mb-14">
+            <div>
+              <p
+                class="text-lg uppercase font-semibold pl-3 tracking-[0.2em] text-orange-400 "
+              >
+                Services
+              </p>
+              <h2 class="text-5xl font-semibold md:text-6xl ">
+                Our Core Offerings
+              </h2>
+            </div>
+            <!----- Tab Buttons ------>
+            <div
+              class="bg-stone-200 text-lg flex gap-3 p-4 rounded-full border-stone-400 border shadow-[0_25px_50px_-12px_rgba(251,146,60,0.25)] hover:shadow-[0_30px_70px_-10px_rgba(251,146,60,0.45)] transition-all duration-300 "
+            >
+              <button
+                class="tab-btn active text-orange-400 font-semibold px-2"
+                data-tab="web"
+              >
+                Web & SEO
+              </button>
+              <button class="tab-btn px-2" data-tab="amazon">Amazon</button>
+              <button class="tab-btn px-2" data-tab="all">All Services</button>
+            </div>
+          </div>
+          <!-------------------- Web & SEO Tab --------------->
+          <div
+            id="tab-web"
+            class="tab-panel active grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3"
+          >
+            <!----- Card#1   ------->
+            <div
+              class="service-card relative bg-stone-200 border-stone-300 border rounded-lg p-10 py-12 "
+            >
+              <span
+                class="text-xl text-gray-500 font-semibold absolute top-4 right-6"
+                >01</span
+              >
+
+              <div
+                class="text-2xl bg-orange-100 w-[48px] h-[48px] flex justify-center items-center rounded-md mb-8"
+              >
+                🌐
+              </div>
+
+              <h3 class="text-xl text-text-dark font-semibold mb-2">
+                Website Design & Development
+              </h3>
+              <p class="text-gray-500 mb-6">
+                Custom, responsive websites that convert visitors into clients.
+                Built for speed, SEO, and stunning visual impact.
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >HTML/CSS</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Responsive</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Performance</span
+                >
+              </div>
+            </div>
+            <!----- Card#2   ------->
+            <div
+              class="service-card relative bg-stone-200 border-stone-300 border rounded-lg p-10 "
+            >
+              <span
+                class="text-xl text-gray-500 font-semibold absolute top-4 right-6"
+                >02</span
+              >
+
+              <div
+                class="text-2xl bg-[#eef1ff] w-[48px] h-[48px] flex justify-center items-center rounded-md mb-8"
+              >
+                🔍
+              </div>
+
+              <h3 class="text-xl text-text-dark font-semibold mb-2">
+                Search Engine Optimization
+              </h3>
+              <p class="text-gray-500 mb-6">
+                Rank higher on Google with technical SEO, on-page optimization,
+                backlink strategy, and content that drives organic traffic.
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >On-Page SEO</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Technical SEO</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Backlinks</span
+                >
+              </div>
+            </div>
+            <!----- Card#3   ------->
+            <div
+              class="service-card relative bg-stone-200 border-stone-300 border rounded-lg p-10 py-12 "
+            >
+              <span
+                class="text-xl text-gray-500 font-semibold absolute top-4 right-6"
+                >03</span
+              >
+
+              <div
+                class="text-2xl bg-[#fff3ee] w-[48px] h-[48px] flex justify-center items-center rounded-md mb-8"
+              >
+                ⚡
+              </div>
+
+              <h3 class="text-xl text-text-dark font-semibold mb-2">
+                Speed & Performance Optimization
+              </h3>
+              <p class="text-gray-500 mb-6">
+                Core Web Vitals, image optimization, lazy loading, and caching
+                strategies that make your site lightning fast.
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Caching</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >CDN</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Core Web Vitals</span
+                >
+              </div>
+            </div>
+            <!----- Card#4   ------->
+            <div
+              class="service-card relative bg-stone-200 border-stone-300 border rounded-lg p-10 py-12 "
+            >
+              <span
+                class="text-xl text-gray-500 font-semibold absolute top-4 right-6"
+                >04</span
+              >
+
+              <div
+                class="text-2xl bg-[#fff3ee] w-[48px] h-[48px] flex justify-center items-center rounded-md mb-8"
+              >
+                🎯
+              </div>
+
+              <h3 class="text-xl text-text-dark font-semibold mb-2">
+                Conversion Rate Optimization
+              </h3>
+              <p class="text-gray-500 mb-6">
+                Turn more visitors into buyers with strategic CTA placement, A/B
+                testing, and UX improvements backed by data.
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >A/B Testing</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >UX Audit</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Heatmaps</span
+                >
+              </div>
+            </div>
+            <!----- Card#5   ------->
+            <div
+              class="service-card relative bg-stone-200 border-stone-300 border rounded-lg p-10 py-12 "
+            >
+              <span
+                class="text-xl text-gray-500 font-semibold absolute top-4 right-6"
+                >05</span
+              >
+
+              <div
+                class="text-2xl bg-[#eef1ff] w-[48px] h-[48px] flex justify-center items-center rounded-md mb-8"
+              >
+                📝
+              </div>
+
+              <h3 class="text-xl text-text-dark font-semibold mb-2">
+                Content Strategy & Blogging
+              </h3>
+              <p class="text-gray-500 mb-6">
+                SEO-optimized content that builds topical authority, drives
+                qualified traffic, and converts readers into leads.
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Keyword Research</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Blog Posts</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Authority</span
+                >
+              </div>
+            </div>
+            <!----- Card#6   ------->
+            <div
+              class="service-card relative bg-[#121212] border-stone-300 border rounded-lg p-10 py-12 "
+            >
+              <div
+                class="text-md text-orange-400 uppercase font-semibold tracking-widest mb-8"
+              >
+                Get Started
+              </div>
+
+              <h3 class="text-3xl text-white font-semibold mb-2">
+                Not sure where to start?
+              </h3>
+              <p class="text-white mb-6">
+                Book a free 30-min consultation and get a custom roadmap for
+                your business.
+              </p>
+
+              <div class="mt-14">
+                <a
+                  href="#"
+                  class="bg-orange-400 text-gray-100 px-6 py-3 rounded-full"
+                  >Book a Free Call <span>→</span></a
+                >
+              </div>
+            </div>
+          </div>
+          <!----------------- Amazon Tab ------------------>
+          <div
+            id="tab-amazon"
+            class="tab-panel grid grid-cols-1 gap-5 mt-[20px] md:grid-cols-2 lg:grid-cols-3"
+          >
+            <!----- Card#1   ------->
+            <div
+              class="service-card relative bg-stone-200 border-stone-300 border rounded-lg p-10 py-12 "
+            >
+              <span
+                class="text-xl text-gray-500 font-semibold absolute top-4 right-6"
+                >01</span
+              >
+
+              <div
+                class="text-2xl bg-orange-100 w-[48px] h-[48px] flex justify-center items-center rounded-md mb-8"
+              >
+                📦
+              </div>
+
+              <h3 class="text-xl text-text-dark font-semibold mb-2">
+                Amazon Account Management
+              </h3>
+              <p class="text-gray-500 mb-6">
+                Full management of your Seller Central — from inventory and
+                listings to health metrics, compliance, and growth strategy.
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Seller Central</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Compliance</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Health Score</span
+                >
+              </div>
+            </div>
+            <!----- Card#2   ------->
+            <div
+              class="service-card relative bg-stone-200 border-stone-300 border rounded-lg p-10"
+            >
+              <span
+                class="text-xl text-gray-500 font-semibold absolute top-4 right-6"
+                >02</span
+              >
+
+              <div
+                class="text-2xl bg-[#eef1ff] w-[48px] h-[48px] flex justify-center items-center rounded-md mb-8"
+              >
+                📊
+              </div>
+
+              <h3 class="text-xl text-text-dark font-semibold mb-2">
+                Data Analysis & Reporting
+              </h3>
+              <p class="text-gray-500 mb-6">
+                Deep-dive analytics on sales, traffic, conversion, and
+                profitability — with clear reports that drive smarter decisions.
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Sales Reports</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >KPI Tracking</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Forecasting</span
+                >
+              </div>
+            </div>
+            <!----- Card#3   ------->
+            <div
+              class="service-card relative bg-stone-200 border-stone-300 border rounded-lg p-10 py-12"
+            >
+              <span
+                class="text-xl text-gray-500 font-semibold absolute top-4 right-6"
+                >03</span
+              >
+
+              <div
+                class="text-2xl bg-[#fff3ee] w-[48px] h-[48px] flex justify-center items-center rounded-md mb-8"
+              >
+                ⚡
+              </div>
+
+              <h3 class="text-xl text-text-dark font-semibold mb-2">
+                Product Listing Optimization
+              </h3>
+              <p class="text-gray-500 mb-6">
+                Keyword-rich titles, bullet points, and A+ Content that rank
+                higher and convert better on search results.
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >A+ Content</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Images</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Keyword Optimization</span
+                >
+              </div>
+            </div>
+            <!----- Card#4   ------->
+            <div
+              class="service-card relative bg-stone-200 border-stone-300 border rounded-lg p-10 py-12"
+            >
+              <span
+                class="text-xl text-gray-500 font-semibold absolute top-4 right-6"
+                >04</span
+              >
+
+              <div
+                class="text-2xl bg-[#fff3ee] w-[48px] h-[48px] flex justify-center items-center rounded-md mb-8"
+              >
+                💰
+              </div>
+
+              <h3 class="text-xl text-text-dark font-semibold mb-2">
+                PPC Campaign Management
+              </h3>
+              <p class="text-gray-500 mb-6">
+                Sponsored Products, Brands & Display ads — structured campaigns
+                that maximize ROAS and lower your ACoS.
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Sponsored Ads</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >ROAS</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >ACoS</span
+                >
+              </div>
+            </div>
+            <!----- Card#5   ------->
+            <div
+              class="service-card relative bg-stone-200 border-stone-300 border rounded-lg p-10 py-12"
+            >
+              <span
+                class="text-xl text-gray-500 font-semibold absolute top-4 right-6"
+                >05</span
+              >
+
+              <div
+                class="text-3xl text-background-yellow bg-blue-600 w-[48px] h-[48px] flex justify-center items-center rounded-md mb-8"
+              >
+                ⭐
+              </div>
+
+              <h3 class="text-xl text-text-dark font-semibold mb-2">
+                Review & Reputation Management
+              </h3>
+              <p class="text-gray-500 mb-6">
+                Ethical strategies to grow positive reviews, respond to negative
+                feedback, and protect your seller reputation.
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Feedback</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Brand Safety</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Review Strategy</span
+                >
+              </div>
+            </div>
+            <!----- Card#6   ------->
+            <div
+              class="service-card relative bg-[#121212] border-stone-300 border rounded-lg p-10 py-12"
+            >
+              <div
+                class="text-md text-orange-400 uppercase font-semibold tracking-widest mb-8"
+              >
+                Amazon Sellers
+              </div>
+
+              <h3 class="text-3xl text-white font-semibold mb-2">
+                Ready to scale your Amazon store?
+              </h3>
+              <p class="text-white mb-6">
+                Get a free account audit and discover untapped revenue
+                opportunities.
+              </p>
+
+              <div class="mt-14">
+                <a
+                  href="#"
+                  class="bg-orange-400 text-gray-100 px-6 py-3 rounded-full"
+                  >Get Free Audit <span>→</span></a
+                >
+              </div>
+            </div>
+          </div>
+          <!---------------------- All Tabs ----------------------->
+          <div
+            id="tab-all"
+            class="tab-panel-all grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3"
+          >
+            <!----- Card#1   ------->
+            <div
+              class="service-card relative bg-stone-200 border-stone-300 border rounded-lg p-10 py-12"
+            >
+              <span
+                class="text-xl text-gray-500 font-semibold absolute top-4 right-6"
+                >01</span
+              >
+
+              <div
+                class="text-2xl bg-orange-100 w-[48px] h-[48px] flex justify-center items-center rounded-md mb-8"
+              >
+                🌐
+              </div>
+
+              <h3 class="text-xl text-text-dark font-semibold mb-2">
+                Website Design & Development
+              </h3>
+              <p class="text-gray-500 mb-6">
+                Custom, responsive websites that convert visitors into clients.
+                Built for speed, SEO, and stunning visual impact.
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >HTML/CSS</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Responsive</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Performance</span
+                >
+              </div>
+            </div>
+            <!----- Card#2   ------->
+            <div
+              class="service-card relative bg-stone-200 border-stone-300 border rounded-lg p-10"
+            >
+              <span
+                class="text-xl text-gray-500 font-semibold absolute top-4 right-6"
+                >02</span
+              >
+
+              <div
+                class="text-2xl bg-[#eef1ff] w-[48px] h-[48px] flex justify-center items-center rounded-md mb-8"
+              >
+                🔍
+              </div>
+
+              <h3 class="text-xl text-text-dark font-semibold mb-2">
+                Search Engine Optimization
+              </h3>
+              <p class="text-gray-500 mb-6">
+                Rank higher on Google with technical SEO, on-page optimization,
+                backlink strategy, and content that drives organic traffic.
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >On-Page SEO</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Technical SEO</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Backlinks</span
+                >
+              </div>
+            </div>
+            <!----- Card#3   ------->
+            <div
+              class="service-card relative bg-stone-200 border-stone-300 border rounded-lg p-10 py-12"
+            >
+              <span
+                class="text-xl text-gray-500 font-semibold absolute top-4 right-6"
+                >03</span
+              >
+
+              <div
+                class="text-2xl bg-[#fff3ee] w-[48px] h-[48px] flex justify-center items-center rounded-md mb-8"
+              >
+                ⚡
+              </div>
+
+              <h3 class="text-xl text-text-dark font-semibold mb-2">
+                Speed & Performance Optimization
+              </h3>
+              <p class="text-gray-500 mb-6">
+                Core Web Vitals, image optimization, lazy loading, and caching
+                strategies that make your site lightning fast.
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Caching</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >CDN</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Core Web Vitals</span
+                >
+              </div>
+            </div>
+            <!----- Card#4   ------->
+            <div
+              class="service-card relative bg-stone-200 border-stone-300 border rounded-lg p-10 py-12"
+            >
+              <span
+                class="text-xl text-gray-500 font-semibold absolute top-4 right-6"
+                >04</span
+              >
+
+              <div
+                class="text-2xl bg-[#fff3ee] w-[48px] h-[48px] flex justify-center items-center rounded-md mb-8"
+              >
+                🎯
+              </div>
+
+              <h3 class="text-xl text-text-dark font-semibold mb-2">
+                Conversion Rate Optimization
+              </h3>
+              <p class="text-gray-500 mb-6">
+                Turn more visitors into buyers with strategic CTA placement, A/B
+                testing, and UX improvements backed by data.
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >A/B Testing</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >UX Audit</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Heatmaps</span
+                >
+              </div>
+            </div>
+            <!----- Card#5   ------->
+            <div
+              class="service-card relative bg-stone-200 border-stone-300 border rounded-lg p-10 py-12"
+            >
+              <span
+                class="text-xl text-gray-500 font-semibold absolute top-4 right-6"
+                >05</span
+              >
+
+              <div
+                class="text-2xl bg-[#eef1ff] w-[48px] h-[48px] flex justify-center items-center rounded-md mb-8"
+              >
+                📝
+              </div>
+
+              <h3 class="text-xl text-text-dark font-semibold mb-2">
+                Content Strategy & Blogging
+              </h3>
+              <p class="text-gray-500 mb-6">
+                SEO-optimized content that builds topical authority, drives
+                qualified traffic, and converts readers into leads.
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Keyword Research</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Blog Posts</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Authority</span
+                >
+              </div>
+            </div>
+
+            <!----------------- Amazon Tab ------------------>
+            <!-- Paste Here -->
+            <!----- Card#6   ------->
+            <div
+              class="service-card relative bg-stone-200 border-stone-300 border rounded-lg p-10 py-12"
+            >
+              <span
+                class="text-xl text-gray-500 font-semibold absolute top-4 right-6"
+                >06</span
+              >
+
+              <div
+                class="text-2xl bg-orange-100 w-[48px] h-[48px] flex justify-center items-center rounded-md mb-8"
+              >
+                📦
+              </div>
+
+              <h3 class="text-xl text-text-dark font-semibold mb-2">
+                Amazon Account Management
+              </h3>
+              <p class="text-gray-500 mb-6">
+                Full management of your Seller Central — from inventory and
+                listings to health metrics, compliance, and growth strategy.
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Seller Central</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Compliance</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Health Score</span
+                >
+              </div>
+            </div>
+            <!----- Card#7   ------->
+            <div
+              class="service-card relative bg-stone-200 border-stone-300 border rounded-lg p-10"
+            >
+              <span
+                class="text-xl text-gray-500 font-semibold absolute top-4 right-6"
+                >07</span
+              >
+
+              <div
+                class="text-2xl bg-[#eef1ff] w-[48px] h-[48px] flex justify-center items-center rounded-md mb-8"
+              >
+                📊
+              </div>
+
+              <h3 class="text-xl text-text-dark font-semibold mb-2">
+                Data Analysis & Reporting
+              </h3>
+              <p class="text-gray-500 mb-6">
+                Deep-dive analytics on sales, traffic, conversion, and
+                profitability — with clear reports that drive smarter decisions.
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Sales Reports</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >KPI Tracking</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Forecasting</span
+                >
+              </div>
+            </div>
+            <!----- Card#8   ------->
+            <div
+              class="service-card relative bg-stone-200 border-stone-300 border rounded-lg p-10 py-12"
+            >
+              <span
+                class="text-xl text-gray-500 font-semibold absolute top-4 right-6"
+                >08</span
+              >
+
+              <div
+                class="text-2xl bg-[#fff3ee] w-[48px] h-[48px] flex justify-center items-center rounded-md mb-8"
+              >
+                ⚡
+              </div>
+
+              <h3 class="text-xl text-text-dark font-semibold mb-2">
+                Product Listing Optimization
+              </h3>
+              <p class="text-gray-500 mb-6">
+                Keyword-rich titles, bullet points, and A+ Content that rank
+                higher and convert better on search results.
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >A+ Content</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Images</span
+                >
+                <span
+                  class="bg-gray-300 text-sm border-gray-400 border py-2 px-4 rounded-full"
+                  >Keyword Optimization</span
+                >
+              </div>
+            </div>
+
+            <!----- Card#9   ------->
+            <div
+              class="service-card relative bg-[#121212] border-stone-300 border rounded-lg p-10 py-12"
+            >
+              <div
+                class="text-md text-orange-400 uppercase font-semibold tracking-widest mb-8"
+              >
+                Custom Package
+              </div>
+
+              <h3 class="text-3xl text-white font-semibold mb-2">
+                Need something specific?
+              </h3>
+              <p class="text-white mb-6">
+                We build custom packages tailored to your exact business needs.
+              </p>
+
+              <div class="mt-14">
+                <a
+                  href="#"
+                  class="bg-orange-400 text-gray-100 px-6 py-3 rounded-full"
+                  >Let's Talk<span>→</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--------------- How we work ---------------->
+      <section class="relative mt-16">
+        <div
+          class="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_50%,_var(--tw-gradient-stops))] from-orange-600/10 via-transparent to-transparent"
+        ></div>
+        <div class="bg-background-torquise p-8 rounded-xl max-w-6xl mx-auto">
+          <div class="text-center">
+            <p
+              class="text-lg uppercase font-semibold pl-3 tracking-[0.2em] text-text-off"
+            >
+              Our process
+            </p>
+            <h2 class="text-5xl font-semibold text-text-off md:text-6xl">
+              How We Work
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-4 p-8">
+            <div class="relative flex flex-col justify-start items-center">
+              <div
+                class="z-10 w-[56px] h-[56px] mb-3 flex justify-center items-center text-2xl font-bold text-white bg-background-orange rounded-full"
+              >
+                01
+              </div>
+              <div
+                class="absolute hidden md:block top-[28px] left-1/2 w-full h-[1px] bg-orange-400 -z-0"
+              ></div>
+
+              <h4 class="text-xl mb-2 font-semibold text-gray-100">
+                Discover Call
+              </h4>
+              <p class="text-orange-50/80 leading-5 px-1">
+                We learn your business, goals and challenges in a free 30-min
+                session.
+              </p>
+            </div>
+
+            <div class="relative flex flex-col justify-start items-center">
+              <div
+                class="z-10 w-[56px] h-[56px] mb-3 flex justify-center items-center text-2xl font-bold text-white bg-stone-500 rounded-full md:text-stone-400"
+              >
+                02
+              </div>
+              <div
+                class="absolute hidden md:block top-[28px] left-1/2 w-full h-[1px] bg-orange-400 -z-0"
+              ></div>
+
+              <h4 class="text-xl mb-2 font-semibold text-gray-100">
+                Custom Strategy
+              </h4>
+              <p class="text-orange-50/80 leading-5 px-1">
+                We craft a tailored plan with clear timelines, deliverables, and
+                KPIs.
+              </p>
+            </div>
+
+            <div class="relative flex flex-col justify-start items-center">
+              <div
+                class="z-10 w-[56px] h-[56px] mb-3 flex justify-center items-center text-2xl font-bold text-white bg-stone-500 rounded-full md:text-stone-400"
+              >
+                03
+              </div>
+              <div
+                class="absolute hidden md:block top-[28px] left-1/2 w-full h-[1px] bg-orange-400 -z-0"
+              ></div>
+
+              <h4 class="text-xl mb-2 font-semibold text-gray-100">
+                Execution
+              </h4>
+              <p class="text-orange-50/80 leading-5 px-1">
+                We build, optimize, and manage, keeping you updated at every
+                step.
+              </p>
+            </div>
+
+            <div class="relative flex flex-col justify-start items-center">
+              <div
+                class="z-10 w-[56px] h-[56px] mb-3 flex justify-center items-center text-2xl font-bold text-stone-400 bg-stone-500 rounded-full md:text-stone-400"
+              >
+                04
+              </div>
+              <h4 class="text-xl mb-2 font-semibold text-gray-100">
+                Results & Scale
+              </h4>
+              <p class="text-orange-50/80 leading-5 px-1">
+                We track, report, and iterate — turning results into repeatable
+                growth.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!------- Accordian ---------->
+      <section class="py-20 px-6 bg-stone-50">
+        <div class="max-w-3xl mx-auto">
+          <!-- Header -->
+          <div class="text-center mb-8">
+            <p
+              class="text-xl uppercase font-semibold tracking-[0.2em] text-orange-400"
+            >
+              FAQ
+            </p>
+            <h2 class="text-3xl md:text-5xl font-semibold text-text-dark">
+              Common Questions
+            </h2>
+          </div>
+
+          <!-- Accordion -->
+          <div class="space-y-3">
+            <!-- Item -->
+            <details
+              class="group border border-stone-200 rounded-xl px-5 overflow-hidden"
+            >
+              <summary
+                class="flex justify-between items-center gap-4 py-5 cursor-pointer list-none font-semibold text-gray-800 hover:text-orange-400 transition-colors"
+              >
+                Do you work with businesses outside Guwahati?
+
+                <span
+                  class="w-7 h-7 aspect-square flex-shrink-0 border border-stone-300 rounded-full flex items-center justify-center text-base leading-none font-semibold transition-all duration-300 group-open:rotate-45 group-open:bg-orange-400 group-open:text-white"
+                >
+                  +
+                </span>
+              </summary>
+
+              <!-- Animated Content -->
+              <div
+                class="grid grid-rows-[0fr] transition-all duration-300 group-open:grid-rows-[1fr]"
+              >
+                <div class="overflow-hidden">
+                  <p class="pb-5 text-sm leading-relaxed text-gray-600">
+                    Yes! We work with clients globally. Whether you're in India
+                    or overseas, our services are fully remote and we adapt to
+                    your timezone and communication preferences.
+                  </p>
+                </div>
+              </div>
+            </details>
+
+            <!-- Duplicate this block for others -->
+
+            <details
+              class="group border border-stone-200 rounded-xl px-5 overflow-hidden"
+            >
+              <summary
+                class="flex justify-between items-center gap-4 py-5 cursor-pointer list-none font-semibold text-gray-800 hover:text-orange-400 transition-colors"
+              >
+                How long does a website project take?
+
+                <span
+                  class="w-7 h-7 aspect-square flex-shrink-0 border border-stone-300 rounded-full flex items-center justify-center text-base leading-none font-semibold transition-all duration-300 group-open:rotate-45 group-open:bg-orange-400 group-open:text-white"
+                >
+                  +
+                </span>
+              </summary>
+
+              <div
+                class="grid grid-rows-[0fr] transition-all duration-300 group-open:grid-rows-[1fr]"
+              >
+                <div class="overflow-hidden">
+                  <p class="pb-5 text-sm leading-relaxed text-gray-600">
+                    Most websites take 2–4 weeks depending on complexity. We'll
+                    give you a clear timeline after the discovery call.
+                  </p>
+                </div>
+              </div>
+            </details>
+            <details
+              class="group border border-stone-200 rounded-xl px-5 overflow-hidden"
+            >
+              <summary
+                class="flex justify-between items-center gap-4 py-5 cursor-pointer list-none font-semibold text-gray-800 hover:text-orange-400 transition-colors"
+              >
+                How long does a website project take?
+
+                <span
+                  class="w-7 h-7 aspect-square flex-shrink-0 border border-stone-300 rounded-full flex items-center justify-center text-base leading-none font-semibold transition-all duration-300 group-open:rotate-45 group-open:bg-orange-400 group-open:text-white"
+                >
+                  +
+                </span>
+              </summary>
+
+              <div
+                class="grid grid-rows-[0fr] transition-all duration-300 group-open:grid-rows-[1fr]"
+              >
+                <div class="overflow-hidden">
+                  <p class="pb-5 text-sm leading-relaxed text-gray-600">
+                    Most websites take 2–4 weeks depending on complexity. We'll
+                    give you a clear timeline after the discovery call.
+                  </p>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!------------  Final CTA   ------------->
+      <section id="contact" class="py-20 px-6">
+        <div class="max-w-5xl mx-auto ">
+          <div
+            class="relative overflow-hidden text-center bg-slate-900 rounded-3xl px-6 py-12 md:px-12 md:py-16 shadow-[0_20px_60px_-15px_rgba(251,146,60,0.45),0_10px_30px_-10px_rgba(0,0,0,0.6)]"
+          >
+            <!-- Glow Effects -->
+            <div
+              class="absolute -top-20 -20 w-[300px] h-[300px] bg-orange-400 rounded-full blur-[100px] opacity-20"
+            ></div>
+            <div
+              class="absolute -bottom-16 -16 w-[250px] h-[250px] bg-pink-400 rounded-full blur-[80px] opacity-10"
+            ></div>
+
+            <!-- Content -->
+            <div class="relative z-10">
+              <p
+                class="font-syne text-xs font-bold tracking-[0.18em] text-orange-400 uppercase mb-4"
+              >
+                Ready to Start?
+              </p>
+
+              <h2
+                class="text-3xl md:text-5xl font-extrabold text-stone-100 leading-tight tracking-tight mb-5"
+              >
+                Let's Build Something<br />That Actually Grows.
+              </h2>
+
+              <p
+                class="text-base text-stone-400 max-w-md mx-auto leading-relaxed mb-10"
+              >
+                Book a free 30-minute consultation. No pressure, no commitment —
+                just a clear plan for your business.
+              </p>
+
+              <div class="flex flex-wrap justify-center gap-4">
+                <!-- Primary CTA -->
+                <a
+                  href="mailto:hello@digitalecho365.com"
+                  class="bg-orange-400 hover:bg-orange-500 text-slate-900 font-syne font-bold text-sm px-8 py-3 rounded-full transition-all duration-300"
+                >
+                  Book Free Consultation
+                </a>
+
+                <!-- Secondary CTA -->
+                <a
+                  href="#services"
+                  class="border-2 border-stone-600 text-stone-400 hover:border-stone-400 hover:text-stone-100 font-syne font-bold text-sm px-8 py-3 rounded-full transition-all duration-300"
+             
+                  >
+                  View All Services
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--------------- Footer Section ---------------->
+    <footer class="mb-7 mt-16 mb:mt-20">
+      <div
+        class="text-center grid grid-cols-2 md:space-x-10 gap-y-3 md:block text-2xl font-medium"
+      >
+        <a href="/index.html" class="hover:text-orange-400 duration-200"
+          >Home</a
+        >
+        <a href="#about" class="hover:text-orange-400 duration-200">About</a>
+
+        <a href="./pages/projects/projectDashboard.html" class="hover:text-orange-400 duration-200"
+          >Projects</a
+        >
+        <a
+          href="./src/pages/blogs/blog-menu.html"
+          class="hover:text-orange-400 duration-200"
+          >Blogs</a
+        >
+      </div>
+      <div class="text-center my-7 py-10 text-4xl md:text-5xl">
+        <a href="https://github.com/firstprogram7"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/shazid-rahman/"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+      </div>
+      <p
+        class="font-semibold text-textColorLight text-center mt-10 px-3 md:mt-14"
+      >
+        Copyright &copy 2026 Shazid. All rights reserved.
+      </p>
+    </footer>
+        <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+
+      document
+        .querySelectorAll("., ., .")
+        .forEach((el) => {
+          observer.observe(el);
+        });
+    </script>
+    <!-- <script src="../services.js"></script> -->
+    <script src="/services.js"></script>
+  </body>
+</html>

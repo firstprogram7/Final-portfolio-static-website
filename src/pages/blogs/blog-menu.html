@@ -27,29 +27,34 @@
     </section>
     <!--------------------    Navigation bar    ----------------->
     <header id="main-header" class="sticky top-0 z-50 scroll-mt-20">
-         <nav class="container mx-auto max-w-6xl"> 
-        <div class="flex justify-between items-center py-4 px-8  md:px-[55px]  lg:px-0"> 
-          <a href="/index.html" id="logo" class="text-4xl font-bold md:text-5xl transistion-all duration-300  ease-in-out"
+      <nav class="container mx-auto max-w-6xl">
+        <div
+          class="flex justify-between items-center py-4 px-8 md:px-[55px] lg:px-0"
+        >
+          <a
+            href="/index.html"
+            id="logo"
+            class="text-4xl font-bold md:text-5xl transistion-all duration-300 ease-in-out"
             >Shazid</a
           >
           <div id="nav-links" class="hidden lg:flex space-x-6">
             <a
               href="/index.html"
-              class="hover:text-orange-400 md:text-xl lg:text-2xl transistion-all duration-150  ease-in-out"
+              class="hover:text-orange-400 md:text-xl lg:text-2xl transistion-all duration-150 ease-in-out"
               >Home</a
             >
 
             <a
-              href="#services"
+              href="/src/services.html"
               class="hover:text-orange-400 md:text-xl lg:text-2xl"
               >Services</a
             >
             <a
-              href="#projects"
+              href="../projects/projectDashboard.html"
               class="hover:text-orange-400 md:text-xl lg:text-2xl"
               >Projects</a
             >
-                        <a
+            <a
               href="/src/about.html"
               class="hover:text-orange-400 md:text-xl lg:text-2xl"
               >About</a
@@ -83,11 +88,17 @@
         >
           <a href="/index.html" class="block hover:text-orange-400">Home</a>
 
-          <a href="#services" class="block hover:text-orange-400"
+          <a href="/src/services.html" class="block hover:text-orange-400"
             >Services</a
           >
-          <a href="#projects" class="block hover:text-orange-400">Projects</a>
-                    <a href="/src/about.html" class="block hover:text-orange-400">About</a>
+          <a
+            href="../projects/projectDashboard.html"
+            class="block hover:text-orange-400"
+            >Projects</a
+          >
+          <a href="/src/about.html" class="block hover:text-orange-400"
+            >About</a
+          >
           <a href="./blog-menu.html" class="block hover:text-orange-400"
             >Blogs</a
           >
@@ -100,7 +111,9 @@
     <!-- Top heading -->
     <section class="container mx-auto px-10 my-20">
       <div class="space-y-4">
-        <h2 class="text-4xl text-orange-400 font-bold md:text-5xl">Blogs & Articles</h2>
+        <h2 class="text-4xl text-orange-400 font-bold md:text-5xl">
+          Blogs & Articles
+        </h2>
         <p class="text-2xl font-semibold text-gray-500 md:text-3xl">
           UX, Code & Beyond
         </p>
@@ -368,7 +381,9 @@
         <div
           class="flex flex-col flex-1 bg-white dark:bg-stone-700 justify-center p-20 mx-2 space-y-7 rounded-3xl"
         >
-          <h2 class="text-xl text-orange-400 font-bold md:text-2xl">Subscribe to my blog</h2>
+          <h2 class="text-xl text-orange-400 font-bold md:text-2xl">
+            Subscribe to my blog
+          </h2>
           <p
             class="text-xl text-textColorLight dark:text-stone-400 font-semibold"
           >
@@ -376,18 +391,16 @@
             optimization, and growing your online presence
           </p>
           <div>
-            <form
-              id="subscribeForm"
-              class="space-y-3"
-            >
+            <form id="subscribeForm" class="space-y-3">
               <input
                 type="email"
                 id="userEmail"
-                name="email"
-                class="ring-1 ring-gray-400 px-2 py-1 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none text-gray-600 font-semibold placeholder:Enter your email rounded-md w-full lg:w-auto"
+                class="ring-1 ring-gray-400 px-2 py-1 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none text-gray-600 font-semibold rounded-md w-full lg:w-auto"
+                placeholder="Enter your Email"
+                required
               />
               <button
-              id="subscribe-btn"
+                id="subscribe-btn"
                 type="submit"
                 class="text-xl font-semibold text-center py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-md w-full block"
               >
@@ -411,17 +424,21 @@
       <div
         class="text-center grid grid-cols-2 md:space-x-10 gap-y-3 md:block text-2xl font-medium"
       >
-        <a href="/src/about.html" class="hover:text-orange-400 duration-200">About</a>
-        <a href="#services" class="hover:text-orange-400 duration-200"
+        <a
+          href="/index.html"
+          class="hover:text-orange-400 duration-200"
+          >Home</a
+        >
+        <a href="/src/about.html" class="hover:text-orange-400 duration-200"
+          >About</a
+        >
+        <a href="/src/services.html" class="hover:text-orange-400 duration-200"
           >Services</a
         >
-        <a href="#projects" class="hover:text-orange-400 duration-200"
-          >Projects</a
-        >
         <a
-          href="../blogs/blog-menu.html"
+          href="../projects/projectDashboard.html"
           class="hover:text-orange-400 duration-200"
-          >Blogs</a
+          >Projects</a
         >
       </div>
       <div class="text-center my-7 py-10 text-4xl md:text-5xl">
@@ -440,6 +457,6 @@
       </p>
     </footer>
 
-    <script src="/main.js"></script>
+    <script src="/main.js" defer></script>
   </body>
 </html>

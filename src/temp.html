@@ -1,14 +1,158 @@
 <!DOCTYPE html>
-<html lang="en" class="">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Temporary-Check-Ground</title>
-    <link rel="stylesheet" href="/dist/output.css">
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Testimonial Cards</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['DM Sans', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          },
+          colors: {
+            teal: {
+              100: '#9FE1CB',
+              400: '#1D9E75',
+              500: '#0F6E56',
+            },
+            purple: {
+              100: '#CECBF6',
+              400: '#7F77DD',
+              500: '#534AB7',
+            },
+            coral: {
+              100: '#F5C4B3',
+              400: '#D85A30',
+              500: '#993C1D',
+            },
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    .card-accent-teal  { background-color: #5DCAA5; }
+    .card-accent-purple { background-color: #7F77DD; }
+    .card-accent-coral  { background-color: #D85A30; }
 
+    .quote-teal   { color: #9FE1CB; }
+    .quote-purple { color: #CECBF6; }
+    .quote-coral  { color: #F5C4B3; }
 
-  </head>
-  <body class="bg-stone-300 dark:bg-stone-900">
-    <h1 class="text-text-dark text-6xl text-center dark:text-bg-stone-300">This is a test line</h1>
-  </body>
+    .star-teal   { color: #1D9E75; }
+    .star-purple { color: #7F77DD; }
+    .star-coral  { color: #D85A30; }
+
+    .avatar-teal   { background-color: #E1F5EE; color: #0F6E56; }
+    .avatar-purple { background-color: #EEEDFE; color: #534AB7; }
+    .avatar-coral  { background-color: #FAECE7; color: #993C1D; }
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex items-center justify-center p-8">
+
+  <!-- Testimonials Section -->
+  <section class="w-full max-w-5xl mx-auto px-6 py-12">
+
+    <!-- Header -->
+    <p class="text-center text-xs font-medium tracking-widest uppercase text-gray-400 mb-2">
+      What people say
+    </p>
+    <h2 class="font-serif text-center text-4xl font-medium text-gray-900 mb-10 leading-snug">
+      Trusted by teams who
+      <em class="italic not-italic" style="color: #5DCAA5;"> care</em>
+      about quality
+    </h2>
+
+    <!-- Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+      <!-- Card 1 — Teal -->
+      <div class="relative bg-white border border-gray-100 rounded-xl p-7 flex flex-col gap-5 transition-colors duration-200 hover:border-gray-200">
+        <!-- Top accent bar -->
+        <div class="absolute top-0 left-6 w-10 h-[3px] rounded-b-sm card-accent-teal"></div>
+
+        <!-- Opening quote mark -->
+        <div class="font-serif text-6xl leading-none italic font-medium select-none quote-teal">"</div>
+
+        <!-- Quote text -->
+        <p class="font-serif italic text-base leading-relaxed text-gray-800 flex-1">
+          This product completely changed how our team collaborates. The clarity it brings to every workflow is something I didn't know I was missing until I had it.
+        </p>
+
+        <!-- Star rating -->
+        <div class="flex gap-1">
+          <svg class="w-3.5 h-3.5 star-teal" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
+          <svg class="w-3.5 h-3.5 star-teal" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
+          <svg class="w-3.5 h-3.5 star-teal" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
+          <svg class="w-3.5 h-3.5 star-teal" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
+          <svg class="w-3.5 h-3.5 star-teal" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
+        </div>
+
+        <!-- Author -->
+        <div class="flex items-center gap-3.5 pt-4 border-t border-gray-100">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium shrink-0 avatar-teal">SR</div>
+          <div>
+            <p class="text-sm font-medium text-gray-900 mb-0.5">Sophia Reyes</p>
+            <p class="text-xs font-light text-gray-400">Head of Product · Luminary Co.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 — Purple -->
+      <div class="relative bg-white border border-gray-100 rounded-xl p-7 flex flex-col gap-5 transition-colors duration-200 hover:border-gray-200">
+        <div class="absolute top-0 left-6 w-10 h-[3px] rounded-b-sm card-accent-purple"></div>
+        <div class="font-serif text-6xl leading-none italic font-medium select-none quote-purple">"</div>
+        <p class="font-serif italic text-base leading-relaxed text-gray-800 flex-1">
+          Onboarding was a breeze. Within a week, our entire engineering team was up to speed — and within a month, we shipped faster than we ever had before.
+        </p>
+        <div class="flex gap-1">
+          <svg class="w-3.5 h-3.5 star-purple" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
+          <svg class="w-3.5 h-3.5 star-purple" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
+          <svg class="w-3.5 h-3.5 star-purple" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
+          <svg class="w-3.5 h-3.5 star-purple" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
+          <svg class="w-3.5 h-3.5 star-purple" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
+        </div>
+        <div class="flex items-center gap-3.5 pt-4 border-t border-gray-100">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium shrink-0 avatar-purple">AM</div>
+          <div>
+            <p class="text-sm font-medium text-gray-900 mb-0.5">Arjun Mehta</p>
+            <p class="text-xs font-light text-gray-400">CTO · Orbit Labs</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 — Coral -->
+      <div class="relative bg-white border border-gray-100 rounded-xl p-7 flex flex-col gap-5 transition-colors duration-200 hover:border-gray-200">
+        <div class="absolute top-0 left-6 w-10 h-[3px] rounded-b-sm card-accent-coral"></div>
+        <div class="font-serif text-6xl leading-none italic font-medium select-none quote-coral">"</div>
+        <p class="font-serif italic text-base leading-relaxed text-gray-800 flex-1">
+          The support team is exceptional. Every question I've had was answered thoughtfully and quickly. It genuinely feels like they're invested in our success.
+        </p>
+        <div class="flex gap-1">
+          <svg class="w-3.5 h-3.5 star-coral" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
+          <svg class="w-3.5 h-3.5 star-coral" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
+          <svg class="w-3.5 h-3.5 star-coral" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
+          <svg class="w-3.5 h-3.5 star-coral" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
+          <svg class="w-3.5 h-3.5 star-coral" viewBox="0 0 14 14" fill="currentColor"><path d="M7 1l1.545 3.13L12 4.635l-2.5 2.435.59 3.44L7 8.885 3.91 10.51l.59-3.44L2 4.635l3.455-.505z"/></svg>
+        </div>
+        <div class="flex items-center gap-3.5 pt-4 border-t border-gray-100">
+          <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium shrink-0 avatar-coral">NC</div>
+          <div>
+            <p class="text-sm font-medium text-gray-900 mb-0.5">Naomi Chen</p>
+            <p class="text-xs font-light text-gray-400">Founder · Driftwood Studio</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</body>
 </html>

@@ -26,12 +26,7 @@ body {
       rgba(255, 255, 255, 0.05) 1px,
       transparent 1px
     ),
-    linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.05) 1px,
-      transparent 1px
-    );
-
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
 }
 /*    Hamburger animation     */
 .open span:nth-child(1) {
@@ -315,3 +310,50 @@ body {
 .scroll-dot {
   animation: scrollDown 1.5s ease infinite;
 }
+
+/*-----------  Services Pages service cards -------------*/
+.tab-btn.active {
+  font-size: 20px;
+  color: #f97316;
+  font-weight: 700;
+}
+.tab-btn:not(.active):hover {
+color: #f97316;
+text-decoration: underline;
+text-underline-offset: 6px;
+transition: 0.6ms ease-in-out;
+text-shadow: 0 0 1px #f97316;
+
+}
+.tab-panel,
+.tab-panel-all {
+  display: none;
+}
+
+.tab-panel.active,
+.tab-panel-all.active {
+  display: grid;
+}
+
+/********** project dashboard ************/
+
+.tab-button.active{
+color: #f8fafc;
+background: #78716c;
+padding: 8px 24px;
+border-radius: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
