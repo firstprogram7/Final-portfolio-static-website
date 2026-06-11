@@ -230,3 +230,7 @@ tabButtons.forEach((btn) => {
     });
   });
 });
+
+// Auto update year on copyright
+const yearUpdate = document.getElementById("copyright-year");
+yearUpdate.textContent = new Date().getFullYear();
