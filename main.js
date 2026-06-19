@@ -231,6 +231,6 @@ tabButtons.forEach((btn) => {
   });
 });
 
-// Auto update year on copyright
+// Auto update year for copyright
 const yearUpdate = document.getElementById("copyright-year");
 yearUpdate.textContent = new Date().getFullYear();
